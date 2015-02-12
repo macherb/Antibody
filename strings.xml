@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Antibody identification for transfusion</string>
+    
+    <string name="Rh_hr_D">D</string>
+    <string name="Rh_hr_BigC">f</string>
+    <string name="Reactions">Reactions</string>
+    
+    <string name="cell1">1</string>
+    <string name="D1">+</string>
+    <string name="BigC1">0</string>
+    
+    <string name="cell2">2</string>
+    <string name="D2">0</string>
+    <string name="BigC2">+</string>
+    
+    <string name="Calculate">Calculate</string>
+    
+    <string name="Solution"></string>
+    
+    <string name="action_settings">Settings</string>
+
+</resources>
