@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.antibody.MainActivity" >
+
+    <TextView
+        android:id="@+id/textBlank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="_"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/textD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textBlank"
+        android:layout_toRightOf="@+id/textBlank"
+        android:text="@string/Rh_hr_D" />
+
+    <TextView
+        android:id="@+id/textBigC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textD"
+        android:layout_toRightOf="@+id/textD"
+        android:text="@string/Rh_hr_BigC" />
+
+    <TextView
+        android:id="@+id/textReactions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textBigC"
+        android:layout_toRightOf="@+id/textBigC"
+        android:text="@string/Reactions" />
+
+    <TextView
+        android:id="@+id/textCell1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textBlank"
+        android:text="@string/cell1" />
+
+    <TextView
+        android:id="@+id/textD1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textCell1"
+        android:layout_toRightOf="@+id/textCell1"
+        android:text="@string/D1" />
+
+    <TextView
+        android:id="@+id/textBigC1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textD1"
+        android:layout_toRightOf="@+id/textD1"
+        android:text="@string/BigC1" />
+
+    <CheckBox
+        android:id="@+id/check1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textD1"
+        android:layout_alignTop="@+id/textD1"
+        android:layout_toRightOf="@+id/textBigC1" />
+
+    <TextView
+        android:id="@+id/textCell2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textCell1"
+        android:layout_below="@+id/textCell1"
+        android:text="@string/cell2" />
+
+    <TextView
+        android:id="@+id/textD2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textCell2"
+        android:layout_toRightOf="@+id/textCell2"
+        android:text="@string/D2" />
+
+    <TextView
+        android:id="@+id/textBigC2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textD2"
+        android:layout_toRightOf="@+id/textD2"
+        android:text="@string/BigC2" />
+
+    <CheckBox
+        android:id="@+id/check2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textD2"
+        android:layout_alignBottom="@+id/textD2"
+        android:layout_alignLeft="@+id/check1" />
+
+    <Button
+        android:id="@+id/buttonCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textCell2"
+        android:text="@string/Calculate" />
+
+    <TextView
+        android:id="@+id/textSolution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/buttonCalculate"
+        android:layout_below="@+id/buttonCalculate"
+        android:text="@string/Solution" />
+
+</RelativeLayout>
