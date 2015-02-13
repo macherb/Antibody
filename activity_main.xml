@@ -14,7 +14,6 @@
         android:layout_height="wrap_content"
         android:text="_"
         android:visibility="invisible" />
-
     <TextView
         android:id="@+id/textD"
         android:layout_width="wrap_content"
@@ -22,7 +21,6 @@
         android:layout_alignTop="@+id/textBlank"
         android:layout_toRightOf="@+id/textBlank"
         android:text="@string/Rh_hr_D" />
-
     <TextView
         android:id="@+id/textBigC"
         android:layout_width="wrap_content"
@@ -30,13 +28,27 @@
         android:layout_alignTop="@+id/textD"
         android:layout_toRightOf="@+id/textD"
         android:text="@string/Rh_hr_BigC" />
-
     <TextView
-        android:id="@+id/textReactions"
+        android:id="@+id/textBigE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/textBigC"
         android:layout_toRightOf="@+id/textBigC"
+        android:text="@string/Rh_hr_BigE" />
+    <TextView
+        android:id="@+id/textLittleC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textBigE"
+        android:layout_alignBottom="@+id/textBigE"
+        android:layout_toRightOf="@+id/textBigE"
+        android:text="@string/Rh_hr_LittleC" />
+    <TextView
+        android:id="@+id/textReactions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textLittleC"
+        android:layout_toRightOf="@+id/textLittleC"
         android:text="@string/Reactions" />
 
     <TextView
@@ -46,7 +58,6 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/textBlank"
         android:text="@string/cell1" />
-
     <TextView
         android:id="@+id/textD1"
         android:layout_width="wrap_content"
@@ -54,7 +65,6 @@
         android:layout_alignTop="@+id/textCell1"
         android:layout_toRightOf="@+id/textCell1"
         android:text="@string/D1" />
-
     <TextView
         android:id="@+id/textBigC1"
         android:layout_width="wrap_content"
@@ -62,14 +72,28 @@
         android:layout_alignTop="@+id/textD1"
         android:layout_toRightOf="@+id/textD1"
         android:text="@string/BigC1" />
-
+    <TextView
+        android:id="@+id/textBigE1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textBigC1"
+        android:layout_toRightOf="@+id/textBigC1"
+        android:text="@string/BigE1" />
+    <TextView
+        android:id="@+id/textLittleC1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textBigE1"
+        android:layout_alignBottom="@+id/textBigE1"
+        android:layout_toRightOf="@+id/textBigE1"
+        android:text="@string/LittleC1" />
     <CheckBox
         android:id="@+id/check1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textD1"
         android:layout_alignTop="@+id/textD1"
-        android:layout_toRightOf="@+id/textBigC1" />
+        android:layout_toRightOf="@+id/textLittleC1" />
 
     <TextView
         android:id="@+id/textCell2"
@@ -78,7 +102,6 @@
         android:layout_alignLeft="@+id/textCell1"
         android:layout_below="@+id/textCell1"
         android:text="@string/cell2" />
-
     <TextView
         android:id="@+id/textD2"
         android:layout_width="wrap_content"
@@ -86,7 +109,6 @@
         android:layout_alignTop="@+id/textCell2"
         android:layout_toRightOf="@+id/textCell2"
         android:text="@string/D2" />
-
     <TextView
         android:id="@+id/textBigC2"
         android:layout_width="wrap_content"
@@ -94,21 +116,77 @@
         android:layout_alignTop="@+id/textD2"
         android:layout_toRightOf="@+id/textD2"
         android:text="@string/BigC2" />
-
+    <TextView
+        android:id="@+id/textBigE2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textBigC2"
+        android:layout_toRightOf="@+id/textBigC2"
+        android:text="@string/BigE2" />
+    <TextView
+        android:id="@+id/textLittleC2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textBigE2"
+        android:layout_toRightOf="@+id/textBigE2"
+        android:text="@string/LittleC2" />
     <CheckBox
         android:id="@+id/check2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textD2"
-        android:layout_alignBottom="@+id/textD2"
+        android:layout_alignBaseline="@+id/textLittleC2"
+        android:layout_alignBottom="@+id/textLittleC2"
         android:layout_alignLeft="@+id/check1" />
+
+    <TextView
+        android:id="@+id/textCell3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textCell2"
+        android:layout_below="@+id/textCell2"
+        android:text="@string/cell3" />
+    <TextView
+        android:id="@+id/textD3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textCell3"
+        android:layout_toRightOf="@+id/textCell3"
+        android:text="@string/D3" />
+    <TextView
+        android:id="@+id/textBigC3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textD3"
+        android:layout_toRightOf="@+id/textD3"
+        android:text="@string/BigC3" />
+    <TextView
+        android:id="@+id/textBigE3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textBigC3"
+        android:layout_toRightOf="@+id/textBigC3"
+        android:text="@string/BigE3" />
+    <TextView
+        android:id="@+id/textLittleC3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textBigE3"
+        android:layout_toRightOf="@+id/textBigE3"
+        android:text="@string/LittleC3" />
+    <CheckBox
+        android:id="@+id/check3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textLittleC3"
+        android:layout_alignBottom="@+id/textLittleC3"
+        android:layout_alignLeft="@+id/check2" />
 
     <Button
         android:id="@+id/buttonCalculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textCell2"
+        android:layout_below="@+id/textCell3"
         android:text="@string/Calculate" />
 
     <TextView
