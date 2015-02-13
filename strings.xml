@@ -4,16 +4,28 @@
     <string name="app_name">Antibody identification for transfusion</string>
     
     <string name="Rh_hr_D">D</string>
-    <string name="Rh_hr_BigC">f</string>
+    <string name="Rh_hr_BigC">C</string>
+    <string name="Rh_hr_BigE">E</string>
+    <string name="Rh_hr_LittleC">c</string>
     <string name="Reactions">Reactions</string>
     
     <string name="cell1">1</string>
     <string name="D1">+</string>
     <string name="BigC1">0</string>
+    <string name="BigE1">0</string>
+    <string name="LittleC1">+</string>
     
     <string name="cell2">2</string>
     <string name="D2">0</string>
     <string name="BigC2">+</string>
+    <string name="BigE2">+</string>
+    <string name="LittleC2">0</string>
+    
+    <string name="cell3">3</string>
+    <string name="D3">0</string>
+    <string name="BigC3">0</string>
+    <string name="BigE3">+</string>
+    <string name="LittleC3">+</string>
     
     <string name="Calculate">Calculate</string>
     
