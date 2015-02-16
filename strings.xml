@@ -63,10 +63,34 @@
     <string name="BigK4">+</string>
     <string name="LittleK4">0</string>
 
+    <string name="cell5">5</string>
+    <string name="D5">+</string>
+    <string name="BigC5">+</string>
+    <string name="BigE5">+</string>
+    <string name="LittleC5">0</string>
+    <string name="LittleE5">+</string>
+    <string name="F5">+</string>
+    <string name="CW5">0</string>
+    <string name="V5">0</string>
+    <string name="BigK5">0</string>
+    <string name="LittleK5">0</string>
+
+    <string name="cell6">6</string>
+    <string name="D6">0</string>
+    <string name="BigC6">0</string>
+    <string name="BigE6">+</string>
+    <string name="LittleC6">0</string>
+    <string name="LittleE6">0</string>
+    <string name="F6">0</string>
+    <string name="CW6">+</string>
+    <string name="V6">+</string>
+    <string name="BigK6">+</string>
+    <string name="LittleK6">+</string>
+
     <string name="Calculate">Calculate</string>
-    
+
     <string name="Solution"></string>
-    
+
     <string name="action_settings">Settings</string>
 
 </resources>
