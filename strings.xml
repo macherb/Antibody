@@ -8,11 +8,13 @@
     <string name="Rh_hr_BigE">E</string>
     <string name="Rh_hr_LittleC">c</string>
     <string name="Rh_hr_LittleE">e</string>
-    <string name="Rh_hr_F">" f"</string>
+    <string name="Rh_hr_F">f</string>
     <string name="Rh_hr_CW">Cw</string>
     <string name="Rh_hr_V">V</string>
     <string name="Kell_BigK">K</string>
     <string name="Kell_LittleK">k</string>
+    <string name="Kell_KPA">Kpa</string>
+    <string name="Kell_KPB">Kpb</string>
     <string name="Reactions">Reactions</string>
 
     <string name="cell1">1</string>
@@ -26,6 +28,8 @@
     <string name="V1">0</string>
     <string name="BigK1">+</string>
     <string name="LittleK1">+</string>
+    <string name="KPA1">0</string>
+    <string name="KPB1">+</string>
 
     <string name="cell2">2</string>
     <string name="D2">0</string>
@@ -38,6 +42,8 @@
     <string name="V2">+</string>
     <string name="BigK2">0</string>
     <string name="LittleK2">0</string>
+    <string name="KPA2">+</string>
+    <string name="KPB2">0</string>
 
     <string name="cell3">3</string>
     <string name="D3">+</string>
@@ -50,6 +56,8 @@
     <string name="V3">+</string>
     <string name="BigK3">0</string>
     <string name="LittleK3">+</string>
+    <string name="KPA3">+</string>
+    <string name="KPB3">+</string>
 
     <string name="cell4">4</string>
     <string name="D4">0</string>
@@ -62,6 +70,8 @@
     <string name="V4">0</string>
     <string name="BigK4">+</string>
     <string name="LittleK4">0</string>
+    <string name="KPA4">0</string>
+    <string name="KPB4">0</string>
 
     <string name="cell5">5</string>
     <string name="D5">+</string>
@@ -74,6 +84,8 @@
     <string name="V5">0</string>
     <string name="BigK5">0</string>
     <string name="LittleK5">0</string>
+    <string name="KPA5">+</string>
+    <string name="KPB5">+</string>
 
     <string name="cell6">6</string>
     <string name="D6">0</string>
@@ -86,6 +98,8 @@
     <string name="V6">+</string>
     <string name="BigK6">+</string>
     <string name="LittleK6">+</string>
+    <string name="KPA6">0</string>
+    <string name="KPB6">0</string>
 
     <string name="Calculate">Calculate</string>
 
