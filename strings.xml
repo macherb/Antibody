@@ -15,6 +15,12 @@
     <string name="Kell_LittleK">k</string>
     <string name="Kell_KPA">Kpa</string>
     <string name="Kell_KPB">Kpb</string>
+    <string name="Kell_JSA">Jsa</string>
+    <string name="Kell_JSB">Jsb</string>
+    <string name="Duffy_FYA">Fya</string>
+    <string name="Duffy_FYB">Fyb</string>
+    <string name="Kidd_JKA">Jka</string>
+    <string name="Kidd_JKB">Jkb</string>
     <string name="Reactions">Reactions</string>
 
     <string name="cell1">1</string>
@@ -30,6 +36,12 @@
     <string name="LittleK1">+</string>
     <string name="KPA1">0</string>
     <string name="KPB1">+</string>
+    <string name="JSA1">0</string>
+    <string name="JSB1">0</string>
+    <string name="FYA1">+</string>
+    <string name="FYB1">+</string>
+    <string name="JKA1">0</string>
+    <string name="JKB1">+</string>
 
     <string name="cell2">2</string>
     <string name="D2">0</string>
@@ -44,6 +56,12 @@
     <string name="LittleK2">0</string>
     <string name="KPA2">+</string>
     <string name="KPB2">0</string>
+    <string name="JSA2">+</string>
+    <string name="JSB2">+</string>
+    <string name="FYA2">0</string>
+    <string name="FYB2">0</string>
+    <string name="JKA2">+</string>
+    <string name="JKB2">0</string>
 
     <string name="cell3">3</string>
     <string name="D3">+</string>
@@ -58,6 +76,12 @@
     <string name="LittleK3">+</string>
     <string name="KPA3">+</string>
     <string name="KPB3">+</string>
+    <string name="JSA3">0</string>
+    <string name="JSB3">0</string>
+    <string name="FYA3">+</string>
+    <string name="FYB3">0</string>
+    <string name="JKA3">+</string>
+    <string name="JKB3">+</string>
 
     <string name="cell4">4</string>
     <string name="D4">0</string>
@@ -72,6 +96,12 @@
     <string name="LittleK4">0</string>
     <string name="KPA4">0</string>
     <string name="KPB4">0</string>
+    <string name="JSA4">+</string>
+    <string name="JSB4">+</string>
+    <string name="FYA4">0</string>
+    <string name="FYB4">+</string>
+    <string name="JKA4">0</string>
+    <string name="JKB4">0</string>
 
     <string name="cell5">5</string>
     <string name="D5">+</string>
@@ -86,6 +116,12 @@
     <string name="LittleK5">0</string>
     <string name="KPA5">+</string>
     <string name="KPB5">+</string>
+    <string name="JSA5">0</string>
+    <string name="JSB5">+</string>
+    <string name="FYA5">0</string>
+    <string name="FYB5">0</string>
+    <string name="JKA5">+</string>
+    <string name="JKB5">+</string>
 
     <string name="cell6">6</string>
     <string name="D6">0</string>
@@ -100,6 +136,12 @@
     <string name="LittleK6">+</string>
     <string name="KPA6">0</string>
     <string name="KPB6">0</string>
+    <string name="JSA6">+</string>
+    <string name="JSB6">0</string>
+    <string name="FYA6">+</string>
+    <string name="FYB6">+</string>
+    <string name="JKA6">0</string>
+    <string name="JKB6">0</string>
 
     <string name="Calculate">Calculate</string>
 
