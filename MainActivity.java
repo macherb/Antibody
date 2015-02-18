@@ -27,6 +27,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
 						mLittleK1,
 						mKPA1,
 						mKPB1,
+						mJSA1,
+						mJSB1,
+						mFYA1,
+						mFYB1,
+						mJKA1,
+						mJKB1,
 
 						mD2,
 						mBigC2,
@@ -40,6 +46,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
 						mLittleK2,
 						mKPA2,
 						mKPB2,
+						mJSA2,
+						mJSB2,
+						mFYA2,
+						mFYB2,
+						mJKA2,
+						mJKB2,
 
 						mD3,
 						mBigC3,
@@ -53,6 +65,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
 						mLittleK3,
 						mKPA3,
 						mKPB3,
+						mJSA3,
+						mJSB3,
+						mFYA3,
+						mFYB3,
+						mJKA3,
+						mJKB3,
 
 						mD4,
 						mBigC4,
@@ -66,6 +84,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
 						mLittleK4,
 						mKPA4,
 						mKPB4,
+						mJSA4,
+						mJSB4,
+						mFYA4,
+						mFYB4,
+						mJKA4,
+						mJKB4,
 
 						mD5,
 						mBigC5,
@@ -79,6 +103,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
 						mLittleK5,
 						mKPA5,
 						mKPB5,
+						mJSA5,
+						mJSB5,
+						mFYA5,
+						mFYB5,
+						mJKA5,
+						mJKB5,
 
 						mD6,
 						mBigC6,
@@ -92,6 +122,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
 						mLittleK6,
 						mKPA6,
 						mKPB6,
+						mJSA6,
+						mJSB6,
+						mFYA6,
+						mFYB6,
+						mJKA6,
+						mJKB6,
 
 						mSolution;
 
@@ -121,6 +157,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		mLittleK1 =		(TextView	)findViewById(R.id.textLittleK1		);
 		mKPA1 =			(TextView	)findViewById(R.id.textKPA1			);
 		mKPB1 =			(TextView	)findViewById(R.id.textKPB1			);
+		mJSA1 =			(TextView	)findViewById(R.id.textJSA1			);
+		mJSB1 =			(TextView	)findViewById(R.id.textJSB1			);
+		mFYA1 =			(TextView	)findViewById(R.id.textFYA1			);
+		mFYB1 =			(TextView	)findViewById(R.id.textFYB1			);
+		mJKA1 =			(TextView	)findViewById(R.id.textJKA1			);
+		mJKB1 =			(TextView	)findViewById(R.id.textJKB1			);
 
 		mD2 =			(TextView	)findViewById(R.id.textD2			);
 		mBigC2 =		(TextView	)findViewById(R.id.textBigC2		);
@@ -134,6 +176,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		mLittleK2 =		(TextView	)findViewById(R.id.textLittleK2		);
 		mKPA2 =			(TextView	)findViewById(R.id.textKPA2			);
 		mKPB2 =			(TextView	)findViewById(R.id.textKPB2			);
+		mJSA2 =			(TextView	)findViewById(R.id.textJSA2			);
+		mJSB2 =			(TextView	)findViewById(R.id.textJSB2			);
+		mFYA2 =			(TextView	)findViewById(R.id.textFYA2			);
+		mFYB2 =			(TextView	)findViewById(R.id.textFYB2			);
+		mJKA2 =			(TextView	)findViewById(R.id.textJKA2			);
+		mJKB2 =			(TextView	)findViewById(R.id.textJKB2			);
 
 		mD3 =			(TextView	)findViewById(R.id.textD3			);
 		mBigC3 =		(TextView	)findViewById(R.id.textBigC3		);
@@ -147,6 +195,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		mLittleK3 =		(TextView	)findViewById(R.id.textLittleK3		);
 		mKPA3 =			(TextView	)findViewById(R.id.textKPA3			);
 		mKPB3 =			(TextView	)findViewById(R.id.textKPB3			);
+		mJSA3 =			(TextView	)findViewById(R.id.textJSA3			);
+		mJSB3 =			(TextView	)findViewById(R.id.textJSB3			);
+		mFYA3 =			(TextView	)findViewById(R.id.textFYA3			);
+		mFYB3 =			(TextView	)findViewById(R.id.textFYB3			);
+		mJKA3 =			(TextView	)findViewById(R.id.textJKA3			);
+		mJKB3 =			(TextView	)findViewById(R.id.textJKB3			);
 
 		mD4 =			(TextView	)findViewById(R.id.textD4			);
 		mBigC4 =		(TextView	)findViewById(R.id.textBigC4		);
@@ -160,6 +214,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		mLittleK4 =		(TextView	)findViewById(R.id.textLittleK4		);
 		mKPA4 =			(TextView	)findViewById(R.id.textKPA4			);
 		mKPB4 =			(TextView	)findViewById(R.id.textKPB4			);
+		mJSA4 =			(TextView	)findViewById(R.id.textJSA4			);
+		mJSB4 =			(TextView	)findViewById(R.id.textJSB4			);
+		mFYA4 =			(TextView	)findViewById(R.id.textFYA4			);
+		mFYB4 =			(TextView	)findViewById(R.id.textFYB4			);
+		mJKA4 =			(TextView	)findViewById(R.id.textJKA4			);
+		mJKB4 =			(TextView	)findViewById(R.id.textJKB4			);
 
 		mD5 =			(TextView	)findViewById(R.id.textD5			);
 		mBigC5 =		(TextView	)findViewById(R.id.textBigC5		);
@@ -173,6 +233,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		mLittleK5 =		(TextView	)findViewById(R.id.textLittleK5		);
 		mKPA5 =			(TextView	)findViewById(R.id.textKPA5			);
 		mKPB5 =			(TextView	)findViewById(R.id.textKPB5			);
+		mJSA5 =			(TextView	)findViewById(R.id.textJSA5			);
+		mJSB5 =			(TextView	)findViewById(R.id.textJSB5			);
+		mFYA5 =			(TextView	)findViewById(R.id.textFYA5			);
+		mFYB5 =			(TextView	)findViewById(R.id.textFYB5			);
+		mJKA5 =			(TextView	)findViewById(R.id.textJKA5			);
+		mJKB5 =			(TextView	)findViewById(R.id.textJKB5			);
 
 		mD6 =			(TextView	)findViewById(R.id.textD6			);
 		mBigC6 =		(TextView	)findViewById(R.id.textBigC6		);
@@ -186,6 +252,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		mLittleK6 =		(TextView	)findViewById(R.id.textLittleK6		);
 		mKPA6 =			(TextView	)findViewById(R.id.textKPA6			);
 		mKPB6 =			(TextView	)findViewById(R.id.textKPB6			);
+		mJSA6 =			(TextView	)findViewById(R.id.textJSA6			);
+		mJSB6 =			(TextView	)findViewById(R.id.textJSB6			);
+		mFYA6 =			(TextView	)findViewById(R.id.textFYA6			);
+		mFYB6 =			(TextView	)findViewById(R.id.textFYB6			);
+		mJKA6 =			(TextView	)findViewById(R.id.textJKA6			);
+		mJKB6 =			(TextView	)findViewById(R.id.textJKB6			);
 
 		mSolution =		(TextView	)findViewById(R.id.textSolution		);
 
@@ -199,7 +271,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		mCalculate =	(Button		)findViewById(R.id.buttonCalculate	);
         mCalculate.setOnClickListener(this);
 
-        antibodies =	new char[12];
+        antibodies =	new char[18];
 	}
 
 	@Override
@@ -226,7 +298,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 		solutions =	0;
 
-		for (i = 0; i < 12; i++)
+		for (i = 0; i < 18; i++)
 			antibodies[i] =	0;
 
 		if      ( mCheck1.isChecked() &&  mCheck2.isChecked() &&  mCheck3.isChecked() &&  mCheck4.isChecked() &&  mCheck5.isChecked() &&  mCheck6.isChecked())
@@ -250,6 +322,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				CrossOutCouple(	9, mLittleK1, mBigK1	,	1, "k");
 				CrossOutCouple(10, mKPA1	, mKPB1		,	1, "Kpa");
 				CrossOutCouple(11, mKPB1	, mKPA1		,	1, "Kpb");
+				CrossOutCouple(12, mJSA1	, mJSB1		,	1, "Jsa");
+				CrossOutCouple(13, mJSB1	, mJSA1		,	1, "Jsb");
+				CrossOutCouple(14, mFYA1	, mFYB1		,	1, "Fya");
+				CrossOutCouple(15, mFYB1	, mFYA1		,	1, "Fyb");
+				CrossOutCouple(16, mJKA1	, mJKB1		,	1, "Jka");
+				CrossOutCouple(17, mJKB1	, mJKA1		,	1, "Jkb");
 			}
 			if (!mCheck2.isChecked())//Can use this row to cross out
 			{
@@ -265,6 +343,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				CrossOutCouple(	9, mLittleK2, mBigK2	,	2, "k");
 				CrossOutCouple(10, mKPA2	, mKPB2		,	2, "Kpa");
 				CrossOutCouple(11, mKPB2	, mKPA2		,	2, "Kpb");
+				CrossOutCouple(12, mJSA2	, mJSB2		,	2, "Jsa");
+				CrossOutCouple(13, mJSB2	, mJSA2		,	2, "Jsb");
+				CrossOutCouple(14, mFYA2	, mFYB2		,	2, "Fya");
+				CrossOutCouple(15, mFYB2	, mFYA2		,	2, "Fyb");
+				CrossOutCouple(16, mJKA2	, mJKB2		,	2, "Jka");
+				CrossOutCouple(17, mJKB2	, mJKA2		,	2, "Jkb");
 			}
 			if (!mCheck3.isChecked())//Can use this row to cross out
 			{
@@ -280,6 +364,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				CrossOutCouple(	9, mLittleK3, mBigK3	,	3, "k");
 				CrossOutCouple(10, mKPA3	, mKPB3		,	3, "Kpa");
 				CrossOutCouple(11, mKPB3	, mKPA3		,	3, "Kpb");
+				CrossOutCouple(12, mJSA3	, mJSB3		,	3, "Jsa");
+				CrossOutCouple(13, mJSB3	, mJSA3		,	3, "Jsb");
+				CrossOutCouple(14, mFYA3	, mFYB3		,	3, "Fya");
+				CrossOutCouple(15, mFYB3	, mFYA3		,	3, "Fyb");
+				CrossOutCouple(16, mJKA3	, mJKB3		,	3, "Jka");
+				CrossOutCouple(17, mJKB3	, mJKA3		,	3, "Jkb");
 			}
 			if (!mCheck4.isChecked())//Can use this row to cross out
 			{
@@ -295,6 +385,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				CrossOutCouple(	9, mLittleK4, mBigK4	,	4, "k");
 				CrossOutCouple(10, mKPA4	, mKPB4		,	4, "Kpa");
 				CrossOutCouple(11, mKPB4	, mKPA4		,	4, "Kpb");
+				CrossOutCouple(12, mJSA4	, mJSB4		,	4, "Jsa");
+				CrossOutCouple(13, mJSB4	, mJSA4		,	4, "Jsb");
+				CrossOutCouple(14, mFYA4	, mFYB4		,	4, "Fya");
+				CrossOutCouple(15, mFYB4	, mFYA4		,	4, "Fyb");
+				CrossOutCouple(16, mJKA4	, mJKB4		,	4, "Jka");
+				CrossOutCouple(17, mJKB4	, mJKA4		,	4, "Jkb");
 			}
 			if (!mCheck5.isChecked())//Can use this row to cross out
 			{
@@ -310,6 +406,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				CrossOutCouple(	9, mLittleK5, mBigK5	,	5, "k");
 				CrossOutCouple(10, mKPA5	, mKPB5		,	5, "Kpa");
 				CrossOutCouple(11, mKPB5	, mKPA5		,	5, "Kpb");
+				CrossOutCouple(12, mJSA5	, mJSB5		,	5, "Jsa");
+				CrossOutCouple(13, mJSB5	, mJSA5		,	5, "Jsb");
+				CrossOutCouple(14, mFYA5	, mFYB5		,	5, "Fya");
+				CrossOutCouple(15, mFYB5	, mFYA5		,	5, "Fyb");
+				CrossOutCouple(16, mJKA5	, mJKB5		,	5, "Jka");
+				CrossOutCouple(17, mJKB5	, mJKA5		,	5, "Jkb");
 			}
 			if (!mCheck6.isChecked())//Can use this row to cross out
 			{
@@ -325,6 +427,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				CrossOutCouple(	9, mLittleK6, mBigK6	,	6, "k");
 				CrossOutCouple(10, mKPA6	, mKPB6		,	6, "Kpa");
 				CrossOutCouple(11, mKPB6	, mKPA6		,	6, "Kpb");
+				CrossOutCouple(12, mJSA6	, mJSB6		,	6, "Jsa");
+				CrossOutCouple(13, mJSB6	, mJSA6		,	6, "Jsb");
+				CrossOutCouple(14, mFYA6	, mFYB6		,	6, "Fya");
+				CrossOutCouple(15, mFYB6	, mFYA6		,	6, "Fyb");
+				CrossOutCouple(16, mJKA6	, mJKB6		,	6, "Jka");
+				CrossOutCouple(17, mJKB6	, mJKA6		,	6, "Jkb");
 			}
 			Use1ToGetSolutions();
 			Use2ToGetSolutions();
@@ -378,6 +486,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
 			GetSolution( 9, mLittleK1	, "k");
 			GetSolution(10, mKPA1		, "Kpa");
 			GetSolution(11, mKPB1		, "Kpb");
+			GetSolution(12, mJSA1		, "Jsa");
+			GetSolution(13, mJSB1		, "Jsb");
+			GetSolution(14, mFYA1		, "Fya");
+			GetSolution(15, mFYB1		, "Fyb");
+			GetSolution(16, mJKA1		, "Jka");
+			GetSolution(17, mJKB1		, "Jkb");
 		}
 	}
 
@@ -398,6 +512,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
 			GetSolution( 9, mLittleK2	, "k");
 			GetSolution(10, mKPA2		, "Kpa");
 			GetSolution(11, mKPB2		, "Kpb");
+			GetSolution(12, mJSA2		, "Jsa");
+			GetSolution(13, mJSB2		, "Jsb");
+			GetSolution(14, mFYA2		, "Fya");
+			GetSolution(15, mFYB2		, "Fyb");
+			GetSolution(16, mJKA2		, "Jka");
+			GetSolution(17, mJKB2		, "Jkb");
 		}
 	}
 
@@ -418,6 +538,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
 			GetSolution( 9, mLittleK3	, "k");
 			GetSolution(10, mKPA3		, "Kpa");
 			GetSolution(11, mKPB3		, "Kpb");
+			GetSolution(12, mJSA3		, "Jsa");
+			GetSolution(13, mJSB3		, "Jsb");
+			GetSolution(14, mFYA3		, "Fya");
+			GetSolution(15, mFYB3		, "Fyb");
+			GetSolution(16, mJKA3		, "Jka");
+			GetSolution(17, mJKB3		, "Jkb");
 		}
 	}
 
@@ -438,6 +564,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
 			GetSolution( 9, mLittleK4	, "k");
 			GetSolution(10, mKPA4		, "Kpa");
 			GetSolution(11, mKPB4		, "Kpb");
+			GetSolution(12, mJSA4		, "Jsa");
+			GetSolution(13, mJSB4		, "Jsb");
+			GetSolution(14, mFYA4		, "Fya");
+			GetSolution(15, mFYB4		, "Fyb");
+			GetSolution(16, mJKA4		, "Jka");
+			GetSolution(17, mJKB4		, "Jkb");
 		}
 	}
 
@@ -458,6 +590,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
 			GetSolution( 9, mLittleK5	, "k");
 			GetSolution(10, mKPA5		, "Kpa");
 			GetSolution(11, mKPB5		, "Kpb");
+			GetSolution(12, mJSA5		, "Jsa");
+			GetSolution(13, mJSB5		, "Jsb");
+			GetSolution(14, mFYA5		, "Fya");
+			GetSolution(15, mFYB5		, "Fyb");
+			GetSolution(16, mJKA5		, "Jka");
+			GetSolution(17, mJKB5		, "Jkb");
 		}
 	}
 
@@ -478,6 +616,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
 			GetSolution( 9, mLittleK6	, "k");
 			GetSolution(10, mKPA6		, "Kpa");
 			GetSolution(11, mKPB6		, "Kpb");
+			GetSolution(12, mJSA6		, "Jsa");
+			GetSolution(13, mJSB6		, "Jsb");
+			GetSolution(14, mFYA6		, "Fya");
+			GetSolution(15, mFYB6		, "Fyb");
+			GetSolution(16, mJKA6		, "Jka");
+			GetSolution(17, mJKB6		, "Jkb");
 		}
 	}
 
