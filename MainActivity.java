@@ -36,6 +36,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 						mXGA1,
 						mLEA1,
 						mLEB1,
+						mBigS1,
+						mLittleS1,
+						mM1,
+						mN1,
+						mP1_1,
+						mLUA1,
+						mLUB1,
 
 						mD2,
 						mBigC2,
@@ -58,6 +65,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 						mXGA2,
 						mLEA2,
 						mLEB2,
+						mBigS2,
+						mLittleS2,
+						mM2,
+						mN2,
+						mP1_2,
+						mLUA2,
+						mLUB2,
 
 						mD3,
 						mBigC3,
@@ -80,6 +94,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 						mXGA3,
 						mLEA3,
 						mLEB3,
+						mBigS3,
+						mLittleS3,
+						mM3,
+						mN3,
+						mP1_3,
+						mLUA3,
+						mLUB3,
 
 						mD4,
 						mBigC4,
@@ -102,6 +123,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 						mXGA4,
 						mLEA4,
 						mLEB4,
+						mBigS4,
+						mLittleS4,
+						mM4,
+						mN4,
+						mP1_4,
+						mLUA4,
+						mLUB4,
 
 						mD5,
 						mBigC5,
@@ -124,6 +152,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 						mXGA5,
 						mLEA5,
 						mLEB5,
+						mBigS5,
+						mLittleS5,
+						mM5,
+						mN5,
+						mP1_5,
+						mLUA5,
+						mLUB5,
 
 						mD6,
 						mBigC6,
@@ -146,6 +181,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 						mXGA6,
 						mLEA6,
 						mLEB6,
+						mBigS6,
+						mLittleS6,
+						mM6,
+						mN6,
+						mP1_6,
+						mLUA6,
+						mLUB6,
 
 						mSolution;
 
@@ -184,6 +226,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		mXGA1 =			(TextView	)findViewById(R.id.textXGA1			);
 		mLEA1 =			(TextView	)findViewById(R.id.textLEA1			);
 		mLEB1 =			(TextView	)findViewById(R.id.textLEB1			);
+		mBigS1 =		(TextView	)findViewById(R.id.textBigS1		);
+		mLittleS1 =		(TextView	)findViewById(R.id.textLittleS1		);
+		mM1 =			(TextView	)findViewById(R.id.textM1			);
+		mN1 =			(TextView	)findViewById(R.id.textN1			);
+		mP1_1 =			(TextView	)findViewById(R.id.textP1_1			);
+		mLUA1 =			(TextView	)findViewById(R.id.textLUA1			);
+		mLUB1 =			(TextView	)findViewById(R.id.textLUB1			);
 
 		mD2 =			(TextView	)findViewById(R.id.textD2			);
 		mBigC2 =		(TextView	)findViewById(R.id.textBigC2		);
@@ -206,6 +255,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		mXGA2 =			(TextView	)findViewById(R.id.textXGA2			);
 		mLEA2 =			(TextView	)findViewById(R.id.textLEA2			);
 		mLEB2 =			(TextView	)findViewById(R.id.textLEB2			);
+		mBigS2 =		(TextView	)findViewById(R.id.textBigS2		);
+		mLittleS2 =		(TextView	)findViewById(R.id.textLittleS2		);
+		mM2 =			(TextView	)findViewById(R.id.textM2			);
+		mN2 =			(TextView	)findViewById(R.id.textN2			);
+		mP1_2 =			(TextView	)findViewById(R.id.textP1_2			);
+		mLUA2 =			(TextView	)findViewById(R.id.textLUA2			);
+		mLUB2 =			(TextView	)findViewById(R.id.textLUB2			);
 
 		mD3 =			(TextView	)findViewById(R.id.textD3			);
 		mBigC3 =		(TextView	)findViewById(R.id.textBigC3		);
@@ -228,6 +284,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		mXGA3 =			(TextView	)findViewById(R.id.textXGA3			);
 		mLEA3 =			(TextView	)findViewById(R.id.textLEA3			);
 		mLEB3 =			(TextView	)findViewById(R.id.textLEB3			);
+		mBigS3 =		(TextView	)findViewById(R.id.textBigS3		);
+		mLittleS3 =		(TextView	)findViewById(R.id.textLittleS3		);
+		mM3 =			(TextView	)findViewById(R.id.textM3			);
+		mN3 =			(TextView	)findViewById(R.id.textN3			);
+		mP1_3 =			(TextView	)findViewById(R.id.textP1_3			);
+		mLUA3 =			(TextView	)findViewById(R.id.textLUA3			);
+		mLUB3 =			(TextView	)findViewById(R.id.textLUB3			);
 
 		mD4 =			(TextView	)findViewById(R.id.textD4			);
 		mBigC4 =		(TextView	)findViewById(R.id.textBigC4		);
@@ -250,6 +313,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		mXGA4 =			(TextView	)findViewById(R.id.textXGA4			);
 		mLEA4 =			(TextView	)findViewById(R.id.textLEA4			);
 		mLEB4 =			(TextView	)findViewById(R.id.textLEB4			);
+		mBigS4 =		(TextView	)findViewById(R.id.textBigS4		);
+		mLittleS4 =		(TextView	)findViewById(R.id.textLittleS4		);
+		mM4 =			(TextView	)findViewById(R.id.textM4			);
+		mN4 =			(TextView	)findViewById(R.id.textN4			);
+		mP1_4 =			(TextView	)findViewById(R.id.textP1_4			);
+		mLUA4 =			(TextView	)findViewById(R.id.textLUA4			);
+		mLUB4 =			(TextView	)findViewById(R.id.textLUB4			);
 
 		mD5 =			(TextView	)findViewById(R.id.textD5			);
 		mBigC5 =		(TextView	)findViewById(R.id.textBigC5		);
@@ -272,6 +342,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		mXGA5 =			(TextView	)findViewById(R.id.textXGA5			);
 		mLEA5 =			(TextView	)findViewById(R.id.textLEA5			);
 		mLEB5 =			(TextView	)findViewById(R.id.textLEB5			);
+		mBigS5 =		(TextView	)findViewById(R.id.textBigS5		);
+		mLittleS5 =		(TextView	)findViewById(R.id.textLittleS5		);
+		mM5 =			(TextView	)findViewById(R.id.textM5			);
+		mN5 =			(TextView	)findViewById(R.id.textN5			);
+		mP1_5 =			(TextView	)findViewById(R.id.textP1_5			);
+		mLUA5 =			(TextView	)findViewById(R.id.textLUA5			);
+		mLUB5 =			(TextView	)findViewById(R.id.textLUB5			);
 
 		mD6 =			(TextView	)findViewById(R.id.textD6			);
 		mBigC6 =		(TextView	)findViewById(R.id.textBigC6		);
@@ -294,6 +371,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		mXGA6 =			(TextView	)findViewById(R.id.textXGA6			);
 		mLEA6 =			(TextView	)findViewById(R.id.textLEA6			);
 		mLEB6 =			(TextView	)findViewById(R.id.textLEB6			);
+		mBigS6 =		(TextView	)findViewById(R.id.textBigS6		);
+		mLittleS6 =		(TextView	)findViewById(R.id.textLittleS6		);
+		mM6 =			(TextView	)findViewById(R.id.textM6			);
+		mN6 =			(TextView	)findViewById(R.id.textN6			);
+		mP1_6 =			(TextView	)findViewById(R.id.textP1_6			);
+		mLUA6 =			(TextView	)findViewById(R.id.textLUA6			);
+		mLUB6 =			(TextView	)findViewById(R.id.textLUB6			);
 
 		mSolution =		(TextView	)findViewById(R.id.textSolution		);
 
@@ -307,7 +391,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		mCalculate =	(Button		)findViewById(R.id.buttonCalculate	);
         mCalculate.setOnClickListener(this);
 
-        antibodies =	new char[21];
+        antibodies =	new char[28];
 	}
 
 	@Override
@@ -334,7 +418,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 		solutions =	0;
 
-		for (i = 0; i < 21; i++)
+		for (i = 0; i < 28; i++)
 			antibodies[i] =	0;
 
 		if      ( mCheck1.isChecked() &&  mCheck2.isChecked() &&  mCheck3.isChecked() &&  mCheck4.isChecked() &&  mCheck5.isChecked() &&  mCheck6.isChecked())
@@ -367,6 +451,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				CrossOutSingle(18, mXGA1	,				1, "Xga");
 				CrossOutCouple(19, mLEA1	, mLEB1		,	1, "Lea");
 				CrossOutCouple(20, mLEB1	, mLEA1		,	1, "Leb");
+				CrossOutCouple(21, mBigS1	, mLittleS1	,	1, "S");
+				CrossOutCouple(22, mLittleS1, mBigS1	,	1, "s");
+				CrossOutCouple(23, mM1		, mN1		,	1, "M");
+				CrossOutCouple(24, mN1		, mM1		,	1, "N");
+				CrossOutSingle(25, mP1_1	,				1, "P1");
+				CrossOutCouple(26, mLUA1	, mLUB1		,	1, "Lua");
+				CrossOutCouple(27, mLUB1	, mLUA1		,	1, "Lub");
 			}
 			if (!mCheck2.isChecked())//Can use this row to cross out
 			{
@@ -391,6 +482,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				CrossOutSingle(18, mXGA2	,				2, "Xga");
 				CrossOutCouple(19, mLEA2	, mLEB2		,	2, "Lea");
 				CrossOutCouple(20, mLEB2	, mLEA2		,	2, "Leb");
+				CrossOutCouple(21, mBigS2	, mLittleS2	,	2, "S");
+				CrossOutCouple(22, mLittleS2, mBigS2	,	2, "s");
+				CrossOutCouple(23, mM2		, mN2		,	2, "M");
+				CrossOutCouple(24, mN2		, mM2		,	2, "N");
+				CrossOutSingle(25, mP1_2	,				2, "P1");
+				CrossOutCouple(26, mLUA2	, mLUB2		,	2, "Lua");
+				CrossOutCouple(27, mLUB2	, mLUA2		,	2, "Lub");
 			}
 			if (!mCheck3.isChecked())//Can use this row to cross out
 			{
@@ -415,6 +513,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				CrossOutSingle(18, mXGA3	,				3, "Xga");
 				CrossOutCouple(19, mLEA3	, mLEB3		,	3, "Lea");
 				CrossOutCouple(20, mLEB3	, mLEA3		,	3, "Leb");
+				CrossOutCouple(21, mBigS3	, mLittleS3	,	3, "S");
+				CrossOutCouple(22, mLittleS3, mBigS3	,	3, "s");
+				CrossOutCouple(23, mM3		, mN3		,	3, "M");
+				CrossOutCouple(24, mN3		, mM3		,	3, "N");
+				CrossOutSingle(25, mP1_3	,				3, "P1");
+				CrossOutCouple(26, mLUA3	, mLUB3		,	3, "Lua");
+				CrossOutCouple(27, mLUB3	, mLUA3		,	3, "Lub");
 			}
 			if (!mCheck4.isChecked())//Can use this row to cross out
 			{
@@ -439,13 +544,20 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				CrossOutSingle(18, mXGA4	,				4, "Xga");
 				CrossOutCouple(19, mLEA4	, mLEB4		,	4, "Lea");
 				CrossOutCouple(20, mLEB4	, mLEA4		,	4, "Leb");
+				CrossOutCouple(21, mBigS4	, mLittleS4	,	4, "S");
+				CrossOutCouple(22, mLittleS4, mBigS4	,	4, "s");
+				CrossOutCouple(23, mM4		, mN4		,	4, "M");
+				CrossOutCouple(24, mN4		, mM4		,	4, "N");
+				CrossOutSingle(25, mP1_4	,				4, "P1");
+				CrossOutCouple(26, mLUA4	, mLUB4		,	4, "Lua");
+				CrossOutCouple(27, mLUB4	, mLUA4		,	4, "Lub");
 			}
 			if (!mCheck5.isChecked())//Can use this row to cross out
 			{
 				CrossOutSingle(	0, mD5		,				5, "D");
 				CrossOutCouple(	1, mBigC5	, mLittleC5	,	5, "C");
 				CrossOutCouple(	2, mBigE5	, mLittleE5	,	5, "E");
-				CrossOutCouple(	3, mLittleC5, mBigC5	,	4, "c");
+				CrossOutCouple(	3, mLittleC5, mBigC5	,	5, "c");
 				CrossOutCouple(	4, mLittleE5, mBigE5	,	5, "e");
 				CrossOutSingle(	5, mF5		,				5, "f");
 				CrossOutSingle(	6, mCW5		,				5, "Cw");
@@ -463,6 +575,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				CrossOutSingle(18, mXGA5	,				5, "Xga");
 				CrossOutCouple(19, mLEA5	, mLEB5		,	5, "Lea");
 				CrossOutCouple(20, mLEB5	, mLEA5		,	5, "Leb");
+				CrossOutCouple(21, mBigS5	, mLittleS5	,	5, "S");
+				CrossOutCouple(22, mLittleS5, mBigS5	,	5, "s");
+				CrossOutCouple(23, mM5		, mN5		,	5, "M");
+				CrossOutCouple(24, mN5		, mM5		,	5, "N");
+				CrossOutSingle(25, mP1_5	,				5, "P1");
+				CrossOutCouple(26, mLUA5	, mLUB5		,	5, "Lua");
+				CrossOutCouple(27, mLUB5	, mLUA5		,	5, "Lub");
 			}
 			if (!mCheck6.isChecked())//Can use this row to cross out
 			{
@@ -487,6 +606,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				CrossOutSingle(18, mXGA6	,				6, "Xga");
 				CrossOutCouple(19, mLEA6	, mLEB6		,	6, "Lea");
 				CrossOutCouple(20, mLEB6	, mLEA6		,	6, "Leb");
+				CrossOutCouple(21, mBigS6	, mLittleS6	,	6, "S");
+				CrossOutCouple(22, mLittleS6, mBigS6	,	6, "s");
+				CrossOutCouple(23, mM6		, mN6		,	6, "M");
+				CrossOutCouple(24, mN6		, mM6		,	6, "N");
+				CrossOutSingle(25, mP1_6	,				6, "P1");
+				CrossOutCouple(26, mLUA6	, mLUB6		,	6, "Lua");
+				CrossOutCouple(27, mLUB6	, mLUA6		,	6, "Lub");
 			}
 			Use1ToGetSolutions();
 			Use2ToGetSolutions();
@@ -549,6 +675,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 			GetSolution(18, mXGA1		, "Xga");
 			GetSolution(19, mLEA1		, "Lea");
 			GetSolution(20, mLEB1		, "Leb");
+			GetSolution(21, mBigS1		, "S");
+			GetSolution(22, mLittleS1	, "s");
+			GetSolution(23, mM1			, "M");
+			GetSolution(24, mN1			, "N");
+			GetSolution(25, mP1_1		, "P1");
+			GetSolution(26, mLUA1		, "Lua");
+			GetSolution(27, mLUB1		, "Lub");
 		}
 	}
 
@@ -578,6 +711,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 			GetSolution(18, mXGA2		, "Xga");
 			GetSolution(19, mLEA2		, "Lea");
 			GetSolution(20, mLEB2		, "Leb");
+			GetSolution(21, mBigS2		, "S");
+			GetSolution(22, mLittleS2	, "s");
+			GetSolution(23, mM2			, "M");
+			GetSolution(24, mN2			, "N");
+			GetSolution(25, mP1_2		, "P1");
+			GetSolution(26, mLUA2		, "Lua");
+			GetSolution(27, mLUB2		, "Lub");
 		}
 	}
 
@@ -607,6 +747,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 			GetSolution(18, mXGA3		, "Xga");
 			GetSolution(19, mLEA3		, "Lea");
 			GetSolution(20, mLEB3		, "Leb");
+			GetSolution(21, mBigS3		, "S");
+			GetSolution(22, mLittleS3	, "s");
+			GetSolution(23, mM3			, "M");
+			GetSolution(24, mN3			, "N");
+			GetSolution(25, mP1_3		, "P1");
+			GetSolution(26, mLUA3		, "Lua");
+			GetSolution(27, mLUB3		, "Lub");
 		}
 	}
 
@@ -636,6 +783,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 			GetSolution(18, mXGA4		, "Xga");
 			GetSolution(19, mLEA4		, "Lea");
 			GetSolution(20, mLEB4		, "Leb");
+			GetSolution(21, mBigS4		, "S");
+			GetSolution(22, mLittleS4	, "s");
+			GetSolution(23, mM4			, "M");
+			GetSolution(24, mN4			, "N");
+			GetSolution(25, mP1_4		, "P1");
+			GetSolution(26, mLUA4		, "Lua");
+			GetSolution(27, mLUB4		, "Lub");
 		}
 	}
 
@@ -665,6 +819,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 			GetSolution(18, mXGA5		, "Xga");
 			GetSolution(19, mLEA5		, "Lea");
 			GetSolution(20, mLEB5		, "Leb");
+			GetSolution(21, mBigS5		, "S");
+			GetSolution(22, mLittleS5	, "s");
+			GetSolution(23, mM5			, "M");
+			GetSolution(24, mN5			, "N");
+			GetSolution(25, mP1_5		, "P1");
+			GetSolution(26, mLUA5		, "Lua");
+			GetSolution(27, mLUB5		, "Lub");
 		}
 	}
 
@@ -694,6 +855,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 			GetSolution(18, mXGA6		, "Xga");
 			GetSolution(19, mLEA6		, "Lea");
 			GetSolution(20, mLEB6		, "Leb");
+			GetSolution(21, mBigS6		, "S");
+			GetSolution(22, mLittleS6	, "s");
+			GetSolution(23, mM6			, "M");
+			GetSolution(24, mN6			, "N");
+			GetSolution(25, mP1_6		, "P1");
+			GetSolution(26, mLUA6		, "Lua");
+			GetSolution(27, mLUB6		, "Lub");
 		}
 	}
 
