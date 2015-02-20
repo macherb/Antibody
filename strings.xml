@@ -24,7 +24,14 @@
     <string name="Sex_Linked_XGA">Xga</string>
     <string name="Lewis_LEA">Lea</string>
     <string name="Lewis_LEB">Leb</string>
-    <string name="Reactions">Reactions</string>
+    <string name="MNS_BigS">S</string>
+    <string name="MNS_LittleS">s</string>
+    <string name="MNS_M">M</string>
+    <string name="MNS_N">N</string>
+    <string name="P_P1">P1</string>
+    <string name="Lutheran_LUA">Lua</string>
+    <string name="Lutheran_LUB">Lub</string>
+    <string name="Reactions">Reaction</string>
 
     <string name="cell1">1</string>
     <string name="D1">+</string>
@@ -48,6 +55,13 @@
     <string name="XGA1">0</string>
     <string name="LEA1">+</string>
     <string name="LEB1">+</string>
+    <string name="BigS1">0</string>
+    <string name="LittleS1">0</string>
+    <string name="M1">+</string>
+    <string name="N1">0</string>
+    <string name="P1_1">+</string>
+    <string name="LUA1">0</string>
+    <string name="LUB1">0</string>
 
     <string name="cell2">2</string>
     <string name="D2">0</string>
@@ -71,6 +85,13 @@
     <string name="XGA2">+</string>
     <string name="LEA2">0</string>
     <string name="LEB2">0</string>
+    <string name="BigS2">+</string>
+    <string name="LittleS2">+</string>
+    <string name="M2">0</string>
+    <string name="N2">+</string>
+    <string name="P1_2">0</string>
+    <string name="LUA2">+</string>
+    <string name="LUB2">+</string>
 
     <string name="cell3">3</string>
     <string name="D3">+</string>
@@ -94,6 +115,13 @@
     <string name="XGA3">0</string>
     <string name="LEA3">+</string>
     <string name="LEB3">+</string>
+    <string name="BigS3">0</string>
+    <string name="LittleS3">+</string>
+    <string name="M3">0</string>
+    <string name="N3">0</string>
+    <string name="P1_3">0</string>
+    <string name="LUA3">+</string>
+    <string name="LUB3">+</string>
 
     <string name="cell4">4</string>
     <string name="D4">0</string>
@@ -117,6 +145,13 @@
     <string name="XGA4">+</string>
     <string name="LEA4">0</string>
     <string name="LEB4">0</string>
+    <string name="BigS4">+</string>
+    <string name="LittleS4">0</string>
+    <string name="M4">+</string>
+    <string name="N4">+</string>
+    <string name="P1_4">+</string>
+    <string name="LUA4">0</string>
+    <string name="LUB4">0</string>
 
     <string name="cell5">5</string>
     <string name="D5">+</string>
@@ -140,6 +175,13 @@
     <string name="XGA5">0</string>
     <string name="LEA5">+</string>
     <string name="LEB5">0</string>
+    <string name="BigS5">+</string>
+    <string name="LittleS5">+</string>
+    <string name="M5">0</string>
+    <string name="N5">0</string>
+    <string name="P1_5">0</string>
+    <string name="LUA5">+</string>
+    <string name="LUB5">0</string>
 
     <string name="cell6">6</string>
     <string name="D6">0</string>
@@ -163,6 +205,13 @@
     <string name="XGA6">+</string>
     <string name="LEA6">0</string>
     <string name="LEB6">+</string>
+    <string name="BigS6">0</string>
+    <string name="LittleS6">0</string>
+    <string name="M6">+</string>
+    <string name="N6">+</string>
+    <string name="P1_6">+</string>
+    <string name="LUA6">0</string>
+    <string name="LUB6">+</string>
 
     <string name="Calculate">Calculate</string>
 
