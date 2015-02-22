@@ -14,7 +14,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 	private class Antibody {
 		public int		count[];
-		public int		race[][];
+		public int		race[][];//percentages for race
 		public int		most;
 		public String	name[];
 		Antibody()
@@ -517,15 +517,21 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		int	i,
 			j;
 
-		solutions =	0;
+		solutions =				0;
 		antibody.most =			0;
 		for (i = 0; i < 28; i++)
 			antibody.count[i] =	0;
 
 		if      ( mCheck1.isChecked() &&  mCheck2.isChecked() &&  mCheck3.isChecked() &&  mCheck4.isChecked() &&  mCheck5.isChecked() &&  mCheck6.isChecked())
+		{
 			mSolution.setText("Inconclusive");
+			SetAllBlack();
+		}
 		else if (!mCheck1.isChecked() && !mCheck2.isChecked() && !mCheck3.isChecked() && !mCheck4.isChecked() && !mCheck5.isChecked() && !mCheck6.isChecked())
+		{
 			mSolution.setText("Too weak");
+			SetAllBlack();
+		}
 		else
 		{
 			mSolution.setText("");
@@ -741,13 +747,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				{
 					if (
 						(antibody.count[i] == antibody.most - j)
-						&&
-						(antibody.count[i] <   255)
+//						&&
+//						(antibody.count[i] <   255)
 					   )
 					{
 						mSolution.setText(	mSolution.getText() + 
 											(solutions > 0 ? ", " : (antibody.most - j) + ": ") + 
-											antibody.name[i] + "(" + antibody.race[i][0] + ", " + antibody.race[i][1] + ")"
+											antibody.name[i] + "(" + antibody.race[i][0] + ", " + antibody.race[i][1] + ")"//display the percentages for race
 										 );
 						solutions++;
 					}
@@ -757,29 +763,210 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		}
 	}
 
-	void CrossOutSingle(int index, TextView Antibody, int cell, String letter)
+	void SetAllBlack() {
+		mD1.setTextColor(0xFF000000);
+		mBigC1.setTextColor(0xFF000000);
+		mBigE1.setTextColor(0xFF000000);
+		mLittleC1.setTextColor(0xFF000000);
+		mLittleE1.setTextColor(0xFF000000);
+		mF1.setTextColor(0xFF000000);
+		mCW1.setTextColor(0xFF000000);
+		mV1.setTextColor(0xFF000000);
+		mBigK1.setTextColor(0xFF000000);
+		mLittleK1.setTextColor(0xFF000000);
+		mKPA1.setTextColor(0xFF000000);
+		mKPB1.setTextColor(0xFF000000);
+		mJSA1.setTextColor(0xFF000000);
+		mJSB1.setTextColor(0xFF000000);
+		mFYA1.setTextColor(0xFF000000);
+		mFYB1.setTextColor(0xFF000000);
+		mJKA1.setTextColor(0xFF000000);
+		mJKB1.setTextColor(0xFF000000);
+		mXGA1.setTextColor(0xFF000000);
+		mLEA1.setTextColor(0xFF000000);
+		mLEB1.setTextColor(0xFF000000);
+		mBigS1.setTextColor(0xFF000000);
+		mLittleS1.setTextColor(0xFF000000);
+		mM1.setTextColor(0xFF000000);
+		mN1.setTextColor(0xFF000000);
+		mP1_1.setTextColor(0xFF000000);
+		mLUA1.setTextColor(0xFF000000);
+		mLUB1.setTextColor(0xFF000000);
+
+		mD2.setTextColor(0xFF000000);
+		mBigC2.setTextColor(0xFF000000);
+		mBigE2.setTextColor(0xFF000000);
+		mLittleC2.setTextColor(0xFF000000);
+		mLittleE2.setTextColor(0xFF000000);
+		mF2.setTextColor(0xFF000000);
+		mCW2.setTextColor(0xFF000000);
+		mV2.setTextColor(0xFF000000);
+		mBigK2.setTextColor(0xFF000000);
+		mLittleK2.setTextColor(0xFF000000);
+		mKPA2.setTextColor(0xFF000000);
+		mKPB2.setTextColor(0xFF000000);
+		mJSA2.setTextColor(0xFF000000);
+		mJSB2.setTextColor(0xFF000000);
+		mFYA2.setTextColor(0xFF000000);
+		mFYB2.setTextColor(0xFF000000);
+		mJKA2.setTextColor(0xFF000000);
+		mJKB2.setTextColor(0xFF000000);
+		mXGA2.setTextColor(0xFF000000);
+		mLEA2.setTextColor(0xFF000000);
+		mLEB2.setTextColor(0xFF000000);
+		mBigS2.setTextColor(0xFF000000);
+		mLittleS2.setTextColor(0xFF000000);
+		mM2.setTextColor(0xFF000000);
+		mN2.setTextColor(0xFF000000);
+		mP1_2.setTextColor(0xFF000000);
+		mLUA2.setTextColor(0xFF000000);
+		mLUB2.setTextColor(0xFF000000);
+
+		mD3.setTextColor(0xFF000000);
+		mBigC3.setTextColor(0xFF000000);
+		mBigE3.setTextColor(0xFF000000);
+		mLittleC3.setTextColor(0xFF000000);
+		mLittleE3.setTextColor(0xFF000000);
+		mF3.setTextColor(0xFF000000);
+		mCW3.setTextColor(0xFF000000);
+		mV3.setTextColor(0xFF000000);
+		mBigK3.setTextColor(0xFF000000);
+		mLittleK3.setTextColor(0xFF000000);
+		mKPA3.setTextColor(0xFF000000);
+		mKPB3.setTextColor(0xFF000000);
+		mJSA3.setTextColor(0xFF000000);
+		mJSB3.setTextColor(0xFF000000);
+		mFYA3.setTextColor(0xFF000000);
+		mFYB3.setTextColor(0xFF000000);
+		mJKA3.setTextColor(0xFF000000);
+		mJKB3.setTextColor(0xFF000000);
+		mXGA3.setTextColor(0xFF000000);
+		mLEA3.setTextColor(0xFF000000);
+		mLEB3.setTextColor(0xFF000000);
+		mBigS3.setTextColor(0xFF000000);
+		mLittleS3.setTextColor(0xFF000000);
+		mM3.setTextColor(0xFF000000);
+		mN3.setTextColor(0xFF000000);
+		mP1_3.setTextColor(0xFF000000);
+		mLUA3.setTextColor(0xFF000000);
+		mLUB3.setTextColor(0xFF000000);
+
+		mD4.setTextColor(0xFF000000);
+		mBigC4.setTextColor(0xFF000000);
+		mBigE4.setTextColor(0xFF000000);
+		mLittleC4.setTextColor(0xFF000000);
+		mLittleE4.setTextColor(0xFF000000);
+		mF4.setTextColor(0xFF000000);
+		mCW4.setTextColor(0xFF000000);
+		mV4.setTextColor(0xFF000000);
+		mBigK4.setTextColor(0xFF000000);
+		mLittleK4.setTextColor(0xFF000000);
+		mKPA4.setTextColor(0xFF000000);
+		mKPB4.setTextColor(0xFF000000);
+		mJSA4.setTextColor(0xFF000000);
+		mJSB4.setTextColor(0xFF000000);
+		mFYA4.setTextColor(0xFF000000);
+		mFYB4.setTextColor(0xFF000000);
+		mJKA4.setTextColor(0xFF000000);
+		mJKB4.setTextColor(0xFF000000);
+		mXGA4.setTextColor(0xFF000000);
+		mLEA4.setTextColor(0xFF000000);
+		mLEB4.setTextColor(0xFF000000);
+		mBigS4.setTextColor(0xFF000000);
+		mLittleS4.setTextColor(0xFF000000);
+		mM4.setTextColor(0xFF000000);
+		mN4.setTextColor(0xFF000000);
+		mP1_4.setTextColor(0xFF000000);
+		mLUA4.setTextColor(0xFF000000);
+		mLUB4.setTextColor(0xFF000000);
+
+		mD5.setTextColor(0xFF000000);
+		mBigC5.setTextColor(0xFF000000);
+		mBigE5.setTextColor(0xFF000000);
+		mLittleC5.setTextColor(0xFF000000);
+		mLittleE5.setTextColor(0xFF000000);
+		mF5.setTextColor(0xFF000000);
+		mCW5.setTextColor(0xFF000000);
+		mV5.setTextColor(0xFF000000);
+		mBigK5.setTextColor(0xFF000000);
+		mLittleK5.setTextColor(0xFF000000);
+		mKPA5.setTextColor(0xFF000000);
+		mKPB5.setTextColor(0xFF000000);
+		mJSA5.setTextColor(0xFF000000);
+		mJSB5.setTextColor(0xFF000000);
+		mFYA5.setTextColor(0xFF000000);
+		mFYB5.setTextColor(0xFF000000);
+		mJKA5.setTextColor(0xFF000000);
+		mJKB5.setTextColor(0xFF000000);
+		mXGA5.setTextColor(0xFF000000);
+		mLEA5.setTextColor(0xFF000000);
+		mLEB5.setTextColor(0xFF000000);
+		mBigS5.setTextColor(0xFF000000);
+		mLittleS5.setTextColor(0xFF000000);
+		mM5.setTextColor(0xFF000000);
+		mN5.setTextColor(0xFF000000);
+		mP1_5.setTextColor(0xFF000000);
+		mLUA5.setTextColor(0xFF000000);
+		mLUB5.setTextColor(0xFF000000);
+
+		mD6.setTextColor(0xFF000000);
+		mBigC6.setTextColor(0xFF000000);
+		mBigE6.setTextColor(0xFF000000);
+		mLittleC6.setTextColor(0xFF000000);
+		mLittleE6.setTextColor(0xFF000000);
+		mF6.setTextColor(0xFF000000);
+		mCW6.setTextColor(0xFF000000);
+		mV6.setTextColor(0xFF000000);
+		mBigK6.setTextColor(0xFF000000);
+		mLittleK6.setTextColor(0xFF000000);
+		mKPA6.setTextColor(0xFF000000);
+		mKPB6.setTextColor(0xFF000000);
+		mJSA6.setTextColor(0xFF000000);
+		mJSB6.setTextColor(0xFF000000);
+		mFYA6.setTextColor(0xFF000000);
+		mFYB6.setTextColor(0xFF000000);
+		mJKA6.setTextColor(0xFF000000);
+		mJKB6.setTextColor(0xFF000000);
+		mXGA6.setTextColor(0xFF000000);
+		mLEA6.setTextColor(0xFF000000);
+		mLEB6.setTextColor(0xFF000000);
+		mBigS6.setTextColor(0xFF000000);
+		mLittleS6.setTextColor(0xFF000000);
+		mM6.setTextColor(0xFF000000);
+		mN6.setTextColor(0xFF000000);
+		mP1_6.setTextColor(0xFF000000);
+		mLUA6.setTextColor(0xFF000000);
+		mLUB6.setTextColor(0xFF000000);
+	}
+
+	void CrossOutSingle(int index, TextView Antibody1, int cell, String letter)
 	{
-		if (
-			(antibody.count[index] < 255)
-			&&
-			Antibody.getText().equals("+")
-		   )
+		if (Antibody1.getText().equals("+"))
 		{
-			Log.d("Antibody", "Using " + cell + " to cross out " + letter);
-			antibody.count[index] =	255;
+			Antibody1.setTextColor(0xFFFF0000);
+			if (antibody.count[index] < 255)
+			{
+				Log.d("Antibody", "Using " + cell + " to cross out " + letter);
+				antibody.count[index] =	255;
+			}
 		}
 	}
 
 	void CrossOutCouple(int index, TextView Big, TextView Little, int cell, String letter)
 	{
-		if (
-			(antibody.count[index] < 255)
-			&&
-			(Big.getText().equals("+") && Little.getText().equals("0"))
-		   )
+		if (Big.getText().equals("+"))
 		{
-			Log.d("Antibody", "Using " + cell + " to cross out " + letter);
-			antibody.count[index] =	255;
+			if (Little.getText().equals("0"))
+			{
+				Big.setTextColor(0xFFFF0000);
+				if (antibody.count[index] < 255)
+				{
+					Log.d("Antibody", "Using " + cell + " to cross out " + letter);
+					antibody.count[index] =	255;
+				}
+			}
+			else
+				Big.setTextColor(0xFF000000);
 		}
 	}
 
@@ -1001,16 +1188,18 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 	void GetSolution(int index, TextView antibody1, String letter)
 	{
-		if (
-			(antibody.count[index] != 255)
-			&&
-			antibody1.getText().equals("+")
-		   )
+		if (antibody1.getText().equals("+"))
 		{
-/*			mSolution.setText(	mSolution.getText() + 
-								(solutions > 0 ? ", " + letter : letter)
-							 );
-*/			antibody.count[index]++;//solutions++;
+			if (antibody.count[index] != 255)
+			{
+/*				mSolution.setText(	mSolution.getText() + 
+									(solutions > 0 ? ", " + letter : letter)
+							 	 );
+*/				antibody1.setTextColor(0xFF00FF00);
+				antibody.count[index]++;//solutions++;
+			}
+			else
+				antibody1.setTextColor(0xFF000000);
 		}
 	}
 }
