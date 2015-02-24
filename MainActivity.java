@@ -10,6 +10,11 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
+/**
+ * Decide which antibodies are solutions
+ * 
+ * @author Bobby Macher
+ */
 public class MainActivity extends Activity implements View.OnClickListener {
 
 	private Antibody	antibody;
@@ -551,8 +556,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		}
 		else
 		{
-			mSolution.setText("");
-			if (!mCheck1.isChecked())//Can use this row to cross out
+			mSolution.setText("");														//clear the solution text
+			if (!mCheck1.isChecked())													//Can use this row to cross out
 			{
 				CrossOutSingle(	0, mD1		, 				1, antibody.GetName( 0));
 				CrossOutCouple(	1, mBigC1	, mLittleC1	,	1, antibody.GetName( 1));
@@ -583,7 +588,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				CrossOutCouple(26, mLUA1	, mLUB1		,	1, antibody.GetName(26));
 				CrossOutCouple(27, mLUB1	, mLUA1		,	1, antibody.GetName(27));
 			}
-			if (!mCheck2.isChecked())//Can use this row to cross out
+			if (!mCheck2.isChecked())													//Can use this row to cross out
 			{
 				CrossOutSingle(	0, mD2		, 				2, antibody.GetName( 0));
 				CrossOutCouple(	1, mBigC2	, mLittleC2	,	2, antibody.GetName( 1));
@@ -614,7 +619,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				CrossOutCouple(26, mLUA2	, mLUB2		,	2, antibody.GetName(26));
 				CrossOutCouple(27, mLUB2	, mLUA2		,	2, antibody.GetName(27));
 			}
-			if (!mCheck3.isChecked())//Can use this row to cross out
+			if (!mCheck3.isChecked())													//Can use this row to cross out
 			{
 				CrossOutSingle(	0, mD3		,				3, antibody.GetName( 0));
 				CrossOutCouple(	1, mBigC3	, mLittleC3	,	3, antibody.GetName( 1));
@@ -645,7 +650,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				CrossOutCouple(26, mLUA3	, mLUB3		,	3, antibody.GetName(26));
 				CrossOutCouple(27, mLUB3	, mLUA3		,	3, antibody.GetName(27));
 			}
-			if (!mCheck4.isChecked())//Can use this row to cross out
+			if (!mCheck4.isChecked())													//Can use this row to cross out
 			{
 				CrossOutSingle(	0, mD4		,				4, antibody.GetName( 0));
 				CrossOutCouple(	1, mBigC4	, mLittleC4	,	4, antibody.GetName( 1));
@@ -676,7 +681,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				CrossOutCouple(26, mLUA4	, mLUB4		,	4, antibody.GetName(26));
 				CrossOutCouple(27, mLUB4	, mLUA4		,	4, antibody.GetName(27));
 			}
-			if (!mCheck5.isChecked())//Can use this row to cross out
+			if (!mCheck5.isChecked())													//Can use this row to cross out
 			{
 				CrossOutSingle(	0, mD5		,				5, antibody.GetName( 0));
 				CrossOutCouple(	1, mBigC5	, mLittleC5	,	5, antibody.GetName( 1));
@@ -707,7 +712,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				CrossOutCouple(26, mLUA5	, mLUB5		,	5, antibody.GetName(26));
 				CrossOutCouple(27, mLUB5	, mLUA5		,	5, antibody.GetName(27));
 			}
-			if (!mCheck6.isChecked())//Can use this row to cross out
+			if (!mCheck6.isChecked())													//Can use this row to cross out
 			{
 				CrossOutSingle(	0, mD6		,				6, antibody.GetName( 0));
 				CrossOutCouple(	1, mBigC6	, mLittleC6	,	6, antibody.GetName( 1));
@@ -738,7 +743,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				CrossOutCouple(26, mLUA6	, mLUB6		,	6, antibody.GetName(26));
 				CrossOutCouple(27, mLUB6	, mLUA6		,	6, antibody.GetName(27));
 			}
-			if (!mCheck7.isChecked())//Can use this row to cross out
+			if (!mCheck7.isChecked())													//Can use this row to cross out
 			{
 				CrossOutSingle(	0, mD7		,				7, antibody.GetName( 0));
 				CrossOutCouple(	1, mBigC7	, mLittleC7	,	7, antibody.GetName( 1));
@@ -769,7 +774,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				CrossOutCouple(26, mLUA7	, mLUB7		,	7, antibody.GetName(26));
 				CrossOutCouple(27, mLUB7	, mLUA7		,	7, antibody.GetName(27));
 			}
-			if (!mCheck8.isChecked())//Can use this row to cross out
+			if (!mCheck8.isChecked())													//Can use this row to cross out
 			{
 				CrossOutSingle(	0, mD8		,				8, antibody.GetName( 0));
 				CrossOutCouple(	1, mBigC8	, mLittleC8	,	8, antibody.GetName( 1));
@@ -797,7 +802,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				CrossOutCouple(23, mM8		, mN8		,	8, antibody.GetName(23));
 				CrossOutCouple(24, mN8		, mM8		,	8, antibody.GetName(24));
 				CrossOutSingle(25, mP1_8	,				8, antibody.GetName(25));
-				CrossOutCouple(26, mLUA8	, mLUB8		,	7, antibody.GetName(26));
+				CrossOutCouple(26, mLUA8	, mLUB8		,	8, antibody.GetName(26));
 				CrossOutCouple(27, mLUB8	, mLUA8		,	8, antibody.GetName(27));
 			}
 			Use1ToGetSolutions();
@@ -811,13 +816,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 			for (i = 0; i < Antibody.max; i++)
 			{
 				if (
-					(antibody.GetCount(i) > 0)
-					&&
-					(antibody.NotCrossedOut(i))
+					(antibody.GetCount(i) > 0)	//if this is a solution
+					&&							//and
+					(antibody.NotCrossedOut(i))	//it hasn't been crossed out
 				   )
 				{
 					Log.d("Antibody", "At " + i + "(" + antibody.GetName(i) + ") there is " + antibody.GetCount(i) + "");
-					antibody.SetNewMost(i);
+					antibody.SetNewMost(i);		//it might be the new most
 				}
 			}
 			for (j = 0; j < antibody.GetMost(); j++)
@@ -833,254 +838,265 @@ public class MainActivity extends Activity implements View.OnClickListener {
 						antibody.IncrementSolutions();
 					}
 				}
-				if (antibody.GetSolutions() > 0)
-					mSolution.setText(	mSolution.getText() + "\n");
+				if (antibody.GetSolutions() > 0)	//if there is at least one solution for this number of solutions
+					mSolution.setText(mSolution.getText() + "\n");
 			}
-			if (antibody.GetMost() == 0)
+			if (antibody.GetMost() == 0)			//if there are not any solutions
 				mSolution.setText("There are no solutions");
 		}
 	}
 
+	/**
+	 * Set the color of every antibody to black
+	 */
 	void SetAllBlack() {
-		mD1.setTextColor(0xFF000000);
-		mBigC1.setTextColor(0xFF000000);
-		mBigE1.setTextColor(0xFF000000);
-		mLittleC1.setTextColor(0xFF000000);
-		mLittleE1.setTextColor(0xFF000000);
-		mF1.setTextColor(0xFF000000);
-		mCW1.setTextColor(0xFF000000);
-		mV1.setTextColor(0xFF000000);
-		mBigK1.setTextColor(0xFF000000);
-		mLittleK1.setTextColor(0xFF000000);
-		mKPA1.setTextColor(0xFF000000);
-		mKPB1.setTextColor(0xFF000000);
-		mJSA1.setTextColor(0xFF000000);
-		mJSB1.setTextColor(0xFF000000);
-		mFYA1.setTextColor(0xFF000000);
-		mFYB1.setTextColor(0xFF000000);
-		mJKA1.setTextColor(0xFF000000);
-		mJKB1.setTextColor(0xFF000000);
-		mXGA1.setTextColor(0xFF000000);
-		mLEA1.setTextColor(0xFF000000);
-		mLEB1.setTextColor(0xFF000000);
-		mBigS1.setTextColor(0xFF000000);
-		mLittleS1.setTextColor(0xFF000000);
-		mM1.setTextColor(0xFF000000);
-		mN1.setTextColor(0xFF000000);
-		mP1_1.setTextColor(0xFF000000);
-		mLUA1.setTextColor(0xFF000000);
-		mLUB1.setTextColor(0xFF000000);
+		mD1.setTextColor(getResources().getColor(R.color.black));
+		mBigC1.setTextColor(getResources().getColor(R.color.black));
+		mBigE1.setTextColor(getResources().getColor(R.color.black));
+		mLittleC1.setTextColor(getResources().getColor(R.color.black));
+		mLittleE1.setTextColor(getResources().getColor(R.color.black));
+		mF1.setTextColor(getResources().getColor(R.color.black));
+		mCW1.setTextColor(getResources().getColor(R.color.black));
+		mV1.setTextColor(getResources().getColor(R.color.black));
+		mBigK1.setTextColor(getResources().getColor(R.color.black));
+		mLittleK1.setTextColor(getResources().getColor(R.color.black));
+		mKPA1.setTextColor(getResources().getColor(R.color.black));
+		mKPB1.setTextColor(getResources().getColor(R.color.black));
+		mJSA1.setTextColor(getResources().getColor(R.color.black));
+		mJSB1.setTextColor(getResources().getColor(R.color.black));
+		mFYA1.setTextColor(getResources().getColor(R.color.black));
+		mFYB1.setTextColor(getResources().getColor(R.color.black));
+		mJKA1.setTextColor(getResources().getColor(R.color.black));
+		mJKB1.setTextColor(getResources().getColor(R.color.black));
+		mXGA1.setTextColor(getResources().getColor(R.color.black));
+		mLEA1.setTextColor(getResources().getColor(R.color.black));
+		mLEB1.setTextColor(getResources().getColor(R.color.black));
+		mBigS1.setTextColor(getResources().getColor(R.color.black));
+		mLittleS1.setTextColor(getResources().getColor(R.color.black));
+		mM1.setTextColor(getResources().getColor(R.color.black));
+		mN1.setTextColor(getResources().getColor(R.color.black));
+		mP1_1.setTextColor(getResources().getColor(R.color.black));
+		mLUA1.setTextColor(getResources().getColor(R.color.black));
+		mLUB1.setTextColor(getResources().getColor(R.color.black));
 
-		mD2.setTextColor(0xFF000000);
-		mBigC2.setTextColor(0xFF000000);
-		mBigE2.setTextColor(0xFF000000);
-		mLittleC2.setTextColor(0xFF000000);
-		mLittleE2.setTextColor(0xFF000000);
-		mF2.setTextColor(0xFF000000);
-		mCW2.setTextColor(0xFF000000);
-		mV2.setTextColor(0xFF000000);
-		mBigK2.setTextColor(0xFF000000);
-		mLittleK2.setTextColor(0xFF000000);
-		mKPA2.setTextColor(0xFF000000);
-		mKPB2.setTextColor(0xFF000000);
-		mJSA2.setTextColor(0xFF000000);
-		mJSB2.setTextColor(0xFF000000);
-		mFYA2.setTextColor(0xFF000000);
-		mFYB2.setTextColor(0xFF000000);
-		mJKA2.setTextColor(0xFF000000);
-		mJKB2.setTextColor(0xFF000000);
-		mXGA2.setTextColor(0xFF000000);
-		mLEA2.setTextColor(0xFF000000);
-		mLEB2.setTextColor(0xFF000000);
-		mBigS2.setTextColor(0xFF000000);
-		mLittleS2.setTextColor(0xFF000000);
-		mM2.setTextColor(0xFF000000);
-		mN2.setTextColor(0xFF000000);
-		mP1_2.setTextColor(0xFF000000);
-		mLUA2.setTextColor(0xFF000000);
-		mLUB2.setTextColor(0xFF000000);
+		mD2.setTextColor(getResources().getColor(R.color.black));
+		mBigC2.setTextColor(getResources().getColor(R.color.black));
+		mBigE2.setTextColor(getResources().getColor(R.color.black));
+		mLittleC2.setTextColor(getResources().getColor(R.color.black));
+		mLittleE2.setTextColor(getResources().getColor(R.color.black));
+		mF2.setTextColor(getResources().getColor(R.color.black));
+		mCW2.setTextColor(getResources().getColor(R.color.black));
+		mV2.setTextColor(getResources().getColor(R.color.black));
+		mBigK2.setTextColor(getResources().getColor(R.color.black));
+		mLittleK2.setTextColor(getResources().getColor(R.color.black));
+		mKPA2.setTextColor(getResources().getColor(R.color.black));
+		mKPB2.setTextColor(getResources().getColor(R.color.black));
+		mJSA2.setTextColor(getResources().getColor(R.color.black));
+		mJSB2.setTextColor(getResources().getColor(R.color.black));
+		mFYA2.setTextColor(getResources().getColor(R.color.black));
+		mFYB2.setTextColor(getResources().getColor(R.color.black));
+		mJKA2.setTextColor(getResources().getColor(R.color.black));
+		mJKB2.setTextColor(getResources().getColor(R.color.black));
+		mXGA2.setTextColor(getResources().getColor(R.color.black));
+		mLEA2.setTextColor(getResources().getColor(R.color.black));
+		mLEB2.setTextColor(getResources().getColor(R.color.black));
+		mBigS2.setTextColor(getResources().getColor(R.color.black));
+		mLittleS2.setTextColor(getResources().getColor(R.color.black));
+		mM2.setTextColor(getResources().getColor(R.color.black));
+		mN2.setTextColor(getResources().getColor(R.color.black));
+		mP1_2.setTextColor(getResources().getColor(R.color.black));
+		mLUA2.setTextColor(getResources().getColor(R.color.black));
+		mLUB2.setTextColor(getResources().getColor(R.color.black));
 
-		mD3.setTextColor(0xFF000000);
-		mBigC3.setTextColor(0xFF000000);
-		mBigE3.setTextColor(0xFF000000);
-		mLittleC3.setTextColor(0xFF000000);
-		mLittleE3.setTextColor(0xFF000000);
-		mF3.setTextColor(0xFF000000);
-		mCW3.setTextColor(0xFF000000);
-		mV3.setTextColor(0xFF000000);
-		mBigK3.setTextColor(0xFF000000);
-		mLittleK3.setTextColor(0xFF000000);
-		mKPA3.setTextColor(0xFF000000);
-		mKPB3.setTextColor(0xFF000000);
-		mJSA3.setTextColor(0xFF000000);
-		mJSB3.setTextColor(0xFF000000);
-		mFYA3.setTextColor(0xFF000000);
-		mFYB3.setTextColor(0xFF000000);
-		mJKA3.setTextColor(0xFF000000);
-		mJKB3.setTextColor(0xFF000000);
-		mXGA3.setTextColor(0xFF000000);
-		mLEA3.setTextColor(0xFF000000);
-		mLEB3.setTextColor(0xFF000000);
-		mBigS3.setTextColor(0xFF000000);
-		mLittleS3.setTextColor(0xFF000000);
-		mM3.setTextColor(0xFF000000);
-		mN3.setTextColor(0xFF000000);
-		mP1_3.setTextColor(0xFF000000);
-		mLUA3.setTextColor(0xFF000000);
-		mLUB3.setTextColor(0xFF000000);
+		mD3.setTextColor(getResources().getColor(R.color.black));
+		mBigC3.setTextColor(getResources().getColor(R.color.black));
+		mBigE3.setTextColor(getResources().getColor(R.color.black));
+		mLittleC3.setTextColor(getResources().getColor(R.color.black));
+		mLittleE3.setTextColor(getResources().getColor(R.color.black));
+		mF3.setTextColor(getResources().getColor(R.color.black));
+		mCW3.setTextColor(getResources().getColor(R.color.black));
+		mV3.setTextColor(getResources().getColor(R.color.black));
+		mBigK3.setTextColor(getResources().getColor(R.color.black));
+		mLittleK3.setTextColor(getResources().getColor(R.color.black));
+		mKPA3.setTextColor(getResources().getColor(R.color.black));
+		mKPB3.setTextColor(getResources().getColor(R.color.black));
+		mJSA3.setTextColor(getResources().getColor(R.color.black));
+		mJSB3.setTextColor(getResources().getColor(R.color.black));
+		mFYA3.setTextColor(getResources().getColor(R.color.black));
+		mFYB3.setTextColor(getResources().getColor(R.color.black));
+		mJKA3.setTextColor(getResources().getColor(R.color.black));
+		mJKB3.setTextColor(getResources().getColor(R.color.black));
+		mXGA3.setTextColor(getResources().getColor(R.color.black));
+		mLEA3.setTextColor(getResources().getColor(R.color.black));
+		mLEB3.setTextColor(getResources().getColor(R.color.black));
+		mBigS3.setTextColor(getResources().getColor(R.color.black));
+		mLittleS3.setTextColor(getResources().getColor(R.color.black));
+		mM3.setTextColor(getResources().getColor(R.color.black));
+		mN3.setTextColor(getResources().getColor(R.color.black));
+		mP1_3.setTextColor(getResources().getColor(R.color.black));
+		mLUA3.setTextColor(getResources().getColor(R.color.black));
+		mLUB3.setTextColor(getResources().getColor(R.color.black));
 
-		mD4.setTextColor(0xFF000000);
-		mBigC4.setTextColor(0xFF000000);
-		mBigE4.setTextColor(0xFF000000);
-		mLittleC4.setTextColor(0xFF000000);
-		mLittleE4.setTextColor(0xFF000000);
-		mF4.setTextColor(0xFF000000);
-		mCW4.setTextColor(0xFF000000);
-		mV4.setTextColor(0xFF000000);
-		mBigK4.setTextColor(0xFF000000);
-		mLittleK4.setTextColor(0xFF000000);
-		mKPA4.setTextColor(0xFF000000);
-		mKPB4.setTextColor(0xFF000000);
-		mJSA4.setTextColor(0xFF000000);
-		mJSB4.setTextColor(0xFF000000);
-		mFYA4.setTextColor(0xFF000000);
-		mFYB4.setTextColor(0xFF000000);
-		mJKA4.setTextColor(0xFF000000);
-		mJKB4.setTextColor(0xFF000000);
-		mXGA4.setTextColor(0xFF000000);
-		mLEA4.setTextColor(0xFF000000);
-		mLEB4.setTextColor(0xFF000000);
-		mBigS4.setTextColor(0xFF000000);
-		mLittleS4.setTextColor(0xFF000000);
-		mM4.setTextColor(0xFF000000);
-		mN4.setTextColor(0xFF000000);
-		mP1_4.setTextColor(0xFF000000);
-		mLUA4.setTextColor(0xFF000000);
-		mLUB4.setTextColor(0xFF000000);
+		mD4.setTextColor(getResources().getColor(R.color.black));
+		mBigC4.setTextColor(getResources().getColor(R.color.black));
+		mBigE4.setTextColor(getResources().getColor(R.color.black));
+		mLittleC4.setTextColor(getResources().getColor(R.color.black));
+		mLittleE4.setTextColor(getResources().getColor(R.color.black));
+		mF4.setTextColor(getResources().getColor(R.color.black));
+		mCW4.setTextColor(getResources().getColor(R.color.black));
+		mV4.setTextColor(getResources().getColor(R.color.black));
+		mBigK4.setTextColor(getResources().getColor(R.color.black));
+		mLittleK4.setTextColor(getResources().getColor(R.color.black));
+		mKPA4.setTextColor(getResources().getColor(R.color.black));
+		mKPB4.setTextColor(getResources().getColor(R.color.black));
+		mJSA4.setTextColor(getResources().getColor(R.color.black));
+		mJSB4.setTextColor(getResources().getColor(R.color.black));
+		mFYA4.setTextColor(getResources().getColor(R.color.black));
+		mFYB4.setTextColor(getResources().getColor(R.color.black));
+		mJKA4.setTextColor(getResources().getColor(R.color.black));
+		mJKB4.setTextColor(getResources().getColor(R.color.black));
+		mXGA4.setTextColor(getResources().getColor(R.color.black));
+		mLEA4.setTextColor(getResources().getColor(R.color.black));
+		mLEB4.setTextColor(getResources().getColor(R.color.black));
+		mBigS4.setTextColor(getResources().getColor(R.color.black));
+		mLittleS4.setTextColor(getResources().getColor(R.color.black));
+		mM4.setTextColor(getResources().getColor(R.color.black));
+		mN4.setTextColor(getResources().getColor(R.color.black));
+		mP1_4.setTextColor(getResources().getColor(R.color.black));
+		mLUA4.setTextColor(getResources().getColor(R.color.black));
+		mLUB4.setTextColor(getResources().getColor(R.color.black));
 
-		mD5.setTextColor(0xFF000000);
-		mBigC5.setTextColor(0xFF000000);
-		mBigE5.setTextColor(0xFF000000);
-		mLittleC5.setTextColor(0xFF000000);
-		mLittleE5.setTextColor(0xFF000000);
-		mF5.setTextColor(0xFF000000);
-		mCW5.setTextColor(0xFF000000);
-		mV5.setTextColor(0xFF000000);
-		mBigK5.setTextColor(0xFF000000);
-		mLittleK5.setTextColor(0xFF000000);
-		mKPA5.setTextColor(0xFF000000);
-		mKPB5.setTextColor(0xFF000000);
-		mJSA5.setTextColor(0xFF000000);
-		mJSB5.setTextColor(0xFF000000);
-		mFYA5.setTextColor(0xFF000000);
-		mFYB5.setTextColor(0xFF000000);
-		mJKA5.setTextColor(0xFF000000);
-		mJKB5.setTextColor(0xFF000000);
-		mXGA5.setTextColor(0xFF000000);
-		mLEA5.setTextColor(0xFF000000);
-		mLEB5.setTextColor(0xFF000000);
-		mBigS5.setTextColor(0xFF000000);
-		mLittleS5.setTextColor(0xFF000000);
-		mM5.setTextColor(0xFF000000);
-		mN5.setTextColor(0xFF000000);
-		mP1_5.setTextColor(0xFF000000);
-		mLUA5.setTextColor(0xFF000000);
-		mLUB5.setTextColor(0xFF000000);
+		mD5.setTextColor(getResources().getColor(R.color.black));
+		mBigC5.setTextColor(getResources().getColor(R.color.black));
+		mBigE5.setTextColor(getResources().getColor(R.color.black));
+		mLittleC5.setTextColor(getResources().getColor(R.color.black));
+		mLittleE5.setTextColor(getResources().getColor(R.color.black));
+		mF5.setTextColor(getResources().getColor(R.color.black));
+		mCW5.setTextColor(getResources().getColor(R.color.black));
+		mV5.setTextColor(getResources().getColor(R.color.black));
+		mBigK5.setTextColor(getResources().getColor(R.color.black));
+		mLittleK5.setTextColor(getResources().getColor(R.color.black));
+		mKPA5.setTextColor(getResources().getColor(R.color.black));
+		mKPB5.setTextColor(getResources().getColor(R.color.black));
+		mJSA5.setTextColor(getResources().getColor(R.color.black));
+		mJSB5.setTextColor(getResources().getColor(R.color.black));
+		mFYA5.setTextColor(getResources().getColor(R.color.black));
+		mFYB5.setTextColor(getResources().getColor(R.color.black));
+		mJKA5.setTextColor(getResources().getColor(R.color.black));
+		mJKB5.setTextColor(getResources().getColor(R.color.black));
+		mXGA5.setTextColor(getResources().getColor(R.color.black));
+		mLEA5.setTextColor(getResources().getColor(R.color.black));
+		mLEB5.setTextColor(getResources().getColor(R.color.black));
+		mBigS5.setTextColor(getResources().getColor(R.color.black));
+		mLittleS5.setTextColor(getResources().getColor(R.color.black));
+		mM5.setTextColor(getResources().getColor(R.color.black));
+		mN5.setTextColor(getResources().getColor(R.color.black));
+		mP1_5.setTextColor(getResources().getColor(R.color.black));
+		mLUA5.setTextColor(getResources().getColor(R.color.black));
+		mLUB5.setTextColor(getResources().getColor(R.color.black));
 
-		mD6.setTextColor(0xFF000000);
-		mBigC6.setTextColor(0xFF000000);
-		mBigE6.setTextColor(0xFF000000);
-		mLittleC6.setTextColor(0xFF000000);
-		mLittleE6.setTextColor(0xFF000000);
-		mF6.setTextColor(0xFF000000);
-		mCW6.setTextColor(0xFF000000);
-		mV6.setTextColor(0xFF000000);
-		mBigK6.setTextColor(0xFF000000);
-		mLittleK6.setTextColor(0xFF000000);
-		mKPA6.setTextColor(0xFF000000);
-		mKPB6.setTextColor(0xFF000000);
-		mJSA6.setTextColor(0xFF000000);
-		mJSB6.setTextColor(0xFF000000);
-		mFYA6.setTextColor(0xFF000000);
-		mFYB6.setTextColor(0xFF000000);
-		mJKA6.setTextColor(0xFF000000);
-		mJKB6.setTextColor(0xFF000000);
-		mXGA6.setTextColor(0xFF000000);
-		mLEA6.setTextColor(0xFF000000);
-		mLEB6.setTextColor(0xFF000000);
-		mBigS6.setTextColor(0xFF000000);
-		mLittleS6.setTextColor(0xFF000000);
-		mM6.setTextColor(0xFF000000);
-		mN6.setTextColor(0xFF000000);
-		mP1_6.setTextColor(0xFF000000);
-		mLUA6.setTextColor(0xFF000000);
-		mLUB6.setTextColor(0xFF000000);
+		mD6.setTextColor(getResources().getColor(R.color.black));
+		mBigC6.setTextColor(getResources().getColor(R.color.black));
+		mBigE6.setTextColor(getResources().getColor(R.color.black));
+		mLittleC6.setTextColor(getResources().getColor(R.color.black));
+		mLittleE6.setTextColor(getResources().getColor(R.color.black));
+		mF6.setTextColor(getResources().getColor(R.color.black));
+		mCW6.setTextColor(getResources().getColor(R.color.black));
+		mV6.setTextColor(getResources().getColor(R.color.black));
+		mBigK6.setTextColor(getResources().getColor(R.color.black));
+		mLittleK6.setTextColor(getResources().getColor(R.color.black));
+		mKPA6.setTextColor(getResources().getColor(R.color.black));
+		mKPB6.setTextColor(getResources().getColor(R.color.black));
+		mJSA6.setTextColor(getResources().getColor(R.color.black));
+		mJSB6.setTextColor(getResources().getColor(R.color.black));
+		mFYA6.setTextColor(getResources().getColor(R.color.black));
+		mFYB6.setTextColor(getResources().getColor(R.color.black));
+		mJKA6.setTextColor(getResources().getColor(R.color.black));
+		mJKB6.setTextColor(getResources().getColor(R.color.black));
+		mXGA6.setTextColor(getResources().getColor(R.color.black));
+		mLEA6.setTextColor(getResources().getColor(R.color.black));
+		mLEB6.setTextColor(getResources().getColor(R.color.black));
+		mBigS6.setTextColor(getResources().getColor(R.color.black));
+		mLittleS6.setTextColor(getResources().getColor(R.color.black));
+		mM6.setTextColor(getResources().getColor(R.color.black));
+		mN6.setTextColor(getResources().getColor(R.color.black));
+		mP1_6.setTextColor(getResources().getColor(R.color.black));
+		mLUA6.setTextColor(getResources().getColor(R.color.black));
+		mLUB6.setTextColor(getResources().getColor(R.color.black));
 
-		mD7.setTextColor(0xFF000000);
-		mBigC7.setTextColor(0xFF000000);
-		mBigE7.setTextColor(0xFF000000);
-		mLittleC7.setTextColor(0xFF000000);
-		mLittleE7.setTextColor(0xFF000000);
-		mF7.setTextColor(0xFF000000);
-		mCW7.setTextColor(0xFF000000);
-		mV7.setTextColor(0xFF000000);
-		mBigK7.setTextColor(0xFF000000);
-		mLittleK7.setTextColor(0xFF000000);
-		mKPA7.setTextColor(0xFF000000);
-		mKPB7.setTextColor(0xFF000000);
-		mJSA7.setTextColor(0xFF000000);
-		mJSB7.setTextColor(0xFF000000);
-		mFYA7.setTextColor(0xFF000000);
-		mFYB7.setTextColor(0xFF000000);
-		mJKA7.setTextColor(0xFF000000);
-		mJKB7.setTextColor(0xFF000000);
-		mXGA7.setTextColor(0xFF000000);
-		mLEA7.setTextColor(0xFF000000);
-		mLEB7.setTextColor(0xFF000000);
-		mBigS7.setTextColor(0xFF000000);
-		mLittleS7.setTextColor(0xFF000000);
-		mM7.setTextColor(0xFF000000);
-		mN7.setTextColor(0xFF000000);
-		mP1_7.setTextColor(0xFF000000);
-		mLUA7.setTextColor(0xFF000000);
-		mLUB7.setTextColor(0xFF000000);
+		mD7.setTextColor(getResources().getColor(R.color.black));
+		mBigC7.setTextColor(getResources().getColor(R.color.black));
+		mBigE7.setTextColor(getResources().getColor(R.color.black));
+		mLittleC7.setTextColor(getResources().getColor(R.color.black));
+		mLittleE7.setTextColor(getResources().getColor(R.color.black));
+		mF7.setTextColor(getResources().getColor(R.color.black));
+		mCW7.setTextColor(getResources().getColor(R.color.black));
+		mV7.setTextColor(getResources().getColor(R.color.black));
+		mBigK7.setTextColor(getResources().getColor(R.color.black));
+		mLittleK7.setTextColor(getResources().getColor(R.color.black));
+		mKPA7.setTextColor(getResources().getColor(R.color.black));
+		mKPB7.setTextColor(getResources().getColor(R.color.black));
+		mJSA7.setTextColor(getResources().getColor(R.color.black));
+		mJSB7.setTextColor(getResources().getColor(R.color.black));
+		mFYA7.setTextColor(getResources().getColor(R.color.black));
+		mFYB7.setTextColor(getResources().getColor(R.color.black));
+		mJKA7.setTextColor(getResources().getColor(R.color.black));
+		mJKB7.setTextColor(getResources().getColor(R.color.black));
+		mXGA7.setTextColor(getResources().getColor(R.color.black));
+		mLEA7.setTextColor(getResources().getColor(R.color.black));
+		mLEB7.setTextColor(getResources().getColor(R.color.black));
+		mBigS7.setTextColor(getResources().getColor(R.color.black));
+		mLittleS7.setTextColor(getResources().getColor(R.color.black));
+		mM7.setTextColor(getResources().getColor(R.color.black));
+		mN7.setTextColor(getResources().getColor(R.color.black));
+		mP1_7.setTextColor(getResources().getColor(R.color.black));
+		mLUA7.setTextColor(getResources().getColor(R.color.black));
+		mLUB7.setTextColor(getResources().getColor(R.color.black));
 
-		mD8.setTextColor(0xFF000000);
-		mBigC8.setTextColor(0xFF000000);
-		mBigE8.setTextColor(0xFF000000);
-		mLittleC8.setTextColor(0xFF000000);
-		mLittleE8.setTextColor(0xFF000000);
-		mF8.setTextColor(0xFF000000);
-		mCW8.setTextColor(0xFF000000);
-		mV8.setTextColor(0xFF000000);
-		mBigK8.setTextColor(0xFF000000);
-		mLittleK8.setTextColor(0xFF000000);
-		mKPA8.setTextColor(0xFF000000);
-		mKPB8.setTextColor(0xFF000000);
-		mJSA8.setTextColor(0xFF000000);
-		mJSB8.setTextColor(0xFF000000);
-		mFYA8.setTextColor(0xFF000000);
-		mFYB8.setTextColor(0xFF000000);
-		mJKA8.setTextColor(0xFF000000);
-		mJKB8.setTextColor(0xFF000000);
-		mXGA8.setTextColor(0xFF000000);
-		mLEA8.setTextColor(0xFF000000);
-		mLEB8.setTextColor(0xFF000000);
-		mBigS8.setTextColor(0xFF000000);
-		mLittleS8.setTextColor(0xFF000000);
-		mM8.setTextColor(0xFF000000);
-		mN8.setTextColor(0xFF000000);
-		mP1_8.setTextColor(0xFF000000);
-		mLUA8.setTextColor(0xFF000000);
-		mLUB8.setTextColor(0xFF000000);
+		mD8.setTextColor(getResources().getColor(R.color.black));
+		mBigC8.setTextColor(getResources().getColor(R.color.black));
+		mBigE8.setTextColor(getResources().getColor(R.color.black));
+		mLittleC8.setTextColor(getResources().getColor(R.color.black));
+		mLittleE8.setTextColor(getResources().getColor(R.color.black));
+		mF8.setTextColor(getResources().getColor(R.color.black));
+		mCW8.setTextColor(getResources().getColor(R.color.black));
+		mV8.setTextColor(getResources().getColor(R.color.black));
+		mBigK8.setTextColor(getResources().getColor(R.color.black));
+		mLittleK8.setTextColor(getResources().getColor(R.color.black));
+		mKPA8.setTextColor(getResources().getColor(R.color.black));
+		mKPB8.setTextColor(getResources().getColor(R.color.black));
+		mJSA8.setTextColor(getResources().getColor(R.color.black));
+		mJSB8.setTextColor(getResources().getColor(R.color.black));
+		mFYA8.setTextColor(getResources().getColor(R.color.black));
+		mFYB8.setTextColor(getResources().getColor(R.color.black));
+		mJKA8.setTextColor(getResources().getColor(R.color.black));
+		mJKB8.setTextColor(getResources().getColor(R.color.black));
+		mXGA8.setTextColor(getResources().getColor(R.color.black));
+		mLEA8.setTextColor(getResources().getColor(R.color.black));
+		mLEB8.setTextColor(getResources().getColor(R.color.black));
+		mBigS8.setTextColor(getResources().getColor(R.color.black));
+		mLittleS8.setTextColor(getResources().getColor(R.color.black));
+		mM8.setTextColor(getResources().getColor(R.color.black));
+		mN8.setTextColor(getResources().getColor(R.color.black));
+		mP1_8.setTextColor(getResources().getColor(R.color.black));
+		mLUA8.setTextColor(getResources().getColor(R.color.black));
+		mLUB8.setTextColor(getResources().getColor(R.color.black));
 	}
 
+	/**
+	 * Cross out Antibody1 if it's positive
+	 * 
+	 * @param index the antibody index
+	 * @param Antibody1 the antibody that may be crossed out
+	 * @param cell the row used
+	 * @param letter the name of the antibody
+	 */
 	void CrossOutSingle(int index, TextView Antibody1, int cell, String letter)
 	{
-		if (Antibody1.getText().equals("+"))
+		if (Antibody1.getText().equals("+"))	//if it is positive
 		{
-			Antibody1.setTextColor(0xFFFF0000);
-			if (antibody.NotCrossedOut(index))
+			Antibody1.setTextColor(getResources().getColor(R.color.red));
+			if (antibody.NotCrossedOut(index))	//make sure it's only crossed out once
 			{
 				Log.d("Antibody", "Using " + cell + " to cross out " + letter);
 				antibody.CrossOut(index);
@@ -1088,27 +1104,36 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		}
 	}
 
+	/**
+     * Cross out Big if it's positive, and Little is negative
+     * 
+     * @param index the antibody index
+     * @param Big the antibody that may be crossed out
+     * @param Little the antibody that may be used to cross out Big
+     * @param cell the row used
+     * @param letter the name of the antibody
+     */
 	void CrossOutCouple(int index, TextView Big, TextView Little, int cell, String letter)
 	{
-		if (Big.getText().equals("+"))
+		if (Big.getText().equals("+"))				//if it is positive
 		{
-			if (Little.getText().equals("0"))
+			if (Little.getText().equals("0"))		//and it's pair is negative
 			{
-				Big.setTextColor(0xFFFF0000);
-				if (antibody.NotCrossedOut(index))
+				Big.setTextColor(getResources().getColor(R.color.red));
+				if (antibody.NotCrossedOut(index))	//make sure it's only crossed out once
 				{
 					Log.d("Antibody", "Using " + cell + " to cross out " + letter);
 					antibody.CrossOut(index);
 				}
 			}
 			else
-				Big.setTextColor(0xFF000000);
+				Big.setTextColor(getResources().getColor(R.color.black));
 		}
 	}
 
 	void Use1ToGetSolutions()
 	{
-		if (mCheck1.isChecked())
+		if (mCheck1.isChecked())	//if the result is positive
 		{
 			Log.d("Antibody", "Using 1 to get solutions");
 			GetSolution( 0, mD1			);//, antibody.GetName( 0));
@@ -1144,7 +1169,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 	void Use2ToGetSolutions()
 	{
-		if (mCheck2.isChecked())
+		if (mCheck2.isChecked())	//if the result is positive
 		{
 			Log.d("Antibody", "Using 2 to get solutions");
 			GetSolution( 0, mD2			);//, antibody.GetName( 0));
@@ -1180,7 +1205,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 	void Use3ToGetSolutions()
 	{
-		if (mCheck3.isChecked())
+		if (mCheck3.isChecked())	//if the result is positive
 		{
 			Log.d("Antibody", "Using 3 to get solutions");
 			GetSolution( 0, mD3			);//, antibody.GetName( 0));
@@ -1216,7 +1241,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 	void Use4ToGetSolutions()
 	{
-		if (mCheck4.isChecked())
+		if (mCheck4.isChecked())	//if the result is positive
 		{
 			Log.d("Antibody", "Using 4 to get solutions");
 			GetSolution( 0, mD4			);//, antibody.GetName( 0));
@@ -1252,7 +1277,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 	void Use5ToGetSolutions()
 	{
-		if (mCheck5.isChecked())
+		if (mCheck5.isChecked())	//if the result is positive
 		{
 			Log.d("Antibody", "Using 5 to get solutions");
 			GetSolution( 0, mD5			);//, antibody.GetName( 0));
@@ -1288,7 +1313,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 	void Use6ToGetSolutions()
 	{
-		if (mCheck6.isChecked())
+		if (mCheck6.isChecked())	//if the result is positive
 		{
 			Log.d("Antibody", "Using 6 to get solutions");
 			GetSolution( 0, mD6			);//, antibody.GetName( 0));
@@ -1324,7 +1349,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 	void Use7ToGetSolutions()
 	{
-		if (mCheck7.isChecked())
+		if (mCheck7.isChecked())	//if the result is positive
 		{
 			Log.d("Antibody", "Using 7 to get solutions");
 			GetSolution( 0, mD7			);//, antibody.GetName( 0));
@@ -1360,7 +1385,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 	void Use8ToGetSolutions()
 	{
-		if (mCheck8.isChecked())
+		if (mCheck8.isChecked())	//if the result is positive
 		{
 			Log.d("Antibody", "Using 8 to get solutions");
 			GetSolution( 0, mD8			);//, antibody.GetName( 0));
@@ -1394,27 +1419,57 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		}
 	}
 
+	/**
+	 * Add this antibody to the solution if it's positive
+	 * 
+	 * @param index
+	 * @param antibody1
+	 */
 	void GetSolution(int index, TextView antibody1)
 	{
 		if (antibody1.getText().equals("+"))
 		{
 			if (antibody.NotCrossedOut(index))
 			{
-				antibody1.setTextColor(0xFF00FF00);
+				antibody1.setTextColor(getResources().getColor(R.color.green));
 				antibody.IncrementCount(index);
 			}
 			else
-				antibody1.setTextColor(0xFF000000);
+				antibody1.setTextColor(getResources().getColor(R.color.black));
 		}
 	}
 }
 
+/**
+ * Everything to do with all the antibodies
+ * 
+ * @author Bobby Macher
+ */
 class Antibody {
+	/**
+	 * The number of antibodies that have this many solutions
+	 */
 	private				int		solutions;
+	
+	/**
+	 * The number of times the antibodies are solutions
+	 */
 	private				int		count	 [];
-	private				int		race	 [][];//percentages for race
+	
+	/**
+	 * percentages for race
+	 */
+	private				int		race	 [][];
+	
+	/**
+	 * The most occurrences of an antibody as a solution
+	 */
 	private				int		most;
 	private				String	name	 [];
+	
+	/**
+	 * The maximum number of antibodies
+	 */
 	public static final	int		max =		28;
 
 	Antibody()
@@ -1523,6 +1578,11 @@ class Antibody {
 	{
 		solutions++;
 	}
+	/**
+	 * @param index1 the antibody index
+	 * @param index2 the solution index
+	 * @return the name and race percents
+	 */
 	public String GetNameRace(int index1, int index2)
 	{
 		String	result;
@@ -1536,6 +1596,10 @@ class Antibody {
 		return	result;
 	}
 
+	/**
+	 * @param index
+	 * @return The number of times this antibody is a solution
+	 */
 	public int GetCount(int index)
 	{
 		return count[index];
@@ -1544,6 +1608,11 @@ class Antibody {
 	{
 		count[index]++;
 	}
+	/**
+	 * This antibody will not be considered a solution
+	 * 
+	 * @param index
+	 */
 	public void CrossOut(int index)
 	{
 		count[index] =	255;
@@ -1553,10 +1622,18 @@ class Antibody {
 		return	count[index] < 255;
 	}
 
+	/**
+	 * @return the highest number of times an antibody is a solution
+	 */
 	public int GetMost()
 	{
 		return	most;
 	}
+	/**
+	 * Sets this antibody as the most if it's greater than the previous {@link #most}
+	 * 
+	 * @param index
+	 */
 	public void SetNewMost(int index)
 	{
 		if (count[index] > most)
@@ -1568,6 +1645,9 @@ class Antibody {
 		return	name[index];
 	}
 
+	/**
+	 * Resets the {@link #most}, and the {@link #count}'s
+	 */
 	public void Reset()
 	{
 		int	i;
