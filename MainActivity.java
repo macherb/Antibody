@@ -188,6 +188,64 @@ public class MainActivity extends Activity implements View.OnClickListener {
 						mLUA6,
 						mLUB6,
 
+						mD7,
+						mBigC7,
+						mBigE7,
+						mLittleC7,
+						mLittleE7,
+						mF7,
+						mCW7,
+						mV7,
+						mBigK7,
+						mLittleK7,
+						mKPA7,
+						mKPB7,
+						mJSA7,
+						mJSB7,
+						mFYA7,
+						mFYB7,
+						mJKA7,
+						mJKB7,
+						mXGA7,
+						mLEA7,
+						mLEB7,
+						mBigS7,
+						mLittleS7,
+						mM7,
+						mN7,
+						mP1_7,
+						mLUA7,
+						mLUB7,
+
+						mD8,
+						mBigC8,
+						mBigE8,
+						mLittleC8,
+						mLittleE8,
+						mF8,
+						mCW8,
+						mV8,
+						mBigK8,
+						mLittleK8,
+						mKPA8,
+						mKPB8,
+						mJSA8,
+						mJSB8,
+						mFYA8,
+						mFYB8,
+						mJKA8,
+						mJKB8,
+						mXGA8,
+						mLEA8,
+						mLEB8,
+						mBigS8,
+						mLittleS8,
+						mM8,
+						mN8,
+						mP1_8,
+						mLUA8,
+						mLUB8,
+
 						mSolution;
 
 	private CheckBox	mCheck1,
@@ -195,7 +253,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
 						mCheck3,
 						mCheck4,
 						mCheck5,
-						mCheck6;
+						mCheck6,
+						mCheck7,
+						mCheck8;
 
 	private Button		mCalculate;
 
@@ -378,6 +438,64 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		mLUA6 =			(TextView	)findViewById(R.id.textLUA6			);
 		mLUB6 =			(TextView	)findViewById(R.id.textLUB6			);
 
+		mD7 =			(TextView	)findViewById(R.id.textD7			);
+		mBigC7 =		(TextView	)findViewById(R.id.textBigC7		);
+		mBigE7 =		(TextView	)findViewById(R.id.textBigE7		);
+		mLittleC7 =		(TextView	)findViewById(R.id.textLittleC7		);
+		mLittleE7 =		(TextView	)findViewById(R.id.textLittleE7		);
+		mF7 =			(TextView	)findViewById(R.id.textF7			);
+		mCW7 =			(TextView	)findViewById(R.id.textCW7			);
+		mV7 =			(TextView	)findViewById(R.id.textV7			);
+		mBigK7 =		(TextView	)findViewById(R.id.textBigK7		);
+		mLittleK7 =		(TextView	)findViewById(R.id.textLittleK7		);
+		mKPA7 =			(TextView	)findViewById(R.id.textKPA7			);
+		mKPB7 =			(TextView	)findViewById(R.id.textKPB7			);
+		mJSA7 =			(TextView	)findViewById(R.id.textJSA7			);
+		mJSB7 =			(TextView	)findViewById(R.id.textJSB7			);
+		mFYA7 =			(TextView	)findViewById(R.id.textFYA7			);
+		mFYB7 =			(TextView	)findViewById(R.id.textFYB7			);
+		mJKA7 =			(TextView	)findViewById(R.id.textJKA7			);
+		mJKB7 =			(TextView	)findViewById(R.id.textJKB7			);
+		mXGA7 =			(TextView	)findViewById(R.id.textXGA7			);
+		mLEA7 =			(TextView	)findViewById(R.id.textLEA7			);
+		mLEB7 =			(TextView	)findViewById(R.id.textLEB7			);
+		mBigS7 =		(TextView	)findViewById(R.id.textBigS7		);
+		mLittleS7 =		(TextView	)findViewById(R.id.textLittleS7		);
+		mM7 =			(TextView	)findViewById(R.id.textM7			);
+		mN7 =			(TextView	)findViewById(R.id.textN7			);
+		mP1_7 =			(TextView	)findViewById(R.id.textP1_7			);
+		mLUA7 =			(TextView	)findViewById(R.id.textLUA7			);
+		mLUB7 =			(TextView	)findViewById(R.id.textLUB7			);
+
+		mD8 =			(TextView	)findViewById(R.id.textD8			);
+		mBigC8 =		(TextView	)findViewById(R.id.textBigC8		);
+		mBigE8 =		(TextView	)findViewById(R.id.textBigE8		);
+		mLittleC8 =		(TextView	)findViewById(R.id.textLittleC8		);
+		mLittleE8 =		(TextView	)findViewById(R.id.textLittleE8		);
+		mF8 =			(TextView	)findViewById(R.id.textF8			);
+		mCW8 =			(TextView	)findViewById(R.id.textCW8			);
+		mV8 =			(TextView	)findViewById(R.id.textV8			);
+		mBigK8 =		(TextView	)findViewById(R.id.textBigK8		);
+		mLittleK8 =		(TextView	)findViewById(R.id.textLittleK8		);
+		mKPA8 =			(TextView	)findViewById(R.id.textKPA8			);
+		mKPB8 =			(TextView	)findViewById(R.id.textKPB8			);
+		mJSA8 =			(TextView	)findViewById(R.id.textJSA8			);
+		mJSB8 =			(TextView	)findViewById(R.id.textJSB8			);
+		mFYA8 =			(TextView	)findViewById(R.id.textFYA8			);
+		mFYB8 =			(TextView	)findViewById(R.id.textFYB8			);
+		mJKA8 =			(TextView	)findViewById(R.id.textJKA8			);
+		mJKB8 =			(TextView	)findViewById(R.id.textJKB8			);
+		mXGA8 =			(TextView	)findViewById(R.id.textXGA8			);
+		mLEA8 =			(TextView	)findViewById(R.id.textLEA8			);
+		mLEB8 =			(TextView	)findViewById(R.id.textLEB8			);
+		mBigS8 =		(TextView	)findViewById(R.id.textBigS8		);
+		mLittleS8 =		(TextView	)findViewById(R.id.textLittleS8		);
+		mM8 =			(TextView	)findViewById(R.id.textM8			);
+		mN8 =			(TextView	)findViewById(R.id.textN8			);
+		mP1_8 =			(TextView	)findViewById(R.id.textP1_8			);
+		mLUA8 =			(TextView	)findViewById(R.id.textLUA8			);
+		mLUB8 =			(TextView	)findViewById(R.id.textLUB8			);
+
 		mSolution =		(TextView	)findViewById(R.id.textSolution		);
 
 		mCheck1 =		(CheckBox	)findViewById(R.id.check1			);
@@ -386,6 +504,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		mCheck4 =		(CheckBox	)findViewById(R.id.check4			);
 		mCheck5 =		(CheckBox	)findViewById(R.id.check5			);
 		mCheck6 =		(CheckBox	)findViewById(R.id.check6			);
+		mCheck7 =		(CheckBox	)findViewById(R.id.check7			);
+		mCheck8 =		(CheckBox	)findViewById(R.id.check8			);
 
 		mCalculate =	(Button		)findViewById(R.id.buttonCalculate	);
         mCalculate.setOnClickListener(this);
@@ -417,12 +537,14 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 		antibody.Reset();
 
-		if      ( mCheck1.isChecked() &&  mCheck2.isChecked() &&  mCheck3.isChecked() &&  mCheck4.isChecked() &&  mCheck5.isChecked() &&  mCheck6.isChecked())
+		if      ( mCheck1.isChecked() &&  mCheck2.isChecked() &&  mCheck3.isChecked() &&  mCheck4.isChecked() &&
+				  mCheck5.isChecked() &&  mCheck6.isChecked() &&  mCheck7.isChecked() &&  mCheck8.isChecked()	)
 		{
 			mSolution.setText("Inconclusive");
 			SetAllBlack();
 		}
-		else if (!mCheck1.isChecked() && !mCheck2.isChecked() && !mCheck3.isChecked() && !mCheck4.isChecked() && !mCheck5.isChecked() && !mCheck6.isChecked())
+		else if (!mCheck1.isChecked() && !mCheck2.isChecked() && !mCheck3.isChecked() && !mCheck4.isChecked() &&
+				 !mCheck5.isChecked() && !mCheck6.isChecked() && !mCheck7.isChecked() && !mCheck8.isChecked()	)
 		{
 			mSolution.setText("Too weak");
 			SetAllBlack();
@@ -616,13 +738,77 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				CrossOutCouple(26, mLUA6	, mLUB6		,	6, antibody.GetName(26));
 				CrossOutCouple(27, mLUB6	, mLUA6		,	6, antibody.GetName(27));
 			}
+			if (!mCheck7.isChecked())//Can use this row to cross out
+			{
+				CrossOutSingle(	0, mD7		,				7, antibody.GetName( 0));
+				CrossOutCouple(	1, mBigC7	, mLittleC7	,	7, antibody.GetName( 1));
+				CrossOutCouple(	2, mBigE7	, mLittleE7	,	7, antibody.GetName( 2));
+				CrossOutCouple(	3, mLittleC7, mBigC7	,	7, antibody.GetName( 3));
+				CrossOutCouple(	4, mLittleE7, mBigE7	,	7, antibody.GetName( 4));
+				CrossOutSingle(	5, mF7		,				7, antibody.GetName( 5));
+				CrossOutSingle(	6, mCW7		,				7, antibody.GetName( 6));
+				CrossOutSingle(	7, mV7		,				7, antibody.GetName( 7));
+				CrossOutCouple(	8, mBigK7	, mLittleK7	,	7, antibody.GetName( 8));
+				CrossOutCouple(	9, mLittleK7, mBigK7	,	7, antibody.GetName( 9));
+				CrossOutCouple(10, mKPA7	, mKPB7		,	7, antibody.GetName(10));
+				CrossOutCouple(11, mKPB7	, mKPA7		,	7, antibody.GetName(11));
+				CrossOutCouple(12, mJSA7	, mJSB7		,	7, antibody.GetName(12));
+				CrossOutCouple(13, mJSB7	, mJSA7		,	7, antibody.GetName(13));
+				CrossOutCouple(14, mFYA7	, mFYB7		,	7, antibody.GetName(14));
+				CrossOutCouple(15, mFYB7	, mFYA7		,	7, antibody.GetName(15));
+				CrossOutCouple(16, mJKA7	, mJKB7		,	7, antibody.GetName(16));
+				CrossOutCouple(17, mJKB7	, mJKA7		,	7, antibody.GetName(17));
+				CrossOutSingle(18, mXGA7	,				7, antibody.GetName(18));
+				CrossOutCouple(19, mLEA7	, mLEB7		,	7, antibody.GetName(19));
+				CrossOutCouple(20, mLEB7	, mLEA7		,	7, antibody.GetName(20));
+				CrossOutCouple(21, mBigS7	, mLittleS7	,	7, antibody.GetName(21));
+				CrossOutCouple(22, mLittleS7, mBigS7	,	7, antibody.GetName(22));
+				CrossOutCouple(23, mM7		, mN7		,	7, antibody.GetName(23));
+				CrossOutCouple(24, mN7		, mM7		,	7, antibody.GetName(24));
+				CrossOutSingle(25, mP1_7	,				7, antibody.GetName(25));
+				CrossOutCouple(26, mLUA7	, mLUB7		,	7, antibody.GetName(26));
+				CrossOutCouple(27, mLUB7	, mLUA7		,	7, antibody.GetName(27));
+			}
+			if (!mCheck8.isChecked())//Can use this row to cross out
+			{
+				CrossOutSingle(	0, mD8		,				8, antibody.GetName( 0));
+				CrossOutCouple(	1, mBigC8	, mLittleC8	,	8, antibody.GetName( 1));
+				CrossOutCouple(	2, mBigE8	, mLittleE8	,	8, antibody.GetName( 2));
+				CrossOutCouple(	3, mLittleC8, mBigC8	,	8, antibody.GetName( 3));
+				CrossOutCouple(	4, mLittleE8, mBigE8	,	8, antibody.GetName( 4));
+				CrossOutSingle(	5, mF8		,				8, antibody.GetName( 5));
+				CrossOutSingle(	6, mCW8		,				8, antibody.GetName( 6));
+				CrossOutSingle(	7, mV8		,				8, antibody.GetName( 7));
+				CrossOutCouple(	8, mBigK8	, mLittleK8	,	8, antibody.GetName( 8));
+				CrossOutCouple(	9, mLittleK8, mBigK8	,	8, antibody.GetName( 9));
+				CrossOutCouple(10, mKPA8	, mKPB8		,	8, antibody.GetName(10));
+				CrossOutCouple(11, mKPB8	, mKPA8		,	8, antibody.GetName(11));
+				CrossOutCouple(12, mJSA8	, mJSB8		,	8, antibody.GetName(12));
+				CrossOutCouple(13, mJSB8	, mJSA8		,	8, antibody.GetName(13));
+				CrossOutCouple(14, mFYA8	, mFYB8		,	8, antibody.GetName(14));
+				CrossOutCouple(15, mFYB8	, mFYA8		,	8, antibody.GetName(15));
+				CrossOutCouple(16, mJKA8	, mJKB8		,	8, antibody.GetName(16));
+				CrossOutCouple(17, mJKB8	, mJKA8		,	8, antibody.GetName(17));
+				CrossOutSingle(18, mXGA8	,				8, antibody.GetName(18));
+				CrossOutCouple(19, mLEA8	, mLEB8		,	8, antibody.GetName(19));
+				CrossOutCouple(20, mLEB8	, mLEA8		,	8, antibody.GetName(20));
+				CrossOutCouple(21, mBigS8	, mLittleS8	,	8, antibody.GetName(21));
+				CrossOutCouple(22, mLittleS8, mBigS8	,	8, antibody.GetName(22));
+				CrossOutCouple(23, mM8		, mN8		,	8, antibody.GetName(23));
+				CrossOutCouple(24, mN8		, mM8		,	8, antibody.GetName(24));
+				CrossOutSingle(25, mP1_8	,				8, antibody.GetName(25));
+				CrossOutCouple(26, mLUA8	, mLUB8		,	7, antibody.GetName(26));
+				CrossOutCouple(27, mLUB8	, mLUA8		,	8, antibody.GetName(27));
+			}
 			Use1ToGetSolutions();
 			Use2ToGetSolutions();
 			Use3ToGetSolutions();
 			Use4ToGetSolutions();
 			Use5ToGetSolutions();
 			Use6ToGetSolutions();
-			for (i = 0; i < 28; i++)
+			Use7ToGetSolutions();
+			Use8ToGetSolutions();
+			for (i = 0; i < Antibody.max; i++)
 			{
 				if (
 					(antibody.GetCount(i) > 0)
@@ -637,18 +823,21 @@ public class MainActivity extends Activity implements View.OnClickListener {
 			for (j = 0; j < antibody.GetMost(); j++)
 			{
 				antibody.ResetSolutions();
-				for (i = 0; i < 28; i++)
+				for (i = 0; i < Antibody.max; i++)
 				{
 					if (antibody.GetCount(i) == antibody.GetMost() - j)
 					{
 						mSolution.setText(	mSolution.getText() + 
-											antibody.GetSolutions(i, j)
+											antibody.GetNameRace(i, j)
 										 );
 						antibody.IncrementSolutions();
 					}
 				}
-				mSolution.setText(	mSolution.getText() + "\n");
+				if (antibody.GetSolutions() > 0)
+					mSolution.setText(	mSolution.getText() + "\n");
 			}
+			if (antibody.GetMost() == 0)
+				mSolution.setText("There are no solutions");
 		}
 	}
 
@@ -826,6 +1015,64 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		mP1_6.setTextColor(0xFF000000);
 		mLUA6.setTextColor(0xFF000000);
 		mLUB6.setTextColor(0xFF000000);
+
+		mD7.setTextColor(0xFF000000);
+		mBigC7.setTextColor(0xFF000000);
+		mBigE7.setTextColor(0xFF000000);
+		mLittleC7.setTextColor(0xFF000000);
+		mLittleE7.setTextColor(0xFF000000);
+		mF7.setTextColor(0xFF000000);
+		mCW7.setTextColor(0xFF000000);
+		mV7.setTextColor(0xFF000000);
+		mBigK7.setTextColor(0xFF000000);
+		mLittleK7.setTextColor(0xFF000000);
+		mKPA7.setTextColor(0xFF000000);
+		mKPB7.setTextColor(0xFF000000);
+		mJSA7.setTextColor(0xFF000000);
+		mJSB7.setTextColor(0xFF000000);
+		mFYA7.setTextColor(0xFF000000);
+		mFYB7.setTextColor(0xFF000000);
+		mJKA7.setTextColor(0xFF000000);
+		mJKB7.setTextColor(0xFF000000);
+		mXGA7.setTextColor(0xFF000000);
+		mLEA7.setTextColor(0xFF000000);
+		mLEB7.setTextColor(0xFF000000);
+		mBigS7.setTextColor(0xFF000000);
+		mLittleS7.setTextColor(0xFF000000);
+		mM7.setTextColor(0xFF000000);
+		mN7.setTextColor(0xFF000000);
+		mP1_7.setTextColor(0xFF000000);
+		mLUA7.setTextColor(0xFF000000);
+		mLUB7.setTextColor(0xFF000000);
+
+		mD8.setTextColor(0xFF000000);
+		mBigC8.setTextColor(0xFF000000);
+		mBigE8.setTextColor(0xFF000000);
+		mLittleC8.setTextColor(0xFF000000);
+		mLittleE8.setTextColor(0xFF000000);
+		mF8.setTextColor(0xFF000000);
+		mCW8.setTextColor(0xFF000000);
+		mV8.setTextColor(0xFF000000);
+		mBigK8.setTextColor(0xFF000000);
+		mLittleK8.setTextColor(0xFF000000);
+		mKPA8.setTextColor(0xFF000000);
+		mKPB8.setTextColor(0xFF000000);
+		mJSA8.setTextColor(0xFF000000);
+		mJSB8.setTextColor(0xFF000000);
+		mFYA8.setTextColor(0xFF000000);
+		mFYB8.setTextColor(0xFF000000);
+		mJKA8.setTextColor(0xFF000000);
+		mJKB8.setTextColor(0xFF000000);
+		mXGA8.setTextColor(0xFF000000);
+		mLEA8.setTextColor(0xFF000000);
+		mLEB8.setTextColor(0xFF000000);
+		mBigS8.setTextColor(0xFF000000);
+		mLittleS8.setTextColor(0xFF000000);
+		mM8.setTextColor(0xFF000000);
+		mN8.setTextColor(0xFF000000);
+		mP1_8.setTextColor(0xFF000000);
+		mLUA8.setTextColor(0xFF000000);
+		mLUB8.setTextColor(0xFF000000);
 	}
 
 	void CrossOutSingle(int index, TextView Antibody1, int cell, String letter)
@@ -1075,6 +1322,78 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		}
 	}
 
+	void Use7ToGetSolutions()
+	{
+		if (mCheck7.isChecked())
+		{
+			Log.d("Antibody", "Using 7 to get solutions");
+			GetSolution( 0, mD7			);//, antibody.GetName( 0));
+			GetSolution( 1, mBigC7		);//, antibody.GetName( 1));
+			GetSolution( 2, mBigE7		);//, antibody.GetName( 2));
+			GetSolution( 3, mLittleC7	);//, antibody.GetName( 3));
+			GetSolution( 4, mLittleE7	);//, antibody.GetName( 4));
+			GetSolution( 5, mF7			);//, antibody.GetName( 5));
+			GetSolution( 6, mCW7		);//, antibody.GetName( 6));
+			GetSolution( 7, mV7			);//, antibody.GetName( 7));
+			GetSolution( 8, mBigK7		);//, antibody.GetName( 8));
+			GetSolution( 9, mLittleK7	);//, antibody.GetName( 9));
+			GetSolution(10, mKPA7		);//, antibody.GetName(10));
+			GetSolution(11, mKPB7		);//, antibody.GetName(11));
+			GetSolution(12, mJSA7		);//, antibody.GetName(12));
+			GetSolution(13, mJSB7		);//, antibody.GetName(13));
+			GetSolution(14, mFYA7		);//, antibody.GetName(14));
+			GetSolution(15, mFYB7		);//, antibody.GetName(15));
+			GetSolution(16, mJKA7		);//, antibody.GetName(16));
+			GetSolution(17, mJKB7		);//, antibody.GetName(17));
+			GetSolution(18, mXGA7		);//, antibody.GetName(18));
+			GetSolution(19, mLEA7		);//, antibody.GetName(19));
+			GetSolution(20, mLEB7		);//, antibody.GetName(20));
+			GetSolution(21, mBigS7		);//, antibody.GetName(21));
+			GetSolution(22, mLittleS7	);//, antibody.GetName(22));
+			GetSolution(23, mM7			);//, antibody.GetName(23));
+			GetSolution(24, mN7			);//, antibody.GetName(24));
+			GetSolution(25, mP1_7		);//, antibody.GetName(25));
+			GetSolution(26, mLUA7		);//, antibody.GetName(26));
+			GetSolution(27, mLUB7		);//, antibody.GetName(27));
+		}
+	}
+
+	void Use8ToGetSolutions()
+	{
+		if (mCheck8.isChecked())
+		{
+			Log.d("Antibody", "Using 8 to get solutions");
+			GetSolution( 0, mD8			);//, antibody.GetName( 0));
+			GetSolution( 1, mBigC8		);//, antibody.GetName( 1));
+			GetSolution( 2, mBigE8		);//, antibody.GetName( 2));
+			GetSolution( 3, mLittleC8	);//, antibody.GetName( 3));
+			GetSolution( 4, mLittleE8	);//, antibody.GetName( 4));
+			GetSolution( 5, mF8			);//, antibody.GetName( 5));
+			GetSolution( 6, mCW8		);//, antibody.GetName( 6));
+			GetSolution( 7, mV8			);//, antibody.GetName( 7));
+			GetSolution( 8, mBigK8		);//, antibody.GetName( 8));
+			GetSolution( 9, mLittleK8	);//, antibody.GetName( 9));
+			GetSolution(10, mKPA8		);//, antibody.GetName(10));
+			GetSolution(11, mKPB8		);//, antibody.GetName(11));
+			GetSolution(12, mJSA8		);//, antibody.GetName(12));
+			GetSolution(13, mJSB8		);//, antibody.GetName(13));
+			GetSolution(14, mFYA8		);//, antibody.GetName(14));
+			GetSolution(15, mFYB8		);//, antibody.GetName(15));
+			GetSolution(16, mJKA8		);//, antibody.GetName(16));
+			GetSolution(17, mJKB8		);//, antibody.GetName(17));
+			GetSolution(18, mXGA8		);//, antibody.GetName(18));
+			GetSolution(19, mLEA8		);//, antibody.GetName(19));
+			GetSolution(20, mLEB8		);//, antibody.GetName(20));
+			GetSolution(21, mBigS8		);//, antibody.GetName(21));
+			GetSolution(22, mLittleS8	);//, antibody.GetName(22));
+			GetSolution(23, mM8			);//, antibody.GetName(23));
+			GetSolution(24, mN8			);//, antibody.GetName(24));
+			GetSolution(25, mP1_8		);//, antibody.GetName(25));
+			GetSolution(26, mLUA8		);//, antibody.GetName(26));
+			GetSolution(27, mLUB8		);//, antibody.GetName(27));
+		}
+	}
+
 	void GetSolution(int index, TextView antibody1)
 	{
 		if (antibody1.getText().equals("+"))
@@ -1091,15 +1410,17 @@ public class MainActivity extends Activity implements View.OnClickListener {
 }
 
 class Antibody {
-	private	int		solutions;
-	private int		count[];
-	private int		race[][];//percentages for race
-	private int		most;
-	private String	name[];
+	private				int		solutions;
+	private				int		count	 [];
+	private				int		race	 [][];//percentages for race
+	private				int		most;
+	private				String	name	 [];
+	public static final	int		max =		28;
+
 	Antibody()
 	{
-        count =	new int[28];
-        race =	new int[28][2];
+        count =	new int[max];
+        race =	new int[max][2];
 
         race[ 0][0] =	 15;
         race[ 0][1] =	  8;
@@ -1158,7 +1479,7 @@ class Antibody {
         race[27][0] =	  0;
         race[27][1] =	  0;
 
-        name =	new String[28];
+        name =	new String[max];
 
         name[ 0] =	"D";
         name[ 1] =	"C";
@@ -1190,6 +1511,10 @@ class Antibody {
         name[27] =	"Lub";
 	}
 
+	public int GetSolutions()
+	{
+		return	solutions;
+	}
 	public void ResetSolutions()
 	{
 		solutions =	0;
@@ -1198,7 +1523,7 @@ class Antibody {
 	{
 		solutions++;
 	}
-	public String GetSolutions(int index1, int index2)
+	public String GetNameRace(int index1, int index2)
 	{
 		String	result;
 
@@ -1248,7 +1573,7 @@ class Antibody {
 		int	i;
 
 		most =			0;
-		for (i = 0; i < 28; i++)
+		for (i = 0; i < max; i++)
 			count[i] =	0;
 	}
 };
