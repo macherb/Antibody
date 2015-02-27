@@ -139,27 +139,40 @@ class Antibody {
 		solutions++;
 	}
 	/**
+	 * Display the name and percentages for race
+	 * 
 	 * @param index1 the antibody index
 	 * @param index2 the solution index
 	 * @return the name and race percents
 	 */
 	public String GetNameRace(int index1, int index2)
 	{
-		String	result =	"";
+		StringBuilder	result =	new StringBuilder();
 
 		if      (solutions > 0)
-			result =	", ";
+			result.append(", ");
 		else if (index2 < max)
-			result =	(most - index2) + ": ";
+		{
+			result.append(most - index2);
+			result.append(": ");
+		}
 
 		if (index1 < max)
-			result +=	name[index1] + "(" + race[index1][0] + ", " + race[index1][1] + ")";//display the percentages for race
-		
-		return	result;
+		{
+			result.append(name[index1]);
+			result.append("(");
+			result.append(race[index1][0]);
+			result.append(", ");
+			result.append(race[index1][1]);
+			result.append(")");
+		}
+
+		return	result.toString();
 	}
 
 	/**
 	 * @param index
+	 * 
 	 * @return The number of times this antibody is a solution
 	 */
 	public int GetCount(int index)
