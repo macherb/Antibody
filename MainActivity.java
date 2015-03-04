@@ -251,6 +251,35 @@ public class MainActivity extends Activity implements View.OnClickListener {
 						mLUA8,
 						mLUB8,
 
+						mD[],
+						mBigC[],
+						mBigE[],
+						mLittleC[],
+						mLittleE[],
+						mF[],
+						mCW[],
+						mV[],
+						mBigK[],
+						mLittleK[],
+						mKPA[],
+						mKPB[],
+						mJSA[],
+						mJSB[],
+						mFYA[],
+						mFYB[],
+						mJKA[],
+						mJKB[],
+						mXGA[],
+						mLEA[],
+						mLEB[],
+						mBigS[],
+						mLittleS[],
+						mM[],
+						mN[],
+						mP1[],
+						mLUA[],
+						mLUB[],
+
 						mSolution;
 
 	private CheckBox	mCheck1,
@@ -260,9 +289,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 						mCheck5,
 						mCheck6,
 						mCheck7,
-						mCheck8;
+						mCheck8,
+
+						mCheck[];
 
 	private Button		mCalculate;
+
+	private final int	max =	8;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -514,7 +547,298 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 		mCalculate =	(Button		)findViewById(R.id.buttonCalculate	);
         mCalculate.setOnClickListener(this);
-        antibody =	new Antibody();
+
+        antibody =		new Antibody();
+
+        mD = 			new TextView[max];
+        mD[0] =			mD1;
+        mD[1] =			mD2;
+        mD[2] =			mD3;
+        mD[3] =			mD4;
+        mD[4] =			mD5;
+        mD[5] =			mD6;
+        mD[6] =			mD7;
+        mD[7] =			mD8;
+
+        mBigC = 		new TextView[max];
+        mBigC[0] =		mBigC1;
+        mBigC[1] =		mBigC2;
+        mBigC[2] =		mBigC3;
+        mBigC[3] =		mBigC4;
+        mBigC[4] =		mBigC5;
+        mBigC[5] =		mBigC6;
+        mBigC[6] =		mBigC7;
+        mBigC[7] =		mBigC8;
+
+        mBigE = 		new TextView[max];
+        mBigE[0] =		mBigE1;
+        mBigE[1] =		mBigE2;
+        mBigE[2] =		mBigE3;
+        mBigE[3] =		mBigE4;
+        mBigE[4] =		mBigE5;
+        mBigE[5] =		mBigE6;
+        mBigE[6] =		mBigE7;
+        mBigE[7] =		mBigE8;
+
+        mLittleC = 		new TextView[max];
+        mLittleC[0] =	mLittleC1;
+        mLittleC[1] =	mLittleC2;
+        mLittleC[2] =	mLittleC3;
+        mLittleC[3] =	mLittleC4;
+        mLittleC[4] =	mLittleC5;
+        mLittleC[5] =	mLittleC6;
+        mLittleC[6] =	mLittleC7;
+        mLittleC[7] =	mLittleC8;
+
+        mLittleE = 		new TextView[max];
+        mLittleE[0] =	mLittleE1;
+        mLittleE[1] =	mLittleE2;
+        mLittleE[2] =	mLittleE3;
+        mLittleE[3] =	mLittleE4;
+        mLittleE[4] =	mLittleE5;
+        mLittleE[5] =	mLittleE6;
+        mLittleE[6] =	mLittleE7;
+        mLittleE[7] =	mLittleE8;
+
+        mF =			new TextView[max];
+        mF[0] =			mF1;
+        mF[1] =			mF2;
+        mF[2] =			mF3;
+        mF[3] =			mF4;
+        mF[4] =			mF5;
+        mF[5] =			mF6;
+        mF[6] =			mF7;
+        mF[7] =			mF8;
+
+        mCW =			new TextView[max];
+        mCW[0] =		mCW1;
+        mCW[1] =		mCW2;
+        mCW[2] =		mCW3;
+        mCW[3] =		mCW4;
+        mCW[4] =		mCW5;
+        mCW[5] =		mCW6;
+        mCW[6] =		mCW7;
+        mCW[7] =		mCW8;
+
+        mV =			new TextView[max];
+        mV[0] =			mV1;
+        mV[1] =			mV2;
+        mV[2] =			mV3;
+        mV[3] =			mV4;
+        mV[4] =			mV5;
+        mV[5] =			mV6;
+        mV[6] =			mV7;
+        mV[7] =			mV8;
+
+        mBigK =			new TextView[max];
+        mBigK[0] =		mBigK1;
+        mBigK[1] =		mBigK2;
+        mBigK[2] =		mBigK3;
+        mBigK[3] =		mBigK4;
+        mBigK[4] =		mBigK5;
+        mBigK[5] =		mBigK6;
+        mBigK[6] =		mBigK7;
+        mBigK[7] =		mBigK8;
+
+        mLittleK =		new TextView[max];
+        mLittleK[0] =	mLittleK1;
+        mLittleK[1] =	mLittleK2;
+        mLittleK[2] =	mLittleK3;
+        mLittleK[3] =	mLittleK4;
+        mLittleK[4] =	mLittleK5;
+        mLittleK[5] =	mLittleK6;
+        mLittleK[6] =	mLittleK7;
+        mLittleK[7] =	mLittleK8;
+
+        mKPA =			new TextView[max];
+        mKPA[0] =		mKPA1;
+        mKPA[1] =		mKPA2;
+        mKPA[2] =		mKPA3;
+        mKPA[3] =		mKPA4;
+        mKPA[4] =		mKPA5;
+        mKPA[5] =		mKPA6;
+        mKPA[6] =		mKPA7;
+        mKPA[7] =		mKPA8;
+
+        mKPB =			new TextView[max];
+        mKPB[0] =		mKPB1;
+        mKPB[1] =		mKPB2;
+        mKPB[2] =		mKPB3;
+        mKPB[3] =		mKPB4;
+        mKPB[4] =		mKPB5;
+        mKPB[5] =		mKPB6;
+        mKPB[6] =		mKPB7;
+        mKPB[7] =		mKPB8;
+
+        mJSA =			new TextView[max];
+        mJSA[0] =		mJSA1;
+        mJSA[1] =		mJSA2;
+        mJSA[2] =		mJSA3;
+        mJSA[3] =		mJSA4;
+        mJSA[4] =		mJSA5;
+        mJSA[5] =		mJSA6;
+        mJSA[6] =		mJSA7;
+        mJSA[7] =		mJSA8;
+
+        mJSB =			new TextView[max];
+        mJSB[0] =		mJSB1;
+        mJSB[1] =		mJSB2;
+        mJSB[2] =		mJSB3;
+        mJSB[3] =		mJSB4;
+        mJSB[4] =		mJSB5;
+        mJSB[5] =		mJSB6;
+        mJSB[6] =		mJSB7;
+        mJSB[7] =		mJSB8;
+
+        mFYA =			new TextView[max];
+        mFYA[0] =		mFYA1;
+        mFYA[1] =		mFYA2;
+        mFYA[2] =		mFYA3;
+        mFYA[3] =		mFYA4;
+        mFYA[4] =		mFYA5;
+        mFYA[5] =		mFYA6;
+        mFYA[6] =		mFYA7;
+        mFYA[7] =		mFYA8;
+
+        mFYB =			new TextView[max];
+        mFYB[0] =		mFYB1;
+        mFYB[1] =		mFYB2;
+        mFYB[2] =		mFYB3;
+        mFYB[3] =		mFYB4;
+        mFYB[4] =		mFYB5;
+        mFYB[5] =		mFYB6;
+        mFYB[6] =		mFYB7;
+        mFYB[7] =		mFYB8;
+
+        mJKA =			new TextView[max];
+        mJKA[0] =		mJKA1;
+        mJKA[1] =		mJKA2;
+        mJKA[2] =		mJKA3;
+        mJKA[3] =		mJKA4;
+        mJKA[4] =		mJKA5;
+        mJKA[5] =		mJKA6;
+        mJKA[6] =		mJKA7;
+        mJKA[7] =		mJKA8;
+
+        mJKB =			new TextView[max];
+        mJKB[0] =		mJKB1;
+        mJKB[1] =		mJKB2;
+        mJKB[2] =		mJKB3;
+        mJKB[3] =		mJKB4;
+        mJKB[4] =		mJKB5;
+        mJKB[5] =		mJKB6;
+        mJKB[6] =		mJKB7;
+        mJKB[7] =		mJKB8;
+
+        mXGA =			new TextView[max];
+        mXGA[0] =		mXGA1;
+        mXGA[1] =		mXGA2;
+        mXGA[2] =		mXGA3;
+        mXGA[3] =		mXGA4;
+        mXGA[4] =		mXGA5;
+        mXGA[5] =		mXGA6;
+        mXGA[6] =		mXGA7;
+        mXGA[7] =		mXGA8;
+
+        mLEA =			new TextView[max];
+        mLEA[0] =		mLEA1;
+        mLEA[1] =		mLEA2;
+        mLEA[2] =		mLEA3;
+        mLEA[3] =		mLEA4;
+        mLEA[4] =		mLEA5;
+        mLEA[5] =		mLEA6;
+        mLEA[6] =		mLEA7;
+        mLEA[7] =		mLEA8;
+
+        mLEB =			new TextView[max];
+        mLEB[0] =		mLEB1;
+        mLEB[1] =		mLEB2;
+        mLEB[2] =		mLEB3;
+        mLEB[3] =		mLEB4;
+        mLEB[4] =		mLEB5;
+        mLEB[5] =		mLEB6;
+        mLEB[6] =		mLEB7;
+        mLEB[7] =		mLEB8;
+
+        mBigS =			new TextView[max];
+        mBigS[0] =		mBigS1;
+        mBigS[1] =		mBigS2;
+        mBigS[2] =		mBigS3;
+        mBigS[3] =		mBigS4;
+        mBigS[4] =		mBigS5;
+        mBigS[5] =		mBigS6;
+        mBigS[6] =		mBigS7;
+        mBigS[7] =		mBigS8;
+
+        mLittleS =		new TextView[max];
+        mLittleS[0] =	mLittleS1;
+        mLittleS[1] =	mLittleS2;
+        mLittleS[2] =	mLittleS3;
+        mLittleS[3] =	mLittleS4;
+        mLittleS[4] =	mLittleS5;
+        mLittleS[5] =	mLittleS6;
+        mLittleS[6] =	mLittleS7;
+        mLittleS[7] =	mLittleS8;
+        
+        mM =			new TextView[max];
+        mM[0] =			mM1;
+        mM[1] =			mM2;
+        mM[2] =			mM3;
+        mM[3] =			mM4;
+        mM[4] =			mM5;
+        mM[5] =			mM6;
+        mM[6] =			mM7;
+        mM[7] =			mM8;
+        
+        mN =			new TextView[max];
+        mN[0] =			mN1;
+        mN[1] =			mN2;
+        mN[2] =			mN3;
+        mN[3] =			mN4;
+        mN[4] =			mN5;
+        mN[5] =			mN6;
+        mN[6] =			mN7;
+        mN[7] =			mN8;
+        
+        mP1 =			new TextView[max];
+        mP1[0] =		mP1_1;
+        mP1[1] =		mP1_2;
+        mP1[2] =		mP1_3;
+        mP1[3] =		mP1_4;
+        mP1[4] =		mP1_5;
+        mP1[5] =		mP1_6;
+        mP1[6] =		mP1_7;
+        mP1[7] =		mP1_8;
+
+        mLUA =			new TextView[max];
+        mLUA[0] =		mLUA1;
+        mLUA[1] =		mLUA2;
+        mLUA[2] =		mLUA3;
+        mLUA[3] =		mLUA4;
+        mLUA[4] =		mLUA5;
+        mLUA[5] =		mLUA6;
+        mLUA[6] =		mLUA7;
+        mLUA[7] =		mLUA8;
+
+        mLUB =			new TextView[max];
+        mLUB[0] =		mLUB1;
+        mLUB[1] =		mLUB2;
+        mLUB[2] =		mLUB3;
+        mLUB[3] =		mLUB4;
+        mLUB[4] =		mLUB5;
+        mLUB[5] =		mLUB6;
+        mLUB[6] =		mLUB7;
+        mLUB[7] =		mLUB8;
+
+        mCheck =		new CheckBox[max];
+        mCheck[0] =		mCheck1;
+        mCheck[1] =		mCheck2;
+        mCheck[2] =		mCheck3;
+        mCheck[3] =		mCheck4;
+        mCheck[4] =		mCheck5;
+        mCheck[5] =		mCheck6;
+        mCheck[6] =		mCheck7;
+        mCheck[7] =		mCheck8;
 	}
 
 	@Override
@@ -556,263 +880,42 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		}
 		else
 		{
-			mSolution.setText("");														//clear the solution text
-			if (!mCheck1.isChecked())													//Can use this row to cross out
-			{
-				CrossOutSingle(	0, mD1		, 				1, antibody.GetName( 0));
-				CrossOutCouple(	1, mBigC1	, mLittleC1	,	1, antibody.GetName( 1));
-				CrossOutCouple(	2, mBigE1	, mLittleE1	,	1, antibody.GetName( 2));
-				CrossOutCouple(	3, mLittleC1, mBigC1	,	1, antibody.GetName( 3));
-				CrossOutCouple(	4, mLittleE1, mBigE1	,	1, antibody.GetName( 4));
-				CrossOutSingle(	5, mF1		,				1, antibody.GetName( 5));
-				CrossOutSingle(	6, mCW1		,				1, antibody.GetName( 6));
-				CrossOutSingle(	7, mV1		,				1, antibody.GetName( 7));
-				CrossOutCouple(	8, mBigK1	, mLittleK1	,	1, antibody.GetName( 8));
-				CrossOutCouple(	9, mLittleK1, mBigK1	,	1, antibody.GetName( 9));
-				CrossOutCouple(10, mKPA1	, mKPB1		,	1, antibody.GetName(10));
-				CrossOutCouple(11, mKPB1	, mKPA1		,	1, antibody.GetName(11));
-				CrossOutCouple(12, mJSA1	, mJSB1		,	1, antibody.GetName(12));
-				CrossOutCouple(13, mJSB1	, mJSA1		,	1, antibody.GetName(13));
-				CrossOutCouple(14, mFYA1	, mFYB1		,	1, antibody.GetName(14));
-				CrossOutCouple(15, mFYB1	, mFYA1		,	1, antibody.GetName(15));
-				CrossOutCouple(16, mJKA1	, mJKB1		,	1, antibody.GetName(16));
-				CrossOutCouple(17, mJKB1	, mJKA1		,	1, antibody.GetName(17));
-				CrossOutSingle(18, mXGA1	,				1, antibody.GetName(18));
-				CrossOutCouple(19, mLEA1	, mLEB1		,	1, antibody.GetName(19));
-				CrossOutCouple(20, mLEB1	, mLEA1		,	1, antibody.GetName(20));
-				CrossOutCouple(21, mBigS1	, mLittleS1	,	1, antibody.GetName(21));
-				CrossOutCouple(22, mLittleS1, mBigS1	,	1, antibody.GetName(22));
-				CrossOutCouple(23, mM1		, mN1		,	1, antibody.GetName(23));
-				CrossOutCouple(24, mN1		, mM1		,	1, antibody.GetName(24));
-				CrossOutSingle(25, mP1_1	,				1, antibody.GetName(25));
-				CrossOutCouple(26, mLUA1	, mLUB1		,	1, antibody.GetName(26));
-				CrossOutCouple(27, mLUB1	, mLUA1		,	1, antibody.GetName(27));
+			mSolution.setText("");											//clear the solution text
+
+			for (i = 0; i < max; i++) {
+				if (!mCheck[i].isChecked()) {								//Can use this row to cross out
+					CrossOutSingle(	0, mD		[i], 					i);
+					CrossOutCouple(	1, mBigC	[i],	mLittleC[i],	i);
+					CrossOutCouple(	2, mBigE	[i],	mLittleE[i],	i);
+					CrossOutCouple(	3, mLittleC	[i],	mBigC	[i],	i);
+					CrossOutCouple(	4, mLittleE	[i],	mBigE	[i],	i);
+					CrossOutSingle(	5, mF		[i],					i);
+					CrossOutSingle(	6, mCW		[i],					i);
+					CrossOutSingle(	7, mV		[i],					i);
+					CrossOutCouple(	8, mBigK	[i],	mLittleK[i],	i);
+					CrossOutCouple(	9, mLittleK	[i],	mBigK	[i],	i);
+					CrossOutCouple(10, mKPA		[i],	mKPB	[i],	i);
+					CrossOutCouple(11, mKPB		[i],	mKPA	[i],	i);
+					CrossOutCouple(12, mJSA		[i],	mJSB	[i],	i);
+					CrossOutCouple(13, mJSB		[i],	mJSA	[i],	i);
+					CrossOutCouple(14, mFYA		[i],	mFYB	[i],	i);
+					CrossOutCouple(15, mFYB		[i],	mFYA	[i],	i);
+					CrossOutCouple(16, mJKA		[i],	mJKB	[i],	i);
+					CrossOutCouple(17, mJKB		[i],	mJKA	[i],	i);
+					CrossOutSingle(18, mXGA		[i],					i);
+					CrossOutCouple(19, mLEA		[i],	mLEB	[i],	i);
+					CrossOutCouple(20, mLEB		[i],	mLEA	[i],	i);
+					CrossOutCouple(21, mBigS	[i],	mLittleS[i],	i);
+					CrossOutCouple(22, mLittleS	[i],	mBigS	[i],	i);
+					CrossOutCouple(23, mM		[i],	mN		[i],	i);
+					CrossOutCouple(24, mN		[i],	mM		[i],	i);
+					CrossOutSingle(25, mP1		[i],					i);
+					CrossOutCouple(26, mLUA		[i],	mLUB	[i]	,	i);
+					CrossOutCouple(27, mLUB		[i],	mLUA	[i]	,	i);
+				}
 			}
-			if (!mCheck2.isChecked())													//Can use this row to cross out
-			{
-				CrossOutSingle(	0, mD2		, 				2, antibody.GetName( 0));
-				CrossOutCouple(	1, mBigC2	, mLittleC2	,	2, antibody.GetName( 1));
-				CrossOutCouple(	2, mBigE2	, mLittleE2	,	2, antibody.GetName( 2));
-				CrossOutCouple(	3, mLittleC2, mBigC2	,	2, antibody.GetName( 3));
-				CrossOutCouple(	4, mLittleE2, mBigE2	,	2, antibody.GetName( 4));
-				CrossOutSingle(	5, mF2		,				2, antibody.GetName( 5));
-				CrossOutSingle(	6, mCW2		,				2, antibody.GetName( 6));
-				CrossOutSingle(	7, mV2		,				2, antibody.GetName( 7));
-				CrossOutCouple(	8, mBigK2	, mLittleK2	,	2, antibody.GetName( 8));
-				CrossOutCouple(	9, mLittleK2, mBigK2	,	2, antibody.GetName( 9));
-				CrossOutCouple(10, mKPA2	, mKPB2		,	2, antibody.GetName(10));
-				CrossOutCouple(11, mKPB2	, mKPA2		,	2, antibody.GetName(11));
-				CrossOutCouple(12, mJSA2	, mJSB2		,	2, antibody.GetName(12));
-				CrossOutCouple(13, mJSB2	, mJSA2		,	2, antibody.GetName(13));
-				CrossOutCouple(14, mFYA2	, mFYB2		,	2, antibody.GetName(14));
-				CrossOutCouple(15, mFYB2	, mFYA2		,	2, antibody.GetName(15));
-				CrossOutCouple(16, mJKA2	, mJKB2		,	2, antibody.GetName(16));
-				CrossOutCouple(17, mJKB2	, mJKA2		,	2, antibody.GetName(17));
-				CrossOutSingle(18, mXGA2	,				2, antibody.GetName(18));
-				CrossOutCouple(19, mLEA2	, mLEB2		,	2, antibody.GetName(19));
-				CrossOutCouple(20, mLEB2	, mLEA2		,	2, antibody.GetName(20));
-				CrossOutCouple(21, mBigS2	, mLittleS2	,	2, antibody.GetName(21));
-				CrossOutCouple(22, mLittleS2, mBigS2	,	2, antibody.GetName(22));
-				CrossOutCouple(23, mM2		, mN2		,	2, antibody.GetName(23));
-				CrossOutCouple(24, mN2		, mM2		,	2, antibody.GetName(24));
-				CrossOutSingle(25, mP1_2	,				2, antibody.GetName(25));
-				CrossOutCouple(26, mLUA2	, mLUB2		,	2, antibody.GetName(26));
-				CrossOutCouple(27, mLUB2	, mLUA2		,	2, antibody.GetName(27));
-			}
-			if (!mCheck3.isChecked())													//Can use this row to cross out
-			{
-				CrossOutSingle(	0, mD3		,				3, antibody.GetName( 0));
-				CrossOutCouple(	1, mBigC3	, mLittleC3	,	3, antibody.GetName( 1));
-				CrossOutCouple(	2, mBigE3	, mLittleE3	,	3, antibody.GetName( 2));
-				CrossOutCouple(	3, mLittleC3, mBigC3	,	3, antibody.GetName( 3));
-				CrossOutCouple(	4, mLittleE3, mBigE3	,	3, antibody.GetName( 4));
-				CrossOutSingle(	5, mF3		,				3, antibody.GetName( 5));
-				CrossOutSingle(	6, mCW3		,				3, antibody.GetName( 6));
-				CrossOutSingle(	7, mV3		,				3, antibody.GetName( 7));
-				CrossOutCouple(	8, mBigK3	, mLittleK3	,	3, antibody.GetName( 8));
-				CrossOutCouple(	9, mLittleK3, mBigK3	,	3, antibody.GetName( 9));
-				CrossOutCouple(10, mKPA3	, mKPB3		,	3, antibody.GetName(10));
-				CrossOutCouple(11, mKPB3	, mKPA3		,	3, antibody.GetName(11));
-				CrossOutCouple(12, mJSA3	, mJSB3		,	3, antibody.GetName(12));
-				CrossOutCouple(13, mJSB3	, mJSA3		,	3, antibody.GetName(13));
-				CrossOutCouple(14, mFYA3	, mFYB3		,	3, antibody.GetName(14));
-				CrossOutCouple(15, mFYB3	, mFYA3		,	3, antibody.GetName(15));
-				CrossOutCouple(16, mJKA3	, mJKB3		,	3, antibody.GetName(16));
-				CrossOutCouple(17, mJKB3	, mJKA3		,	3, antibody.GetName(17));
-				CrossOutSingle(18, mXGA3	,				3, antibody.GetName(18));
-				CrossOutCouple(19, mLEA3	, mLEB3		,	3, antibody.GetName(19));
-				CrossOutCouple(20, mLEB3	, mLEA3		,	3, antibody.GetName(20));
-				CrossOutCouple(21, mBigS3	, mLittleS3	,	3, antibody.GetName(21));
-				CrossOutCouple(22, mLittleS3, mBigS3	,	3, antibody.GetName(22));
-				CrossOutCouple(23, mM3		, mN3		,	3, antibody.GetName(23));
-				CrossOutCouple(24, mN3		, mM3		,	3, antibody.GetName(24));
-				CrossOutSingle(25, mP1_3	,				3, antibody.GetName(25));
-				CrossOutCouple(26, mLUA3	, mLUB3		,	3, antibody.GetName(26));
-				CrossOutCouple(27, mLUB3	, mLUA3		,	3, antibody.GetName(27));
-			}
-			if (!mCheck4.isChecked())													//Can use this row to cross out
-			{
-				CrossOutSingle(	0, mD4		,				4, antibody.GetName( 0));
-				CrossOutCouple(	1, mBigC4	, mLittleC4	,	4, antibody.GetName( 1));
-				CrossOutCouple(	2, mBigE4	, mLittleE4	,	4, antibody.GetName( 2));
-				CrossOutCouple(	3, mLittleC4, mBigC4	,	4, antibody.GetName( 3));
-				CrossOutCouple(	4, mLittleE4, mBigE4	,	4, antibody.GetName( 4));
-				CrossOutSingle(	5, mF4		,				4, antibody.GetName( 5));
-				CrossOutSingle(	6, mCW4		,				4, antibody.GetName( 6));
-				CrossOutSingle(	7, mV4		,				4, antibody.GetName( 7));
-				CrossOutCouple(	8, mBigK4	, mLittleK4	,	4, antibody.GetName( 8));
-				CrossOutCouple(	9, mLittleK4, mBigK4	,	4, antibody.GetName( 9));
-				CrossOutCouple(10, mKPA4	, mKPB4		,	4, antibody.GetName(10));
-				CrossOutCouple(11, mKPB4	, mKPA4		,	4, antibody.GetName(11));
-				CrossOutCouple(12, mJSA4	, mJSB4		,	4, antibody.GetName(12));
-				CrossOutCouple(13, mJSB4	, mJSA4		,	4, antibody.GetName(13));
-				CrossOutCouple(14, mFYA4	, mFYB4		,	4, antibody.GetName(14));
-				CrossOutCouple(15, mFYB4	, mFYA4		,	4, antibody.GetName(15));
-				CrossOutCouple(16, mJKA4	, mJKB4		,	4, antibody.GetName(16));
-				CrossOutCouple(17, mJKB4	, mJKA4		,	4, antibody.GetName(17));
-				CrossOutSingle(18, mXGA4	,				4, antibody.GetName(18));
-				CrossOutCouple(19, mLEA4	, mLEB4		,	4, antibody.GetName(19));
-				CrossOutCouple(20, mLEB4	, mLEA4		,	4, antibody.GetName(20));
-				CrossOutCouple(21, mBigS4	, mLittleS4	,	4, antibody.GetName(21));
-				CrossOutCouple(22, mLittleS4, mBigS4	,	4, antibody.GetName(22));
-				CrossOutCouple(23, mM4		, mN4		,	4, antibody.GetName(23));
-				CrossOutCouple(24, mN4		, mM4		,	4, antibody.GetName(24));
-				CrossOutSingle(25, mP1_4	,				4, antibody.GetName(25));
-				CrossOutCouple(26, mLUA4	, mLUB4		,	4, antibody.GetName(26));
-				CrossOutCouple(27, mLUB4	, mLUA4		,	4, antibody.GetName(27));
-			}
-			if (!mCheck5.isChecked())													//Can use this row to cross out
-			{
-				CrossOutSingle(	0, mD5		,				5, antibody.GetName( 0));
-				CrossOutCouple(	1, mBigC5	, mLittleC5	,	5, antibody.GetName( 1));
-				CrossOutCouple(	2, mBigE5	, mLittleE5	,	5, antibody.GetName( 2));
-				CrossOutCouple(	3, mLittleC5, mBigC5	,	5, antibody.GetName( 3));
-				CrossOutCouple(	4, mLittleE5, mBigE5	,	5, antibody.GetName( 4));
-				CrossOutSingle(	5, mF5		,				5, antibody.GetName( 5));
-				CrossOutSingle(	6, mCW5		,				5, antibody.GetName( 6));
-				CrossOutSingle(	7, mV5		,				5, antibody.GetName( 7));
-				CrossOutCouple(	8, mBigK5	, mLittleK5	,	5, antibody.GetName( 8));
-				CrossOutCouple(	9, mLittleK5, mBigK5	,	5, antibody.GetName( 9));
-				CrossOutCouple(10, mKPA5	, mKPB5		,	5, antibody.GetName(10));
-				CrossOutCouple(11, mKPB5	, mKPA5		,	5, antibody.GetName(11));
-				CrossOutCouple(12, mJSA5	, mJSB5		,	5, antibody.GetName(12));
-				CrossOutCouple(13, mJSB5	, mJSA5		,	5, antibody.GetName(13));
-				CrossOutCouple(14, mFYA5	, mFYB5		,	5, antibody.GetName(14));
-				CrossOutCouple(15, mFYB5	, mFYA5		,	5, antibody.GetName(15));
-				CrossOutCouple(16, mJKA5	, mJKB5		,	5, antibody.GetName(16));
-				CrossOutCouple(17, mJKB5	, mJKA5		,	5, antibody.GetName(17));
-				CrossOutSingle(18, mXGA5	,				5, antibody.GetName(18));
-				CrossOutCouple(19, mLEA5	, mLEB5		,	5, antibody.GetName(19));
-				CrossOutCouple(20, mLEB5	, mLEA5		,	5, antibody.GetName(20));
-				CrossOutCouple(21, mBigS5	, mLittleS5	,	5, antibody.GetName(21));
-				CrossOutCouple(22, mLittleS5, mBigS5	,	5, antibody.GetName(22));
-				CrossOutCouple(23, mM5		, mN5		,	5, antibody.GetName(23));
-				CrossOutCouple(24, mN5		, mM5		,	5, antibody.GetName(24));
-				CrossOutSingle(25, mP1_5	,				5, antibody.GetName(25));
-				CrossOutCouple(26, mLUA5	, mLUB5		,	5, antibody.GetName(26));
-				CrossOutCouple(27, mLUB5	, mLUA5		,	5, antibody.GetName(27));
-			}
-			if (!mCheck6.isChecked())													//Can use this row to cross out
-			{
-				CrossOutSingle(	0, mD6		,				6, antibody.GetName( 0));
-				CrossOutCouple(	1, mBigC6	, mLittleC6	,	6, antibody.GetName( 1));
-				CrossOutCouple(	2, mBigE6	, mLittleE6	,	6, antibody.GetName( 2));
-				CrossOutCouple(	3, mLittleC6, mBigC6	,	6, antibody.GetName( 3));
-				CrossOutCouple(	4, mLittleE6, mBigE6	,	6, antibody.GetName( 4));
-				CrossOutSingle(	5, mF6		,				6, antibody.GetName( 5));
-				CrossOutSingle(	6, mCW6		,				6, antibody.GetName( 6));
-				CrossOutSingle(	7, mV6		,				6, antibody.GetName( 7));
-				CrossOutCouple(	8, mBigK6	, mLittleK6	,	6, antibody.GetName( 8));
-				CrossOutCouple(	9, mLittleK6, mBigK6	,	6, antibody.GetName( 9));
-				CrossOutCouple(10, mKPA6	, mKPB6		,	6, antibody.GetName(10));
-				CrossOutCouple(11, mKPB6	, mKPA6		,	6, antibody.GetName(11));
-				CrossOutCouple(12, mJSA6	, mJSB6		,	6, antibody.GetName(12));
-				CrossOutCouple(13, mJSB6	, mJSA6		,	6, antibody.GetName(13));
-				CrossOutCouple(14, mFYA6	, mFYB6		,	6, antibody.GetName(14));
-				CrossOutCouple(15, mFYB6	, mFYA6		,	6, antibody.GetName(15));
-				CrossOutCouple(16, mJKA6	, mJKB6		,	6, antibody.GetName(16));
-				CrossOutCouple(17, mJKB6	, mJKA6		,	6, antibody.GetName(17));
-				CrossOutSingle(18, mXGA6	,				6, antibody.GetName(18));
-				CrossOutCouple(19, mLEA6	, mLEB6		,	6, antibody.GetName(19));
-				CrossOutCouple(20, mLEB6	, mLEA6		,	6, antibody.GetName(20));
-				CrossOutCouple(21, mBigS6	, mLittleS6	,	6, antibody.GetName(21));
-				CrossOutCouple(22, mLittleS6, mBigS6	,	6, antibody.GetName(22));
-				CrossOutCouple(23, mM6		, mN6		,	6, antibody.GetName(23));
-				CrossOutCouple(24, mN6		, mM6		,	6, antibody.GetName(24));
-				CrossOutSingle(25, mP1_6	,				6, antibody.GetName(25));
-				CrossOutCouple(26, mLUA6	, mLUB6		,	6, antibody.GetName(26));
-				CrossOutCouple(27, mLUB6	, mLUA6		,	6, antibody.GetName(27));
-			}
-			if (!mCheck7.isChecked())													//Can use this row to cross out
-			{
-				CrossOutSingle(	0, mD7		,				7, antibody.GetName( 0));
-				CrossOutCouple(	1, mBigC7	, mLittleC7	,	7, antibody.GetName( 1));
-				CrossOutCouple(	2, mBigE7	, mLittleE7	,	7, antibody.GetName( 2));
-				CrossOutCouple(	3, mLittleC7, mBigC7	,	7, antibody.GetName( 3));
-				CrossOutCouple(	4, mLittleE7, mBigE7	,	7, antibody.GetName( 4));
-				CrossOutSingle(	5, mF7		,				7, antibody.GetName( 5));
-				CrossOutSingle(	6, mCW7		,				7, antibody.GetName( 6));
-				CrossOutSingle(	7, mV7		,				7, antibody.GetName( 7));
-				CrossOutCouple(	8, mBigK7	, mLittleK7	,	7, antibody.GetName( 8));
-				CrossOutCouple(	9, mLittleK7, mBigK7	,	7, antibody.GetName( 9));
-				CrossOutCouple(10, mKPA7	, mKPB7		,	7, antibody.GetName(10));
-				CrossOutCouple(11, mKPB7	, mKPA7		,	7, antibody.GetName(11));
-				CrossOutCouple(12, mJSA7	, mJSB7		,	7, antibody.GetName(12));
-				CrossOutCouple(13, mJSB7	, mJSA7		,	7, antibody.GetName(13));
-				CrossOutCouple(14, mFYA7	, mFYB7		,	7, antibody.GetName(14));
-				CrossOutCouple(15, mFYB7	, mFYA7		,	7, antibody.GetName(15));
-				CrossOutCouple(16, mJKA7	, mJKB7		,	7, antibody.GetName(16));
-				CrossOutCouple(17, mJKB7	, mJKA7		,	7, antibody.GetName(17));
-				CrossOutSingle(18, mXGA7	,				7, antibody.GetName(18));
-				CrossOutCouple(19, mLEA7	, mLEB7		,	7, antibody.GetName(19));
-				CrossOutCouple(20, mLEB7	, mLEA7		,	7, antibody.GetName(20));
-				CrossOutCouple(21, mBigS7	, mLittleS7	,	7, antibody.GetName(21));
-				CrossOutCouple(22, mLittleS7, mBigS7	,	7, antibody.GetName(22));
-				CrossOutCouple(23, mM7		, mN7		,	7, antibody.GetName(23));
-				CrossOutCouple(24, mN7		, mM7		,	7, antibody.GetName(24));
-				CrossOutSingle(25, mP1_7	,				7, antibody.GetName(25));
-				CrossOutCouple(26, mLUA7	, mLUB7		,	7, antibody.GetName(26));
-				CrossOutCouple(27, mLUB7	, mLUA7		,	7, antibody.GetName(27));
-			}
-			if (!mCheck8.isChecked())													//Can use this row to cross out
-			{
-				CrossOutSingle(	0, mD8		,				8, antibody.GetName( 0));
-				CrossOutCouple(	1, mBigC8	, mLittleC8	,	8, antibody.GetName( 1));
-				CrossOutCouple(	2, mBigE8	, mLittleE8	,	8, antibody.GetName( 2));
-				CrossOutCouple(	3, mLittleC8, mBigC8	,	8, antibody.GetName( 3));
-				CrossOutCouple(	4, mLittleE8, mBigE8	,	8, antibody.GetName( 4));
-				CrossOutSingle(	5, mF8		,				8, antibody.GetName( 5));
-				CrossOutSingle(	6, mCW8		,				8, antibody.GetName( 6));
-				CrossOutSingle(	7, mV8		,				8, antibody.GetName( 7));
-				CrossOutCouple(	8, mBigK8	, mLittleK8	,	8, antibody.GetName( 8));
-				CrossOutCouple(	9, mLittleK8, mBigK8	,	8, antibody.GetName( 9));
-				CrossOutCouple(10, mKPA8	, mKPB8		,	8, antibody.GetName(10));
-				CrossOutCouple(11, mKPB8	, mKPA8		,	8, antibody.GetName(11));
-				CrossOutCouple(12, mJSA8	, mJSB8		,	8, antibody.GetName(12));
-				CrossOutCouple(13, mJSB8	, mJSA8		,	8, antibody.GetName(13));
-				CrossOutCouple(14, mFYA8	, mFYB8		,	8, antibody.GetName(14));
-				CrossOutCouple(15, mFYB8	, mFYA8		,	8, antibody.GetName(15));
-				CrossOutCouple(16, mJKA8	, mJKB8		,	8, antibody.GetName(16));
-				CrossOutCouple(17, mJKB8	, mJKA8		,	8, antibody.GetName(17));
-				CrossOutSingle(18, mXGA8	,				8, antibody.GetName(18));
-				CrossOutCouple(19, mLEA8	, mLEB8		,	8, antibody.GetName(19));
-				CrossOutCouple(20, mLEB8	, mLEA8		,	8, antibody.GetName(20));
-				CrossOutCouple(21, mBigS8	, mLittleS8	,	8, antibody.GetName(21));
-				CrossOutCouple(22, mLittleS8, mBigS8	,	8, antibody.GetName(22));
-				CrossOutCouple(23, mM8		, mN8		,	8, antibody.GetName(23));
-				CrossOutCouple(24, mN8		, mM8		,	8, antibody.GetName(24));
-				CrossOutSingle(25, mP1_8	,				8, antibody.GetName(25));
-				CrossOutCouple(26, mLUA8	, mLUB8		,	8, antibody.GetName(26));
-				CrossOutCouple(27, mLUB8	, mLUA8		,	8, antibody.GetName(27));
-			}
-			Use1ToGetSolutions();
-			Use2ToGetSolutions();
-			Use3ToGetSolutions();
-			Use4ToGetSolutions();
-			Use5ToGetSolutions();
-			Use6ToGetSolutions();
-			Use7ToGetSolutions();
-			Use8ToGetSolutions();
+			for (i = 0; i < max; i++)
+				UseToGetSolutions(i);
 			for (i = 0; i < Antibody.max; i++)
 			{
 				if (
@@ -821,7 +924,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 					(antibody.NotCrossedOut(i))	//it hasn't been crossed out
 				   )
 				{
-					Log.d.d("Antibody", "At " + i + "(" + antibody.GetName(i) + ") there is " + antibody.GetCount(i) + "");
+					Log.d("Antibody", "At " + i + "(" + antibody.GetName(i) + ") there is " + antibody.GetCount(i) + "");
 					antibody.SetNewMost(i);		//it might be the new most
 				}
 			}
@@ -850,237 +953,39 @@ public class MainActivity extends Activity implements View.OnClickListener {
 	 * Set the color of every antibody to black
 	 */
 	void SetAllBlack() {
-		mD1.setTextColor(getResources().getColor(R.color.black));
-		mBigC1.setTextColor(getResources().getColor(R.color.black));
-		mBigE1.setTextColor(getResources().getColor(R.color.black));
-		mLittleC1.setTextColor(getResources().getColor(R.color.black));
-		mLittleE1.setTextColor(getResources().getColor(R.color.black));
-		mF1.setTextColor(getResources().getColor(R.color.black));
-		mCW1.setTextColor(getResources().getColor(R.color.black));
-		mV1.setTextColor(getResources().getColor(R.color.black));
-		mBigK1.setTextColor(getResources().getColor(R.color.black));
-		mLittleK1.setTextColor(getResources().getColor(R.color.black));
-		mKPA1.setTextColor(getResources().getColor(R.color.black));
-		mKPB1.setTextColor(getResources().getColor(R.color.black));
-		mJSA1.setTextColor(getResources().getColor(R.color.black));
-		mJSB1.setTextColor(getResources().getColor(R.color.black));
-		mFYA1.setTextColor(getResources().getColor(R.color.black));
-		mFYB1.setTextColor(getResources().getColor(R.color.black));
-		mJKA1.setTextColor(getResources().getColor(R.color.black));
-		mJKB1.setTextColor(getResources().getColor(R.color.black));
-		mXGA1.setTextColor(getResources().getColor(R.color.black));
-		mLEA1.setTextColor(getResources().getColor(R.color.black));
-		mLEB1.setTextColor(getResources().getColor(R.color.black));
-		mBigS1.setTextColor(getResources().getColor(R.color.black));
-		mLittleS1.setTextColor(getResources().getColor(R.color.black));
-		mM1.setTextColor(getResources().getColor(R.color.black));
-		mN1.setTextColor(getResources().getColor(R.color.black));
-		mP1_1.setTextColor(getResources().getColor(R.color.black));
-		mLUA1.setTextColor(getResources().getColor(R.color.black));
-		mLUB1.setTextColor(getResources().getColor(R.color.black));
+		int	i;
 
-		mD2.setTextColor(getResources().getColor(R.color.black));
-		mBigC2.setTextColor(getResources().getColor(R.color.black));
-		mBigE2.setTextColor(getResources().getColor(R.color.black));
-		mLittleC2.setTextColor(getResources().getColor(R.color.black));
-		mLittleE2.setTextColor(getResources().getColor(R.color.black));
-		mF2.setTextColor(getResources().getColor(R.color.black));
-		mCW2.setTextColor(getResources().getColor(R.color.black));
-		mV2.setTextColor(getResources().getColor(R.color.black));
-		mBigK2.setTextColor(getResources().getColor(R.color.black));
-		mLittleK2.setTextColor(getResources().getColor(R.color.black));
-		mKPA2.setTextColor(getResources().getColor(R.color.black));
-		mKPB2.setTextColor(getResources().getColor(R.color.black));
-		mJSA2.setTextColor(getResources().getColor(R.color.black));
-		mJSB2.setTextColor(getResources().getColor(R.color.black));
-		mFYA2.setTextColor(getResources().getColor(R.color.black));
-		mFYB2.setTextColor(getResources().getColor(R.color.black));
-		mJKA2.setTextColor(getResources().getColor(R.color.black));
-		mJKB2.setTextColor(getResources().getColor(R.color.black));
-		mXGA2.setTextColor(getResources().getColor(R.color.black));
-		mLEA2.setTextColor(getResources().getColor(R.color.black));
-		mLEB2.setTextColor(getResources().getColor(R.color.black));
-		mBigS2.setTextColor(getResources().getColor(R.color.black));
-		mLittleS2.setTextColor(getResources().getColor(R.color.black));
-		mM2.setTextColor(getResources().getColor(R.color.black));
-		mN2.setTextColor(getResources().getColor(R.color.black));
-		mP1_2.setTextColor(getResources().getColor(R.color.black));
-		mLUA2.setTextColor(getResources().getColor(R.color.black));
-		mLUB2.setTextColor(getResources().getColor(R.color.black));
-
-		mD3.setTextColor(getResources().getColor(R.color.black));
-		mBigC3.setTextColor(getResources().getColor(R.color.black));
-		mBigE3.setTextColor(getResources().getColor(R.color.black));
-		mLittleC3.setTextColor(getResources().getColor(R.color.black));
-		mLittleE3.setTextColor(getResources().getColor(R.color.black));
-		mF3.setTextColor(getResources().getColor(R.color.black));
-		mCW3.setTextColor(getResources().getColor(R.color.black));
-		mV3.setTextColor(getResources().getColor(R.color.black));
-		mBigK3.setTextColor(getResources().getColor(R.color.black));
-		mLittleK3.setTextColor(getResources().getColor(R.color.black));
-		mKPA3.setTextColor(getResources().getColor(R.color.black));
-		mKPB3.setTextColor(getResources().getColor(R.color.black));
-		mJSA3.setTextColor(getResources().getColor(R.color.black));
-		mJSB3.setTextColor(getResources().getColor(R.color.black));
-		mFYA3.setTextColor(getResources().getColor(R.color.black));
-		mFYB3.setTextColor(getResources().getColor(R.color.black));
-		mJKA3.setTextColor(getResources().getColor(R.color.black));
-		mJKB3.setTextColor(getResources().getColor(R.color.black));
-		mXGA3.setTextColor(getResources().getColor(R.color.black));
-		mLEA3.setTextColor(getResources().getColor(R.color.black));
-		mLEB3.setTextColor(getResources().getColor(R.color.black));
-		mBigS3.setTextColor(getResources().getColor(R.color.black));
-		mLittleS3.setTextColor(getResources().getColor(R.color.black));
-		mM3.setTextColor(getResources().getColor(R.color.black));
-		mN3.setTextColor(getResources().getColor(R.color.black));
-		mP1_3.setTextColor(getResources().getColor(R.color.black));
-		mLUA3.setTextColor(getResources().getColor(R.color.black));
-		mLUB3.setTextColor(getResources().getColor(R.color.black));
-
-		mD4.setTextColor(getResources().getColor(R.color.black));
-		mBigC4.setTextColor(getResources().getColor(R.color.black));
-		mBigE4.setTextColor(getResources().getColor(R.color.black));
-		mLittleC4.setTextColor(getResources().getColor(R.color.black));
-		mLittleE4.setTextColor(getResources().getColor(R.color.black));
-		mF4.setTextColor(getResources().getColor(R.color.black));
-		mCW4.setTextColor(getResources().getColor(R.color.black));
-		mV4.setTextColor(getResources().getColor(R.color.black));
-		mBigK4.setTextColor(getResources().getColor(R.color.black));
-		mLittleK4.setTextColor(getResources().getColor(R.color.black));
-		mKPA4.setTextColor(getResources().getColor(R.color.black));
-		mKPB4.setTextColor(getResources().getColor(R.color.black));
-		mJSA4.setTextColor(getResources().getColor(R.color.black));
-		mJSB4.setTextColor(getResources().getColor(R.color.black));
-		mFYA4.setTextColor(getResources().getColor(R.color.black));
-		mFYB4.setTextColor(getResources().getColor(R.color.black));
-		mJKA4.setTextColor(getResources().getColor(R.color.black));
-		mJKB4.setTextColor(getResources().getColor(R.color.black));
-		mXGA4.setTextColor(getResources().getColor(R.color.black));
-		mLEA4.setTextColor(getResources().getColor(R.color.black));
-		mLEB4.setTextColor(getResources().getColor(R.color.black));
-		mBigS4.setTextColor(getResources().getColor(R.color.black));
-		mLittleS4.setTextColor(getResources().getColor(R.color.black));
-		mM4.setTextColor(getResources().getColor(R.color.black));
-		mN4.setTextColor(getResources().getColor(R.color.black));
-		mP1_4.setTextColor(getResources().getColor(R.color.black));
-		mLUA4.setTextColor(getResources().getColor(R.color.black));
-		mLUB4.setTextColor(getResources().getColor(R.color.black));
-
-		mD5.setTextColor(getResources().getColor(R.color.black));
-		mBigC5.setTextColor(getResources().getColor(R.color.black));
-		mBigE5.setTextColor(getResources().getColor(R.color.black));
-		mLittleC5.setTextColor(getResources().getColor(R.color.black));
-		mLittleE5.setTextColor(getResources().getColor(R.color.black));
-		mF5.setTextColor(getResources().getColor(R.color.black));
-		mCW5.setTextColor(getResources().getColor(R.color.black));
-		mV5.setTextColor(getResources().getColor(R.color.black));
-		mBigK5.setTextColor(getResources().getColor(R.color.black));
-		mLittleK5.setTextColor(getResources().getColor(R.color.black));
-		mKPA5.setTextColor(getResources().getColor(R.color.black));
-		mKPB5.setTextColor(getResources().getColor(R.color.black));
-		mJSA5.setTextColor(getResources().getColor(R.color.black));
-		mJSB5.setTextColor(getResources().getColor(R.color.black));
-		mFYA5.setTextColor(getResources().getColor(R.color.black));
-		mFYB5.setTextColor(getResources().getColor(R.color.black));
-		mJKA5.setTextColor(getResources().getColor(R.color.black));
-		mJKB5.setTextColor(getResources().getColor(R.color.black));
-		mXGA5.setTextColor(getResources().getColor(R.color.black));
-		mLEA5.setTextColor(getResources().getColor(R.color.black));
-		mLEB5.setTextColor(getResources().getColor(R.color.black));
-		mBigS5.setTextColor(getResources().getColor(R.color.black));
-		mLittleS5.setTextColor(getResources().getColor(R.color.black));
-		mM5.setTextColor(getResources().getColor(R.color.black));
-		mN5.setTextColor(getResources().getColor(R.color.black));
-		mP1_5.setTextColor(getResources().getColor(R.color.black));
-		mLUA5.setTextColor(getResources().getColor(R.color.black));
-		mLUB5.setTextColor(getResources().getColor(R.color.black));
-
-		mD6.setTextColor(getResources().getColor(R.color.black));
-		mBigC6.setTextColor(getResources().getColor(R.color.black));
-		mBigE6.setTextColor(getResources().getColor(R.color.black));
-		mLittleC6.setTextColor(getResources().getColor(R.color.black));
-		mLittleE6.setTextColor(getResources().getColor(R.color.black));
-		mF6.setTextColor(getResources().getColor(R.color.black));
-		mCW6.setTextColor(getResources().getColor(R.color.black));
-		mV6.setTextColor(getResources().getColor(R.color.black));
-		mBigK6.setTextColor(getResources().getColor(R.color.black));
-		mLittleK6.setTextColor(getResources().getColor(R.color.black));
-		mKPA6.setTextColor(getResources().getColor(R.color.black));
-		mKPB6.setTextColor(getResources().getColor(R.color.black));
-		mJSA6.setTextColor(getResources().getColor(R.color.black));
-		mJSB6.setTextColor(getResources().getColor(R.color.black));
-		mFYA6.setTextColor(getResources().getColor(R.color.black));
-		mFYB6.setTextColor(getResources().getColor(R.color.black));
-		mJKA6.setTextColor(getResources().getColor(R.color.black));
-		mJKB6.setTextColor(getResources().getColor(R.color.black));
-		mXGA6.setTextColor(getResources().getColor(R.color.black));
-		mLEA6.setTextColor(getResources().getColor(R.color.black));
-		mLEB6.setTextColor(getResources().getColor(R.color.black));
-		mBigS6.setTextColor(getResources().getColor(R.color.black));
-		mLittleS6.setTextColor(getResources().getColor(R.color.black));
-		mM6.setTextColor(getResources().getColor(R.color.black));
-		mN6.setTextColor(getResources().getColor(R.color.black));
-		mP1_6.setTextColor(getResources().getColor(R.color.black));
-		mLUA6.setTextColor(getResources().getColor(R.color.black));
-		mLUB6.setTextColor(getResources().getColor(R.color.black));
-
-		mD7.setTextColor(getResources().getColor(R.color.black));
-		mBigC7.setTextColor(getResources().getColor(R.color.black));
-		mBigE7.setTextColor(getResources().getColor(R.color.black));
-		mLittleC7.setTextColor(getResources().getColor(R.color.black));
-		mLittleE7.setTextColor(getResources().getColor(R.color.black));
-		mF7.setTextColor(getResources().getColor(R.color.black));
-		mCW7.setTextColor(getResources().getColor(R.color.black));
-		mV7.setTextColor(getResources().getColor(R.color.black));
-		mBigK7.setTextColor(getResources().getColor(R.color.black));
-		mLittleK7.setTextColor(getResources().getColor(R.color.black));
-		mKPA7.setTextColor(getResources().getColor(R.color.black));
-		mKPB7.setTextColor(getResources().getColor(R.color.black));
-		mJSA7.setTextColor(getResources().getColor(R.color.black));
-		mJSB7.setTextColor(getResources().getColor(R.color.black));
-		mFYA7.setTextColor(getResources().getColor(R.color.black));
-		mFYB7.setTextColor(getResources().getColor(R.color.black));
-		mJKA7.setTextColor(getResources().getColor(R.color.black));
-		mJKB7.setTextColor(getResources().getColor(R.color.black));
-		mXGA7.setTextColor(getResources().getColor(R.color.black));
-		mLEA7.setTextColor(getResources().getColor(R.color.black));
-		mLEB7.setTextColor(getResources().getColor(R.color.black));
-		mBigS7.setTextColor(getResources().getColor(R.color.black));
-		mLittleS7.setTextColor(getResources().getColor(R.color.black));
-		mM7.setTextColor(getResources().getColor(R.color.black));
-		mN7.setTextColor(getResources().getColor(R.color.black));
-		mP1_7.setTextColor(getResources().getColor(R.color.black));
-		mLUA7.setTextColor(getResources().getColor(R.color.black));
-		mLUB7.setTextColor(getResources().getColor(R.color.black));
-
-		mD8.setTextColor(getResources().getColor(R.color.black));
-		mBigC8.setTextColor(getResources().getColor(R.color.black));
-		mBigE8.setTextColor(getResources().getColor(R.color.black));
-		mLittleC8.setTextColor(getResources().getColor(R.color.black));
-		mLittleE8.setTextColor(getResources().getColor(R.color.black));
-		mF8.setTextColor(getResources().getColor(R.color.black));
-		mCW8.setTextColor(getResources().getColor(R.color.black));
-		mV8.setTextColor(getResources().getColor(R.color.black));
-		mBigK8.setTextColor(getResources().getColor(R.color.black));
-		mLittleK8.setTextColor(getResources().getColor(R.color.black));
-		mKPA8.setTextColor(getResources().getColor(R.color.black));
-		mKPB8.setTextColor(getResources().getColor(R.color.black));
-		mJSA8.setTextColor(getResources().getColor(R.color.black));
-		mJSB8.setTextColor(getResources().getColor(R.color.black));
-		mFYA8.setTextColor(getResources().getColor(R.color.black));
-		mFYB8.setTextColor(getResources().getColor(R.color.black));
-		mJKA8.setTextColor(getResources().getColor(R.color.black));
-		mJKB8.setTextColor(getResources().getColor(R.color.black));
-		mXGA8.setTextColor(getResources().getColor(R.color.black));
-		mLEA8.setTextColor(getResources().getColor(R.color.black));
-		mLEB8.setTextColor(getResources().getColor(R.color.black));
-		mBigS8.setTextColor(getResources().getColor(R.color.black));
-		mLittleS8.setTextColor(getResources().getColor(R.color.black));
-		mM8.setTextColor(getResources().getColor(R.color.black));
-		mN8.setTextColor(getResources().getColor(R.color.black));
-		mP1_8.setTextColor(getResources().getColor(R.color.black));
-		mLUA8.setTextColor(getResources().getColor(R.color.black));
-		mLUB8.setTextColor(getResources().getColor(R.color.black));
+		for (i = 0; i < max; i++)
+		{
+			mD[i].setTextColor(getResources().getColor(R.color.black));
+			mBigC[i].setTextColor(getResources().getColor(R.color.black));
+			mBigE[i].setTextColor(getResources().getColor(R.color.black));
+			mLittleC[i].setTextColor(getResources().getColor(R.color.black));
+			mLittleE[i].setTextColor(getResources().getColor(R.color.black));
+			mF[i].setTextColor(getResources().getColor(R.color.black));
+			mCW[i].setTextColor(getResources().getColor(R.color.black));
+			mV[i].setTextColor(getResources().getColor(R.color.black));
+			mBigK[i].setTextColor(getResources().getColor(R.color.black));
+			mLittleK[i].setTextColor(getResources().getColor(R.color.black));
+			mKPA[i].setTextColor(getResources().getColor(R.color.black));
+			mKPB[i].setTextColor(getResources().getColor(R.color.black));
+			mJSA[i].setTextColor(getResources().getColor(R.color.black));
+			mJSB[i].setTextColor(getResources().getColor(R.color.black));
+			mFYA[i].setTextColor(getResources().getColor(R.color.black));
+			mFYB[i].setTextColor(getResources().getColor(R.color.black));
+			mJKA[i].setTextColor(getResources().getColor(R.color.black));
+			mJKB[i].setTextColor(getResources().getColor(R.color.black));
+			mXGA[i].setTextColor(getResources().getColor(R.color.black));
+			mLEA[i].setTextColor(getResources().getColor(R.color.black));
+			mLEB[i].setTextColor(getResources().getColor(R.color.black));
+			mBigS[i].setTextColor(getResources().getColor(R.color.black));
+			mLittleS[i].setTextColor(getResources().getColor(R.color.black));
+			mM[i].setTextColor(getResources().getColor(R.color.black));
+			mN[i].setTextColor(getResources().getColor(R.color.black));
+			mP1[i].setTextColor(getResources().getColor(R.color.black));
+			mLUA[i].setTextColor(getResources().getColor(R.color.black));
+			mLUB[i].setTextColor(getResources().getColor(R.color.black));
+		}
 	}
 
 	/**
@@ -1091,14 +996,14 @@ public class MainActivity extends Activity implements View.OnClickListener {
 	 * @param cell the row used
 	 * @param letter the name of the antibody
 	 */
-	void CrossOutSingle(int index, TextView Antibody1, int cell, String letter)
+	void CrossOutSingle(int index, TextView Antibody1, int cell)
 	{
 		if (Antibody1.getText().equals("+"))	//if it is positive
 		{
 			Antibody1.setTextColor(getResources().getColor(R.color.red));
 			if (antibody.NotCrossedOut(index))	//make sure it's only crossed out once
 			{
-				Log.d("Antibody", "Using " + cell + " to cross out " + letter);
+				Log.d("Antibody", "Using " + (cell + 1) + " to cross out " + antibody.GetName(index));
 				antibody.CrossOut(index);
 			}
 		}
@@ -1113,7 +1018,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
      * @param cell the row used
      * @param letter the name of the antibody
      */
-	void CrossOutCouple(int index, TextView Big, TextView Little, int cell, String letter)
+	void CrossOutCouple(int index, TextView Big, TextView Little, int cell)
 	{
 		if (Big.getText().equals("+"))				//if it is positive
 		{
@@ -1122,7 +1027,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				Big.setTextColor(getResources().getColor(R.color.red));
 				if (antibody.NotCrossedOut(index))	//make sure it's only crossed out once
 				{
-					Log.d("Antibody", "Using " + cell + " to cross out " + letter);
+					Log.d("Antibody", "Using " + (cell + 1) + " to cross out " + antibody.GetName(index));
 					antibody.CrossOut(index);
 				}
 			}
@@ -1131,291 +1036,44 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		}
 	}
 
-	void Use1ToGetSolutions()
+	/**
+	 * If the Reaction of the cell is positive, get solutions
+	 * 
+	 * @param index
+	 */
+	void UseToGetSolutions(int index)
 	{
-		if (mCheck1.isChecked())	//if the result is positive
+		if (mCheck[index].isChecked())	//if the result is positive
 		{
-			Log.d("Antibody", "Using 1 to get solutions");
-			GetSolution( 0, mD1			);//, antibody.GetName( 0));
-			GetSolution( 1, mBigC1		);//, antibody.GetName( 1));
-			GetSolution( 2, mBigE1		);//, antibody.GetName( 2));
-			GetSolution( 3, mLittleC1	);//, antibody.GetName( 3));
-			GetSolution( 4, mLittleE1	);//, antibody.GetName( 4));
-			GetSolution( 5, mF1			);//, antibody.GetName( 5));
-			GetSolution( 6, mCW1		);//, antibody.GetName( 6));
-			GetSolution( 7, mV1			);//, antibody.GetName( 7));
-			GetSolution( 8, mBigK1		);//, antibody.GetName( 8));
-			GetSolution( 9, mLittleK1	);//, antibody.GetName( 9));
-			GetSolution(10, mKPA1		);//, antibody.GetName(10));
-			GetSolution(11, mKPB1		);//, antibody.GetName(11));
-			GetSolution(12, mJSA1		);//, antibody.GetName(12));
-			GetSolution(13, mJSB1		);//, antibody.GetName(13));
-			GetSolution(14, mFYA1		);//, antibody.GetName(14));
-			GetSolution(15, mFYB1		);//, antibody.GetName(15));
-			GetSolution(16, mJKA1		);//, antibody.GetName(16));
-			GetSolution(17, mJKB1		);//, antibody.GetName(17));
-			GetSolution(18, mXGA1		);//, antibody.GetName(18));
-			GetSolution(19, mLEA1		);//, antibody.GetName(19));
-			GetSolution(20, mLEB1		);//, antibody.GetName(20));
-			GetSolution(21, mBigS1		);//, antibody.GetName(21));
-			GetSolution(22, mLittleS1	);//, antibody.GetName(22));
-			GetSolution(23, mM1			);//, antibody.GetName(23));
-			GetSolution(24, mN1			);//, antibody.GetName(24));
-			GetSolution(25, mP1_1		);//, antibody.GetName(25));
-			GetSolution(26, mLUA1		);//, antibody.GetName(26));
-			GetSolution(27, mLUB1		);//, antibody.GetName(27));
-		}
-	}
-
-	void Use2ToGetSolutions()
-	{
-		if (mCheck2.isChecked())	//if the result is positive
-		{
-			Log.d("Antibody", "Using 2 to get solutions");
-			GetSolution( 0, mD2			);//, antibody.GetName( 0));
-			GetSolution( 1, mBigC2		);//, antibody.GetName( 1));
-			GetSolution( 2, mBigE2		);//, antibody.GetName( 2));
-			GetSolution( 3, mLittleC2	);//, antibody.GetName( 3));
-			GetSolution( 4, mLittleE2	);//, antibody.GetName( 4));
-			GetSolution( 5, mF2			);//, antibody.GetName( 5));
-			GetSolution( 6, mCW2		);//, antibody.GetName( 6));
-			GetSolution( 7, mV2			);//, antibody.GetName( 7));
-			GetSolution( 8, mBigK2		);//, antibody.GetName( 8));
-			GetSolution( 9, mLittleK2	);//, antibody.GetName( 9));
-			GetSolution(10, mKPA2		);//, antibody.GetName(10));
-			GetSolution(11, mKPB2		);//, antibody.GetName(11));
-			GetSolution(12, mJSA2		);//, antibody.GetName(12));
-			GetSolution(13, mJSB2		);//, antibody.GetName(13));
-			GetSolution(14, mFYA2		);//, antibody.GetName(14));
-			GetSolution(15, mFYB2		);//, antibody.GetName(15));
-			GetSolution(16, mJKA2		);//, antibody.GetName(16));
-			GetSolution(17, mJKB2		);//, antibody.GetName(17));
-			GetSolution(18, mXGA2		);//, antibody.GetName(18));
-			GetSolution(19, mLEA2		);//, antibody.GetName(19));
-			GetSolution(20, mLEB2		);//, antibody.GetName(20));
-			GetSolution(21, mBigS2		);//, antibody.GetName(21));
-			GetSolution(22, mLittleS2	);//, antibody.GetName(22));
-			GetSolution(23, mM2			);//, antibody.GetName(23));
-			GetSolution(24, mN2			);//, antibody.GetName(24));
-			GetSolution(25, mP1_2		);//, antibody.GetName(25));
-			GetSolution(26, mLUA2		);//, antibody.GetName(26));
-			GetSolution(27, mLUB2		);//, antibody.GetName(27));
-		}
-	}
-
-	void Use3ToGetSolutions()
-	{
-		if (mCheck3.isChecked())	//if the result is positive
-		{
-			Log.d("Antibody", "Using 3 to get solutions");
-			GetSolution( 0, mD3			);//, antibody.GetName( 0));
-			GetSolution( 1, mBigC3		);//, antibody.GetName( 1));
-			GetSolution( 2, mBigE3		);//, antibody.GetName( 2));
-			GetSolution( 3, mLittleC3	);//, antibody.GetName( 3));
-			GetSolution( 4, mLittleE3	);//, antibody.GetName( 4));
-			GetSolution( 5, mF3			);//, antibody.GetName( 5));
-			GetSolution( 6, mCW3		);//, antibody.GetName( 6));
-			GetSolution( 7, mV3			);//, antibody.GetName( 7));
-			GetSolution( 8, mBigK3		);//, antibody.GetName( 8));
-			GetSolution( 9, mLittleK3	);//, antibody.GetName( 9));
-			GetSolution(10, mKPA3		);//, antibody.GetName(10));
-			GetSolution(11, mKPB3		);//, antibody.GetName(11));
-			GetSolution(12, mJSA3		);//, antibody.GetName(12));
-			GetSolution(13, mJSB3		);//, antibody.GetName(13));
-			GetSolution(14, mFYA3		);//, antibody.GetName(14));
-			GetSolution(15, mFYB3		);//, antibody.GetName(15));
-			GetSolution(16, mJKA3		);//, antibody.GetName(16));
-			GetSolution(17, mJKB3		);//, antibody.GetName(17));
-			GetSolution(18, mXGA3		);//, antibody.GetName(18));
-			GetSolution(19, mLEA3		);//, antibody.GetName(19));
-			GetSolution(20, mLEB3		);//, antibody.GetName(20));
-			GetSolution(21, mBigS3		);//, antibody.GetName(21));
-			GetSolution(22, mLittleS3	);//, antibody.GetName(22));
-			GetSolution(23, mM3			);//, antibody.GetName(23));
-			GetSolution(24, mN3			);//, antibody.GetName(24));
-			GetSolution(25, mP1_3		);//, antibody.GetName(25));
-			GetSolution(26, mLUA3		);//, antibody.GetName(26));
-			GetSolution(27, mLUB3		);//, antibody.GetName(27));
-		}
-	}
-
-	void Use4ToGetSolutions()
-	{
-		if (mCheck4.isChecked())	//if the result is positive
-		{
-			Log.d("Antibody", "Using 4 to get solutions");
-			GetSolution( 0, mD4			);//, antibody.GetName( 0));
-			GetSolution( 1, mBigC4		);//, antibody.GetName( 1));
-			GetSolution( 2, mBigE4		);//, antibody.GetName( 2));
-			GetSolution( 3, mLittleC4	);//, antibody.GetName( 3));
-			GetSolution( 4, mLittleE4	);//, antibody.GetName( 4));
-			GetSolution( 5, mF4			);//, antibody.GetName( 5));
-			GetSolution( 6, mCW4		);//, antibody.GetName( 6));
-			GetSolution( 7, mV4			);//, antibody.GetName( 7));
-			GetSolution( 8, mBigK4		);//, antibody.GetName( 8));
-			GetSolution( 9, mLittleK4	);//, antibody.GetName( 9));
-			GetSolution(10, mKPA4		);//, antibody.GetName(10));
-			GetSolution(11, mKPB4		);//, antibody.GetName(11));
-			GetSolution(12, mJSA4		);//, antibody.GetName(12));
-			GetSolution(13, mJSB4		);//, antibody.GetName(13));
-			GetSolution(14, mFYA4		);//, antibody.GetName(14));
-			GetSolution(15, mFYB4		);//, antibody.GetName(15));
-			GetSolution(16, mJKA4		);//, antibody.GetName(16));
-			GetSolution(17, mJKB4		);//, antibody.GetName(17));
-			GetSolution(18, mXGA4		);//, antibody.GetName(18));
-			GetSolution(19, mLEA4		);//, antibody.GetName(19));
-			GetSolution(20, mLEB4		);//, antibody.GetName(20));
-			GetSolution(21, mBigS4		);//, antibody.GetName(21));
-			GetSolution(22, mLittleS4	);//, antibody.GetName(22));
-			GetSolution(23, mM4			);//, antibody.GetName(23));
-			GetSolution(24, mN4			);//, antibody.GetName(24));
-			GetSolution(25, mP1_4		);//, antibody.GetName(25));
-			GetSolution(26, mLUA4		);//, antibody.GetName(26));
-			GetSolution(27, mLUB4		);//, antibody.GetName(27));
-		}
-	}
-
-	void Use5ToGetSolutions()
-	{
-		if (mCheck5.isChecked())	//if the result is positive
-		{
-			Log.d("Antibody", "Using 5 to get solutions");
-			GetSolution( 0, mD5			);//, antibody.GetName( 0));
-			GetSolution( 1, mBigC5		);//, antibody.GetName( 1));
-			GetSolution( 2, mBigE5		);//, antibody.GetName( 2));
-			GetSolution( 3, mLittleC5	);//, antibody.GetName( 3));
-			GetSolution( 4, mLittleE5	);//, antibody.GetName( 4));
-			GetSolution( 5, mF5			);//, antibody.GetName( 5));
-			GetSolution( 6, mCW5		);//, antibody.GetName( 6));
-			GetSolution( 7, mV5			);//, antibody.GetName( 7));
-			GetSolution( 8, mBigK5		);//, antibody.GetName( 8));
-			GetSolution( 9, mLittleK5	);//, antibody.GetName( 9));
-			GetSolution(10, mKPA5		);//, antibody.GetName(10));
-			GetSolution(11, mKPB5		);//, antibody.GetName(11));
-			GetSolution(12, mJSA5		);//, antibody.GetName(12));
-			GetSolution(13, mJSB5		);//, antibody.GetName(13));
-			GetSolution(14, mFYA5		);//, antibody.GetName(14));
-			GetSolution(15, mFYB5		);//, antibody.GetName(15));
-			GetSolution(16, mJKA5		);//, antibody.GetName(16));
-			GetSolution(17, mJKB5		);//, antibody.GetName(17));
-			GetSolution(18, mXGA5		);//, antibody.GetName(18));
-			GetSolution(19, mLEA5		);//, antibody.GetName(19));
-			GetSolution(20, mLEB5		);//, antibody.GetName(20));
-			GetSolution(21, mBigS5		);//, antibody.GetName(21));
-			GetSolution(22, mLittleS5	);//, antibody.GetName(22));
-			GetSolution(23, mM5			);//, antibody.GetName(23));
-			GetSolution(24, mN5			);//, antibody.GetName(24));
-			GetSolution(25, mP1_5		);//, antibody.GetName(25));
-			GetSolution(26, mLUA5		);//, antibody.GetName(26));
-			GetSolution(27, mLUB5		);//, antibody.GetName(27));
-		}
-	}
-
-	void Use6ToGetSolutions()
-	{
-		if (mCheck6.isChecked())	//if the result is positive
-		{
-			Log.d("Antibody", "Using 6 to get solutions");
-			GetSolution( 0, mD6			);//, antibody.GetName( 0));
-			GetSolution( 1, mBigC6		);//, antibody.GetName( 1));
-			GetSolution( 2, mBigE6		);//, antibody.GetName( 2));
-			GetSolution( 3, mLittleC6	);//, antibody.GetName( 3));
-			GetSolution( 4, mLittleE6	);//, antibody.GetName( 4));
-			GetSolution( 5, mF6			);//, antibody.GetName( 5));
-			GetSolution( 6, mCW6		);//, antibody.GetName( 6));
-			GetSolution( 7, mV6			);//, antibody.GetName( 7));
-			GetSolution( 8, mBigK6		);//, antibody.GetName( 8));
-			GetSolution( 9, mLittleK6	);//, antibody.GetName( 9));
-			GetSolution(10, mKPA6		);//, antibody.GetName(10));
-			GetSolution(11, mKPB6		);//, antibody.GetName(11));
-			GetSolution(12, mJSA6		);//, antibody.GetName(12));
-			GetSolution(13, mJSB6		);//, antibody.GetName(13));
-			GetSolution(14, mFYA6		);//, antibody.GetName(14));
-			GetSolution(15, mFYB6		);//, antibody.GetName(15));
-			GetSolution(16, mJKA6		);//, antibody.GetName(16));
-			GetSolution(17, mJKB6		);//, antibody.GetName(17));
-			GetSolution(18, mXGA6		);//, antibody.GetName(18));
-			GetSolution(19, mLEA6		);//, antibody.GetName(19));
-			GetSolution(20, mLEB6		);//, antibody.GetName(20));
-			GetSolution(21, mBigS6		);//, antibody.GetName(21));
-			GetSolution(22, mLittleS6	);//, antibody.GetName(22));
-			GetSolution(23, mM6			);//, antibody.GetName(23));
-			GetSolution(24, mN6			);//, antibody.GetName(24));
-			GetSolution(25, mP1_6		);//, antibody.GetName(25));
-			GetSolution(26, mLUA6		);//, antibody.GetName(26));
-			GetSolution(27, mLUB6		);//, antibody.GetName(27));
-		}
-	}
-
-	void Use7ToGetSolutions()
-	{
-		if (mCheck7.isChecked())	//if the result is positive
-		{
-			Log.d("Antibody", "Using 7 to get solutions");
-			GetSolution( 0, mD7			);//, antibody.GetName( 0));
-			GetSolution( 1, mBigC7		);//, antibody.GetName( 1));
-			GetSolution( 2, mBigE7		);//, antibody.GetName( 2));
-			GetSolution( 3, mLittleC7	);//, antibody.GetName( 3));
-			GetSolution( 4, mLittleE7	);//, antibody.GetName( 4));
-			GetSolution( 5, mF7			);//, antibody.GetName( 5));
-			GetSolution( 6, mCW7		);//, antibody.GetName( 6));
-			GetSolution( 7, mV7			);//, antibody.GetName( 7));
-			GetSolution( 8, mBigK7		);//, antibody.GetName( 8));
-			GetSolution( 9, mLittleK7	);//, antibody.GetName( 9));
-			GetSolution(10, mKPA7		);//, antibody.GetName(10));
-			GetSolution(11, mKPB7		);//, antibody.GetName(11));
-			GetSolution(12, mJSA7		);//, antibody.GetName(12));
-			GetSolution(13, mJSB7		);//, antibody.GetName(13));
-			GetSolution(14, mFYA7		);//, antibody.GetName(14));
-			GetSolution(15, mFYB7		);//, antibody.GetName(15));
-			GetSolution(16, mJKA7		);//, antibody.GetName(16));
-			GetSolution(17, mJKB7		);//, antibody.GetName(17));
-			GetSolution(18, mXGA7		);//, antibody.GetName(18));
-			GetSolution(19, mLEA7		);//, antibody.GetName(19));
-			GetSolution(20, mLEB7		);//, antibody.GetName(20));
-			GetSolution(21, mBigS7		);//, antibody.GetName(21));
-			GetSolution(22, mLittleS7	);//, antibody.GetName(22));
-			GetSolution(23, mM7			);//, antibody.GetName(23));
-			GetSolution(24, mN7			);//, antibody.GetName(24));
-			GetSolution(25, mP1_7		);//, antibody.GetName(25));
-			GetSolution(26, mLUA7		);//, antibody.GetName(26));
-			GetSolution(27, mLUB7		);//, antibody.GetName(27));
-		}
-	}
-
-	void Use8ToGetSolutions()
-	{
-		if (mCheck8.isChecked())	//if the result is positive
-		{
-			Log.d("Antibody", "Using 8 to get solutions");
-			GetSolution( 0, mD8			);//, antibody.GetName( 0));
-			GetSolution( 1, mBigC8		);//, antibody.GetName( 1));
-			GetSolution( 2, mBigE8		);//, antibody.GetName( 2));
-			GetSolution( 3, mLittleC8	);//, antibody.GetName( 3));
-			GetSolution( 4, mLittleE8	);//, antibody.GetName( 4));
-			GetSolution( 5, mF8			);//, antibody.GetName( 5));
-			GetSolution( 6, mCW8		);//, antibody.GetName( 6));
-			GetSolution( 7, mV8			);//, antibody.GetName( 7));
-			GetSolution( 8, mBigK8		);//, antibody.GetName( 8));
-			GetSolution( 9, mLittleK8	);//, antibody.GetName( 9));
-			GetSolution(10, mKPA8		);//, antibody.GetName(10));
-			GetSolution(11, mKPB8		);//, antibody.GetName(11));
-			GetSolution(12, mJSA8		);//, antibody.GetName(12));
-			GetSolution(13, mJSB8		);//, antibody.GetName(13));
-			GetSolution(14, mFYA8		);//, antibody.GetName(14));
-			GetSolution(15, mFYB8		);//, antibody.GetName(15));
-			GetSolution(16, mJKA8		);//, antibody.GetName(16));
-			GetSolution(17, mJKB8		);//, antibody.GetName(17));
-			GetSolution(18, mXGA8		);//, antibody.GetName(18));
-			GetSolution(19, mLEA8		);//, antibody.GetName(19));
-			GetSolution(20, mLEB8		);//, antibody.GetName(20));
-			GetSolution(21, mBigS8		);//, antibody.GetName(21));
-			GetSolution(22, mLittleS8	);//, antibody.GetName(22));
-			GetSolution(23, mM8			);//, antibody.GetName(23));
-			GetSolution(24, mN8			);//, antibody.GetName(24));
-			GetSolution(25, mP1_8		);//, antibody.GetName(25));
-			GetSolution(26, mLUA8		);//, antibody.GetName(26));
-			GetSolution(27, mLUB8		);//, antibody.GetName(27));
+			Log.d("Antibody", "Using " + (index + 1) + " to get solutions");
+			GetSolution( 0, mD		[index]);//, antibody.GetName( 0));
+			GetSolution( 1, mBigC	[index]);//, antibody.GetName( 1));
+			GetSolution( 2, mBigE	[index]);//, antibody.GetName( 2));
+			GetSolution( 3, mLittleC[index]);//, antibody.GetName( 3));
+			GetSolution( 4, mLittleE[index]);//, antibody.GetName( 4));
+			GetSolution( 5, mF		[index]);//, antibody.GetName( 5));
+			GetSolution( 6, mCW		[index]);//, antibody.GetName( 6));
+			GetSolution( 7, mV		[index]);//, antibody.GetName( 7));
+			GetSolution( 8, mBigK	[index]);//, antibody.GetName( 8));
+			GetSolution( 9, mLittleK[index]);//, antibody.GetName( 9));
+			GetSolution(10, mKPA	[index]);//, antibody.GetName(10));
+			GetSolution(11, mKPB	[index]);//, antibody.GetName(11));
+			GetSolution(12, mJSA	[index]);//, antibody.GetName(12));
+			GetSolution(13, mJSB	[index]);//, antibody.GetName(13));
+			GetSolution(14, mFYA	[index]);//, antibody.GetName(14));
+			GetSolution(15, mFYB	[index]);//, antibody.GetName(15));
+			GetSolution(16, mJKA	[index]);//, antibody.GetName(16));
+			GetSolution(17, mJKB	[index]);//, antibody.GetName(17));
+			GetSolution(18, mXGA	[index]);//, antibody.GetName(18));
+			GetSolution(19, mLEA	[index]);//, antibody.GetName(19));
+			GetSolution(20, mLEB	[index]);//, antibody.GetName(20));
+			GetSolution(21, mBigS	[index]);//, antibody.GetName(21));
+			GetSolution(22, mLittleS[index]);//, antibody.GetName(22));
+			GetSolution(23, mM		[index]);//, antibody.GetName(23));
+			GetSolution(24, mN		[index]);//, antibody.GetName(24));
+			GetSolution(25, mP1		[index]);//, antibody.GetName(25));
+			GetSolution(26, mLUA	[index]);//, antibody.GetName(26));
+			GetSolution(27, mLUB	[index]);//, antibody.GetName(27));
 		}
 	}
 
