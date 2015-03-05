@@ -17,7 +17,7 @@ import android.widget.TextView;
  */
 public class MainActivity extends Activity implements View.OnClickListener {
 
-	private Antibody	antibody;
+	private Antibody_Super	antibody;
 
 	private TextView	mD1,
 						mBigC1,
@@ -548,7 +548,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		mCalculate =	(Button		)findViewById(R.id.buttonCalculate	);
         mCalculate.setOnClickListener(this);
 
-        antibody =		new Antibody();
+        antibody =		new Antibody_Super();
 
         mD = 			new TextView[max];
         mD[0] =			mD1;
@@ -883,40 +883,69 @@ public class MainActivity extends Activity implements View.OnClickListener {
 			mSolution.setText("");											//clear the solution text
 
 			for (i = 0; i < max; i++) {
+				antibody.SetValue( 0, mD		[i].getText());				//The values need to be set for every cell
+				antibody.SetValue( 1, mBigC		[i].getText());
+				antibody.SetValue( 2, mBigE		[i].getText());
+				antibody.SetValue( 3, mLittleC	[i].getText());
+				antibody.SetValue( 4, mLittleE	[i].getText());
+				antibody.SetValue( 5, mF		[i].getText());
+				antibody.SetValue( 6, mCW		[i].getText());
+				antibody.SetValue( 7, mV		[i].getText());
+				antibody.SetValue( 8, mBigK		[i].getText());
+				antibody.SetValue( 9, mLittleK	[i].getText());
+				antibody.SetValue(10, mKPA		[i].getText());
+				antibody.SetValue(11, mKPB		[i].getText());
+				antibody.SetValue(12, mJSA		[i].getText());
+				antibody.SetValue(13, mJSB		[i].getText());
+				antibody.SetValue(14, mFYA		[i].getText());
+				antibody.SetValue(15, mFYB		[i].getText());
+				antibody.SetValue(16, mJKA		[i].getText());
+				antibody.SetValue(17, mJKB		[i].getText());
+				antibody.SetValue(18, mXGA		[i].getText());
+				antibody.SetValue(19, mLEA		[i].getText());
+				antibody.SetValue(20, mLEB		[i].getText());
+				antibody.SetValue(21, mBigS		[i].getText());
+				antibody.SetValue(22, mLittleS	[i].getText());
+				antibody.SetValue(23, mM		[i].getText());
+				antibody.SetValue(24, mN		[i].getText());
+				antibody.SetValue(25, mP1		[i].getText());
+				antibody.SetValue(26, mLUA		[i].getText());
+				antibody.SetValue(27, mLUB		[i].getText());
+
 				if (!mCheck[i].isChecked()) {								//Can use this row to cross out
-					CrossOutSingle(	0, mD		[i], 					i);
-					CrossOutCouple(	1, mBigC	[i],	mLittleC[i],	i);
-					CrossOutCouple(	2, mBigE	[i],	mLittleE[i],	i);
-					CrossOutCouple(	3, mLittleC	[i],	mBigC	[i],	i);
-					CrossOutCouple(	4, mLittleE	[i],	mBigE	[i],	i);
-					CrossOutSingle(	5, mF		[i],					i);
-					CrossOutSingle(	6, mCW		[i],					i);
-					CrossOutSingle(	7, mV		[i],					i);
-					CrossOutCouple(	8, mBigK	[i],	mLittleK[i],	i);
-					CrossOutCouple(	9, mLittleK	[i],	mBigK	[i],	i);
-					CrossOutCouple(10, mKPA		[i],	mKPB	[i],	i);
-					CrossOutCouple(11, mKPB		[i],	mKPA	[i],	i);
-					CrossOutCouple(12, mJSA		[i],	mJSB	[i],	i);
-					CrossOutCouple(13, mJSB		[i],	mJSA	[i],	i);
-					CrossOutCouple(14, mFYA		[i],	mFYB	[i],	i);
-					CrossOutCouple(15, mFYB		[i],	mFYA	[i],	i);
-					CrossOutCouple(16, mJKA		[i],	mJKB	[i],	i);
-					CrossOutCouple(17, mJKB		[i],	mJKA	[i],	i);
-					CrossOutSingle(18, mXGA		[i],					i);
-					CrossOutCouple(19, mLEA		[i],	mLEB	[i],	i);
-					CrossOutCouple(20, mLEB		[i],	mLEA	[i],	i);
-					CrossOutCouple(21, mBigS	[i],	mLittleS[i],	i);
-					CrossOutCouple(22, mLittleS	[i],	mBigS	[i],	i);
-					CrossOutCouple(23, mM		[i],	mN		[i],	i);
-					CrossOutCouple(24, mN		[i],	mM		[i],	i);
-					CrossOutSingle(25, mP1		[i],					i);
-					CrossOutCouple(26, mLUA		[i],	mLUB	[i]	,	i);
-					CrossOutCouple(27, mLUB		[i],	mLUA	[i]	,	i);
+					CrossOut( 0, mD			[i], i);
+					CrossOut( 1, mBigC		[i], i);
+					CrossOut( 2, mBigE		[i], i);
+					CrossOut( 3, mLittleC	[i], i);
+					CrossOut( 4, mLittleE	[i], i);
+					CrossOut( 5, mF			[i], i);
+					CrossOut( 6, mCW		[i], i);
+					CrossOut( 7, mV			[i], i);
+					CrossOut( 8, mBigK		[i], i);
+					CrossOut( 9, mLittleK	[i], i);
+					CrossOut(10, mKPA		[i], i);
+					CrossOut(11, mKPB		[i], i);
+					CrossOut(12, mJSA		[i], i);
+					CrossOut(13, mJSB		[i], i);
+					CrossOut(14, mFYA		[i], i);
+					CrossOut(15, mFYB		[i], i);
+					CrossOut(16, mJKA		[i], i);
+					CrossOut(17, mJKB		[i], i);
+					CrossOut(18, mXGA		[i], i);
+					CrossOut(19, mLEA		[i], i);
+					CrossOut(20, mLEB		[i], i);
+					CrossOut(21, mBigS		[i], i);
+					CrossOut(22, mLittleS	[i], i);
+					CrossOut(23, mM			[i], i);
+					CrossOut(24, mN			[i], i);
+					CrossOut(25, mP1		[i], i);
+					CrossOut(26, mLUA		[i], i);
+					CrossOut(27, mLUB		[i], i);
 				}
 			}
 			for (i = 0; i < max; i++)
 				UseToGetSolutions(i);
-			for (i = 0; i < Antibody.max; i++)
+			for (i = 0; i < Antibody_Super.max; i++)
 			{
 				if (
 					(antibody.GetCount(i) > 0)	//if this is a solution
@@ -931,7 +960,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 			for (j = 0; j < antibody.GetMost(); j++)
 			{
 				antibody.ResetSolutions();
-				for (i = 0; i < Antibody.max; i++)
+				for (i = 0; i < Antibody_Super.max; i++)
 				{
 					if (antibody.GetCount(i) == antibody.GetMost() - j)
 					{
@@ -996,43 +1025,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 	 * @param cell the row used
 	 * @param letter the name of the antibody
 	 */
-	void CrossOutSingle(int index, TextView Antibody1, int cell)
+	void CrossOut(int index, TextView Antibody1, int cell)
 	{
-		if (Antibody1.getText().equals("+"))	//if it is positive
-		{
+		if (antibody.IsPositive(index)) {
 			Antibody1.setTextColor(getResources().getColor(R.color.red));
-			if (antibody.NotCrossedOut(index))	//make sure it's only crossed out once
-			{
+			if (antibody.CrossOut(index)) {
 				Log.d("Antibody", "Using " + (cell + 1) + " to cross out " + antibody.GetName(index));
-				antibody.CrossOut(index);
 			}
-		}
-	}
-
-	/**
-     * Cross out Big if it's positive, and Little is negative
-     * 
-     * @param index the antibody index
-     * @param Big the antibody that may be crossed out
-     * @param Little the antibody that may be used to cross out Big
-     * @param cell the row used
-     * @param letter the name of the antibody
-     */
-	void CrossOutCouple(int index, TextView Big, TextView Little, int cell)
-	{
-		if (Big.getText().equals("+"))				//if it is positive
-		{
-			if (Little.getText().equals("0"))		//and it's pair is negative
-			{
-				Big.setTextColor(getResources().getColor(R.color.red));
-				if (antibody.NotCrossedOut(index))	//make sure it's only crossed out once
-				{
-					Log.d("Antibody", "Using " + (cell + 1) + " to cross out " + antibody.GetName(index));
-					antibody.CrossOut(index);
-				}
-			}
-			else
-				Big.setTextColor(getResources().getColor(R.color.black));
 		}
 	}
 
