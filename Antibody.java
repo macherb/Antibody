@@ -1,131 +1,120 @@
 package com.example.antibodyidentification;
 
 /**
- * Everything to do with all the antibodies
+ * Everything to do with the collection of antibodies
  * 
  * @author Bobby Macher
  */
-class Antibody {
+class Antibody_Super {
 	/**
 	 * The number of antibodies that have this many solutions
 	 */
 	private				int		solutions;
 	
 	/**
-	 * The number of times the antibodies are solutions
-	 */
-	private				int		count	 [];
-	
-	/**
-	 * percentages for race
-	 */
-	private				int		race	 [][];
-	
-	/**
 	 * The most occurrences of an antibody as a solution
 	 */
 	private				int		most;
-	private				String	name	 [];
-	
+
 	/**
 	 * The maximum number of antibodies
 	 */
 	public static final	int		max =		28;
 
-	Antibody()
+	private Antibody_Sub		ab		[];
+
+	Antibody_Super()
 	{
-        count =	new int[max];
-        race =	new int[max][2];
+		ab =		new Antibody_Sub[max];
 
-        race[ 0][0] =	 15;
-        race[ 0][1] =	  8;
-        race[ 1][0] =	 32;
-        race[ 1][1] =	 73;
-        race[ 2][0] =	 71;
-        race[ 2][1] =	 78;
-        race[ 3][0] =	 15;
-        race[ 3][1] =	  8;
-        race[ 4][0] =	 20;
-        race[ 4][1] =	  4;
-        race[ 5][0] =	  2;
-        race[ 5][1] =	  2;
-        race[ 6][0] =	 35;
-        race[ 6][1] =	  8;
-        race[ 7][0] =	 98;
-        race[ 7][1] =	 99;
-        race[ 8][0] =	 99;
-        race[ 8][1] =	 70;
-        race[ 9][0] =	 91;
-        race[ 9][1] =	 98;
-        race[10][0] =	  0;
-        race[10][1] =	  0;
-        race[11][0] =	 98;
-        race[11][1] =	100;
-        race[12][0] =	  0;
-        race[12][1] =	  0;
-        race[13][0] =	100;
-        race[13][1] =	 80;
-        race[14][0] =	  0;
-        race[14][1] =	  1;
-        race[15][0] =	 34;
-        race[15][1] =	 90;
-        race[16][0] =	 17;
-        race[16][1] =	 77;
-        race[17][0] =	 23;
-        race[17][1] =	  8;
-        race[18][0] =	 26;
-        race[18][1] =	 51;
-        race[19][0] =	 28;
-        race[19][1] =	 45;
-        race[20][0] =	 45;
-        race[20][1] =	 69;
-        race[21][0] =	 11;
-        race[21][1] =	  7;
-        race[22][0] =	 22;
-        race[22][1] =	 26;
-        race[23][0] =	 28;
-        race[23][1] =	 25;
-        race[24][0] =	  0;
-        race[24][1] =	  1;
-        race[25][0] =	 21;
-        race[25][1] =	  6;
-        race[26][0] =	 92;
-        race[26][1] =	 95;
-        race[27][0] =	  0;
-        race[27][1] =	  0;
+		ab[ 0] =	new Antibody_Sub("D"	,  15,   8);
+		
+		ab[ 1] =	new Antibody_Sub("C"	,  32,  73);
+		ab[ 2] =	new Antibody_Sub("E"	,  71,  78);
+		ab[ 3] =	new Antibody_Sub("c"	,  15,   8);
+		ab[ 1].SetPair(ab[ 3]);
+		ab[ 3].SetPair(ab[ 1]);
+		ab[ 4] =	new Antibody_Sub("e"	,  20,   4);
+		ab[ 2].SetPair(ab[ 4]);
+		ab[ 4].SetPair(ab[ 2]);
+		
+		ab[ 5] =	new Antibody_Sub("f"	,   2,   2);
+		
+		ab[ 6] =	new Antibody_Sub("Cw"	,  35,   8);
+		
+		ab[ 7] =	new Antibody_Sub("V"	,  98,  99);
+		
+		ab[ 8] =	new Antibody_Sub("K"	,  99,  70);
+		ab[ 9] =	new Antibody_Sub("k"	,  91,  98);
+		ab[ 8].SetPair(ab[ 9]);
+		ab[ 9].SetPair(ab[ 8]);
+		
+		ab[10] =	new Antibody_Sub("Kpa"	,   0,   0);
+		ab[11] =	new Antibody_Sub("Kpb"	,  98, 100);
+		ab[10].SetPair(ab[11]);
+		ab[11].SetPair(ab[10]);
+		
+		ab[12] =	new Antibody_Sub("Jsa"	,   0,   0);
+		ab[13] =	new Antibody_Sub("Jsb"	, 100,  80);
+		ab[12].SetPair(ab[13]);
+		ab[13].SetPair(ab[12]);
 
-        name =	new String[max];
+		ab[14] =	new Antibody_Sub("Fya"	,   0,   1);
+		ab[15] =	new Antibody_Sub("Fyb"	,  34,  90);
+		ab[14].SetPair(ab[15]);
+		ab[15].SetPair(ab[14]);
+		
+		ab[16] =	new Antibody_Sub("Jka"	,  17,  77);
+		ab[17] =	new Antibody_Sub("Jkb"	,  23,   8);
+		ab[16].SetPair(ab[17]);
+		ab[17].SetPair(ab[16]);
+		
+		ab[18] =	new Antibody_Sub("Xga"	,  26,  51);
+		
+		ab[19] =	new Antibody_Sub("Lea"	,  28,  45);
+		ab[20] =	new Antibody_Sub("Leb"	,  45,  69);
+		ab[19].SetPair(ab[20]);
+		ab[20].SetPair(ab[19]);
+		
+		ab[21] =	new Antibody_Sub("S"	,  11,   7);
+		ab[22] =	new Antibody_Sub("s"	,  22,  26);
+		ab[21].SetPair(ab[22]);
+		ab[22].SetPair(ab[21]);
+		
+		ab[23] =	new Antibody_Sub("M"	,  28,  25);
+		ab[24] =	new Antibody_Sub("N"	,   0,   1);
+		ab[23].SetPair(ab[24]);
+		ab[24].SetPair(ab[23]);
 
-        name[ 0] =	"D";
-        name[ 1] =	"C";
-        name[ 2] =	"E";
-        name[ 3] =	"c";
-        name[ 4] =	"e";
-        name[ 5] =	"f";
-        name[ 6] =	"Cw";
-        name[ 7] =	"V";
-        name[ 8] =	"K";
-        name[ 9] =	"k";
-        name[10] =	"Kpa";
-        name[11] =	"Kpb";
-        name[12] =	"Jsa";
-        name[13] =	"Jsb";
-        name[14] =	"Fya";
-        name[15] =	"Fyb";
-        name[16] =	"Jka";
-        name[17] =	"Jkb";
-        name[18] =	"Xga";
-        name[19] =	"Lea";
-        name[20] =	"Leb";
-        name[21] =	"S";
-        name[22] =	"s";
-        name[23] =	"M";
-        name[24] =	"N";
-        name[25] =	"P1";
-        name[26] =	"Lua";
-        name[27] =	"Lub";
+		ab[25] =	new Antibody_Sub("P1"	,  21,   6);
+		
+		ab[26] =	new Antibody_Sub("Lua"	,  92,  95);
+		ab[27] =	new Antibody_Sub("Lub"	,   0,   0);
+		ab[26].SetPair(ab[27]);
+		ab[27].SetPair(ab[26]);
 	}
 
+	/**
+	 * @param index
+	 * 
+	 * @return if the value is positive
+	 */
+	public boolean GetValue(int index) {
+		if (index < max)
+			return	ab[index].GetValue() == Antibody_Sub.Value.Positive;
+		else
+			return	false;
+	}
+	public void SetValue(int index, CharSequence value) {
+		if (index < max) {
+			if      (value.equals("+"))
+				ab[index].SetValue(Antibody_Sub.Value.Positive	);
+			else if (value.equals("0"))
+				ab[index].SetValue(Antibody_Sub.Value.Negative	);
+			else
+				ab[index].SetValue(Antibody_Sub.Value.Unknown	);
+		}
+	}
 	public int GetSolutions()
 	{
 		return	solutions;
@@ -143,6 +132,7 @@ class Antibody {
 	 * 
 	 * @param index1 the antibody index
 	 * @param index2 the solution index
+	 * 
 	 * @return the name and race percents
 	 */
 	public String GetNameRace(int index1, int index2)
@@ -159,11 +149,11 @@ class Antibody {
 
 		if (index1 < max)
 		{
-			result.append(name[index1]);
+			result.append(ab[index1].GetName());
 			result.append("(");
-			result.append(race[index1][0]);
+			result.append(ab[index1].GetRace(0));
 			result.append(", ");
-			result.append(race[index1][1]);
+			result.append(ab[index1].GetRace(1));
 			result.append(")");
 		}
 
@@ -178,29 +168,57 @@ class Antibody {
 	public int GetCount(int index)
 	{
 		if (index < max)
-			return	count[index];
+			return	ab[index].GetCount();
 		else
 			return	0;
 	}
 	public void IncrementCount(int index)
 	{
 		if (index < max)
-			count[index]++;
+			ab[index].IncrementCount();
+	}
+
+	/**
+	 * @param index
+	 * 
+	 * @return If this antibody is positive and should be crossed out
+	 */
+	public boolean IsPositive(int index) {
+		if (index < max) {
+			if (ab[index].GetValue() == Antibody_Sub.Value.Positive) {
+				if (ab[index].GetPair() == null)	//if it doesn't have a pair, nothing else matters
+					return	true;
+				else {
+					if (ab[index].GetPair().GetValue() == Antibody_Sub.Value.Negative)
+						return	true;
+					else
+						return	false;
+				}
+			}
+			else
+				return	false;
+		}
+		else
+			return	false;
 	}
 	/**
 	 * This antibody will not be considered a solution
 	 * 
 	 * @param index
 	 */
-	public void CrossOut(int index)
-	{
-		if (index < max)
-			count[index] =	255;
+	public boolean CrossOut(int index) {
+		if (index < max) {
+			if (ab[index].GetCount() < 255) {//if it's not crossed out already
+				ab[index].CrossOut();
+				return	true;
+			} else
+				return	false;
+		} else
+			return	false;
 	}
-	public boolean NotCrossedOut(int index)
-	{
+	public boolean NotCrossedOut(int index) {
 		if (index < max)
-			return	count[index] < 255;
+			return	ab[index].GetCount() < 255;
 		else
 			return	false;
 	}
@@ -219,28 +237,107 @@ class Antibody {
 	 */
 	public void SetNewMost(int index)
 	{
-		if (index < max)
-			if (count[index] > most)
-				most =	count[index];
+		if (index < max) {
+			if (ab[index].GetCount() > most)
+				most =	ab[index].GetCount();
+		}
 	}
 
 	public String GetName(int index)
 	{
 		if (index < max)
-			return	name[index];
+			return	ab[index].GetName();
 		else
 			return	"";
 	}
 
 	/**
-	 * Resets the {@link #most}, and the {@link #count}'s
+	 * Resets the {@link #most}, and the {@link Antibody_Sub#count}'s
 	 */
 	public void Reset()
 	{
 		int	i;
 
-		most =			0;
+		most =	0;
 		for (i = 0; i < max; i++)
-			count[i] =	0;
+			ab[i].ResetCount();
 	}
-};
+}
+
+/**
+ * Everything to do with the specific antibodies
+ * 
+ * @author Bobby Macher
+ */
+class Antibody_Sub {
+	private				Value			value;
+
+	/**
+	 * The number of times the antibody is a solution
+	 */
+	private				int				count;
+
+	/**
+	 * Percentages for race
+	 */
+	private				int				race	 [];
+
+	private final		String			name;
+
+	enum Value {
+		Negative,
+		Positive,
+		Unknown
+	}
+
+	/**
+	 * If this antibody has a pair
+	 */
+	private				Antibody_Sub	pair;
+
+	Antibody_Sub(String name, int race0, int  race1) {
+		race =			new int[2];
+
+		value =			Value.Unknown;
+		count =			0;
+		this.name =		name;
+		this.race[0] =	race0;
+		this.race[1] =	race1;
+		pair =			null;
+	}
+
+	public Antibody_Sub GetPair() {
+		return	pair;
+	}
+	public void SetPair(Antibody_Sub pair) {
+		this.pair =	pair;
+	}
+
+	public Value GetValue() {
+		return	value;
+	}
+	public void SetValue(Value value) {
+		this.value =	value;
+	}
+
+	public int GetCount() {
+		return	count;
+	}
+	public void ResetCount() {
+		count =	0;
+	}
+	public void IncrementCount() {
+		count++;
+	}
+	public void CrossOut() {
+		count =	255;
+	}
+	
+	public String GetName() {
+		return	name;
+	}
+
+	public int GetRace(int index) {
+		return	race[index];
+	}
+}
