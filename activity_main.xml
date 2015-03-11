@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:text="_"
         android:visibility="invisible"
-        android:width="8dp" />
+        android:width="16dp" />
     <TextView
         android:id="@+id/textD"
         android:layout_width="wrap_content"
@@ -253,7 +253,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/textBlank"
         android:text="@string/cell1"
-        android:width="8dp" />
+        android:width="16dp" />
     <TextView
         android:id="@+id/textD1"
         android:layout_width="wrap_content"
@@ -492,7 +492,7 @@
         android:layout_alignLeft="@+id/textCell1"
         android:layout_below="@+id/textCell1"
         android:text="@string/cell2"
-        android:width="8dp" />
+        android:width="16dp" />
     <TextView
         android:id="@+id/textD2"
         android:layout_width="wrap_content"
@@ -731,7 +731,7 @@
         android:layout_alignLeft="@+id/textCell2"
         android:layout_below="@+id/textCell2"
         android:text="@string/cell3"
-        android:width="8dp" />
+        android:width="16dp" />
     <TextView
         android:id="@+id/textD3"
         android:layout_width="wrap_content"
@@ -970,7 +970,7 @@
         android:layout_alignLeft="@+id/textCell3"
         android:layout_below="@+id/textCell3"
         android:text="@string/cell4"
-        android:width="8dp" />
+        android:width="16dp" />
     <TextView
         android:id="@+id/textD4"
         android:layout_width="wrap_content"
@@ -1209,7 +1209,7 @@
         android:layout_alignLeft="@+id/textCell4"
         android:layout_below="@+id/textCell4"
         android:text="@string/cell5"
-        android:width="8dp" />
+        android:width="16dp" />
     <TextView
         android:id="@+id/textD5"
         android:layout_width="wrap_content"
@@ -1448,7 +1448,7 @@
         android:layout_alignLeft="@+id/textCell5"
         android:layout_below="@+id/textCell5"
         android:text="@string/cell6"
-        android:width="8dp" />
+        android:width="16dp" />
     <TextView
         android:id="@+id/textD6"
         android:layout_width="wrap_content"
@@ -1687,7 +1687,7 @@
         android:layout_alignLeft="@+id/textCell6"
         android:layout_below="@+id/textCell6"
         android:text="@string/cell7"
-        android:width="8dp" />
+        android:width="16dp" />
     <TextView
         android:id="@+id/textD7"
         android:layout_width="wrap_content"
@@ -1926,7 +1926,7 @@
         android:layout_alignLeft="@+id/textCell7"
         android:layout_below="@+id/textCell7"
         android:text="@string/cell8"
-        android:width="8dp" />
+        android:width="16dp" />
     <TextView
         android:id="@+id/textD8"
         android:layout_width="wrap_content"
@@ -2158,13 +2158,498 @@
         android:layout_alignBottom="@+id/textLUB8"
         android:layout_alignLeft="@+id/check7" />
 
+    <TextView
+        android:id="@+id/textCell9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textCell8"
+        android:layout_below="@+id/textCell8"
+        android:text="@string/cell9"
+        android:width="16dp" />
+    <TextView
+        android:id="@+id/textD9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textCell9"
+        android:layout_toRightOf="@+id/textCell9"
+        android:text="@string/D9"
+        android:width="9dp" />
+    <TextView
+        android:id="@+id/textBigC9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textD9"
+        android:layout_toRightOf="@+id/textD9"
+        android:text="@string/BigC9"
+        android:width="9dp" />
+    <TextView
+        android:id="@+id/textBigE9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textBigC9"
+        android:layout_toRightOf="@+id/textBigC9"
+        android:text="@string/BigE9"
+        android:width="9dp" />
+    <TextView
+        android:id="@+id/textLittleC9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textBigE9"
+        android:layout_toRightOf="@+id/textBigE9"
+        android:text="@string/LittleC9"
+        android:width="8dp" />
+    <TextView
+        android:id="@+id/textLittleE9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textLittleC9"
+        android:layout_toRightOf="@+id/textLittleC9"
+        android:text="@string/LittleE9"
+        android:width="9dp" />
+    <TextView
+        android:id="@+id/textF9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textLittleE9"
+        android:layout_toRightOf="@+id/textLittleE9"
+        android:text="@string/F9"
+        android:width="9dp" />
+    <TextView
+        android:id="@+id/textCW9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textF9"
+        android:layout_toRightOf="@+id/textF9"
+        android:text="@string/CW9" />
+    <TextView
+        android:id="@+id/textV9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textCW9"
+        android:layout_alignLeft="@+id/textV"
+        android:text="@string/V9"
+        android:width="9dp" />
+    <TextView
+        android:id="@+id/textBigK9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textV9"
+        android:layout_toRightOf="@+id/textV9"
+        android:text="@string/BigK9"
+        android:width="9dp" />
+    <TextView
+        android:id="@+id/textLittleK9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textBigK9"
+        android:layout_toRightOf="@+id/textBigK9"
+        android:text="@string/LittleK9"
+        android:width="9dp" />
+    <TextView
+        android:id="@+id/textKPA9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textLittleK9"
+        android:layout_toRightOf="@+id/textLittleK9"
+        android:text="@string/KPA9"
+        android:width="25dp" />
+    <TextView
+        android:id="@+id/textKPB9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textKPA9"
+        android:layout_toRightOf="@+id/textKPA9"
+        android:text="@string/KPB9"
+        android:width="25dp" />
+    <TextView
+        android:id="@+id/textJSA9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textKPB9"
+        android:layout_toRightOf="@+id/textKPB9"
+        android:text="@string/JSA9"
+        android:width="24dp" />
+    <TextView
+        android:id="@+id/textJSB9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textJSA9"
+        android:layout_toRightOf="@+id/textJSA9"
+        android:text="@string/JSB9"
+        android:width="24dp" />
+    <TextView
+        android:id="@+id/textFYA9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textJSB9"
+        android:layout_toRightOf="@+id/textJSB9"
+        android:text="@string/FYA9"
+        android:width="24dp" />
+    <TextView
+        android:id="@+id/textFYB9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textFYA9"
+        android:layout_toRightOf="@+id/textFYA9"
+        android:text="@string/FYB9"
+        android:width="24dp" />
+    <TextView
+        android:id="@+id/textJKA9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textFYB9"
+        android:layout_toRightOf="@+id/textFYB9"
+        android:text="@string/JKA9"
+        android:width="24dp" />
+    <TextView
+        android:id="@+id/textJKB9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textJKA9"
+        android:layout_toRightOf="@+id/textJKA9"
+        android:text="@string/JKB9"
+        android:width="24dp" />
+    <TextView
+        android:id="@+id/textXGA9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textJKB9"
+        android:layout_toRightOf="@+id/textJKB9"
+        android:text="@string/XGA9"
+        android:width="25dp" />
+    <TextView
+        android:id="@+id/textLEA9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textXGA9"
+        android:layout_toRightOf="@+id/textXGA9"
+        android:text="@string/LEA9"
+        android:width="24dp" />
+    <TextView
+        android:id="@+id/textLEB9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textLEA9"
+        android:layout_toRightOf="@+id/textLEA9"
+        android:text="@string/LEB9"
+        android:width="24dp" />
+    <TextView
+        android:id="@+id/textBigS9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textLEB9"
+        android:layout_toRightOf="@+id/textLEB9"
+        android:text="@string/BigS9"
+        android:width="9dp" />
+    <TextView
+        android:id="@+id/textLittleS9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textBigS9"
+        android:layout_toRightOf="@+id/textBigS9"
+        android:text="@string/LittleS9"
+        android:width="9dp" />
+    <TextView
+        android:id="@+id/textM9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textLittleS9"
+        android:layout_toRightOf="@+id/textLittleS9"
+        android:text="@string/M9"
+        android:width="11dp" />
+    <TextView
+        android:id="@+id/textN9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/textM9"
+        android:layout_alignTop="@+id/textM9"
+        android:text="@string/N9"
+        android:width="9dp" />
+    <TextView
+        android:id="@+id/textP1_9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textN9"
+        android:layout_toRightOf="@+id/textN9"
+        android:text="@string/P1_9"
+        android:width="17dp" />
+    <TextView
+        android:id="@+id/textLUA9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textP1_9"
+        android:layout_toRightOf="@+id/textP1_9"
+        android:text="@string/LUA9"
+        android:width="24dp" />
+    <TextView
+        android:id="@+id/textLUB9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textLUA9"
+        android:layout_toRightOf="@+id/textLUA9"
+        android:text="@string/LUB9"
+        android:width="24dp" />
+    <CheckBox
+        android:id="@+id/check9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textLUB9"
+        android:layout_alignBottom="@+id/textLUB9"
+        android:layout_alignLeft="@+id/check8" />
+
+    <TextView
+        android:id="@+id/textCell10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textCell9"
+        android:layout_below="@+id/textCell9"
+        android:text="@string/cell10"
+        android:width="16dp" />
+    <TextView
+        android:id="@+id/textD10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textCell10"
+        android:layout_toRightOf="@+id/textCell10"
+        android:text="@string/D10"
+        android:width="9dp" />
+    <TextView
+        android:id="@+id/textBigC10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textD10"
+        android:layout_toRightOf="@+id/textD10"
+        android:text="@string/BigC10"
+        android:width="9dp" />
+    <TextView
+        android:id="@+id/textBigE10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textBigC10"
+        android:layout_toRightOf="@+id/textBigC10"
+        android:text="@string/BigE10"
+        android:width="9dp" />
+    <TextView
+        android:id="@+id/textLittleC10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textBigE10"
+        android:layout_toRightOf="@+id/textBigE10"
+        android:text="@string/LittleC10"
+        android:width="8dp" />
+    <TextView
+        android:id="@+id/textLittleE10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textLittleC10"
+        android:layout_toRightOf="@+id/textLittleC10"
+        android:text="@string/LittleE10"
+        android:width="9dp" />
+    <TextView
+        android:id="@+id/textF10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textLittleE10"
+        android:layout_toRightOf="@+id/textLittleE10"
+        android:text="@string/F10"
+        android:width="9dp" />
+    <TextView
+        android:id="@+id/textCW10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textF10"
+        android:layout_toRightOf="@+id/textF10"
+        android:text="@string/CW10" />
+    <TextView
+        android:id="@+id/textV10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textCW10"
+        android:layout_alignLeft="@+id/textV"
+        android:text="@string/V10"
+        android:width="9dp" />
+    <TextView
+        android:id="@+id/textBigK10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textV10"
+        android:layout_toRightOf="@+id/textV10"
+        android:text="@string/BigK10"
+        android:width="9dp" />
+    <TextView
+        android:id="@+id/textLittleK10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textBigK10"
+        android:layout_toRightOf="@+id/textBigK10"
+        android:text="@string/LittleK10"
+        android:width="9dp" />
+    <TextView
+        android:id="@+id/textKPA10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textLittleK10"
+        android:layout_toRightOf="@+id/textLittleK10"
+        android:text="@string/KPA10"
+        android:width="25dp" />
+    <TextView
+        android:id="@+id/textKPB10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textKPA10"
+        android:layout_toRightOf="@+id/textKPA10"
+        android:text="@string/KPB10"
+        android:width="25dp" />
+    <TextView
+        android:id="@+id/textJSA10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textKPB10"
+        android:layout_toRightOf="@+id/textKPB10"
+        android:text="@string/JSA10"
+        android:width="24dp" />
+    <TextView
+        android:id="@+id/textJSB10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textJSA10"
+        android:layout_toRightOf="@+id/textJSA10"
+        android:text="@string/JSB10"
+        android:width="24dp" />
+    <TextView
+        android:id="@+id/textFYA10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textJSB10"
+        android:layout_toRightOf="@+id/textJSB10"
+        android:text="@string/FYA10"
+        android:width="24dp" />
+    <TextView
+        android:id="@+id/textFYB10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textFYA10"
+        android:layout_toRightOf="@+id/textFYA10"
+        android:text="@string/FYB10"
+        android:width="24dp" />
+    <TextView
+        android:id="@+id/textJKA10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textFYB10"
+        android:layout_toRightOf="@+id/textFYB10"
+        android:text="@string/JKA10"
+        android:width="24dp" />
+    <TextView
+        android:id="@+id/textJKB10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textJKA10"
+        android:layout_toRightOf="@+id/textJKA10"
+        android:text="@string/JKB10"
+        android:width="24dp" />
+    <TextView
+        android:id="@+id/textXGA10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textJKB10"
+        android:layout_toRightOf="@+id/textJKB10"
+        android:text="@string/XGA10"
+        android:width="25dp" />
+    <TextView
+        android:id="@+id/textLEA10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textXGA10"
+        android:layout_toRightOf="@+id/textXGA10"
+        android:text="@string/LEA10"
+        android:width="24dp" />
+    <TextView
+        android:id="@+id/textLEB10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textLEA10"
+        android:layout_toRightOf="@+id/textLEA10"
+        android:text="@string/LEB10"
+        android:width="24dp" />
+    <TextView
+        android:id="@+id/textBigS10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textLEB10"
+        android:layout_toRightOf="@+id/textLEB10"
+        android:text="@string/BigS10"
+        android:width="9dp" />
+    <TextView
+        android:id="@+id/textLittleS10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textBigS10"
+        android:layout_toRightOf="@+id/textBigS10"
+        android:text="@string/LittleS10"
+        android:width="9dp" />
+    <TextView
+        android:id="@+id/textM10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textLittleS10"
+        android:layout_toRightOf="@+id/textLittleS10"
+        android:text="@string/M10"
+        android:width="11dp" />
+    <TextView
+        android:id="@+id/textN10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/textM10"
+        android:layout_alignTop="@+id/textM10"
+        android:text="@string/N10"
+        android:width="9dp" />
+    <TextView
+        android:id="@+id/textP1_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textN10"
+        android:layout_toRightOf="@+id/textN10"
+        android:text="@string/P1_10"
+        android:width="17dp" />
+    <TextView
+        android:id="@+id/textLUA10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textP1_10"
+        android:layout_toRightOf="@+id/textP1_10"
+        android:text="@string/LUA10"
+        android:width="24dp" />
+    <TextView
+        android:id="@+id/textLUB10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textLUA10"
+        android:layout_toRightOf="@+id/textLUA10"
+        android:text="@string/LUB10"
+        android:width="24dp" />
+    <CheckBox
+        android:id="@+id/check10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textLUB10"
+        android:layout_alignBottom="@+id/textLUB10"
+        android:layout_alignLeft="@+id/check9" />
+
     <Button
         android:id="@+id/buttonCalculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textCell8"
+        android:layout_below="@+id/textCell10"
         android:text="@string/Calculate" />
+    <Button
+        android:id="@+id/buttonReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/buttonCalculate"
+        android:layout_toRightOf="@+id/buttonCalculate"
+        android:text="@string/Reset" />
 
     <TextView
         android:id="@+id/textSolution"
@@ -2173,5 +2658,4 @@
         android:layout_alignLeft="@+id/buttonCalculate"
         android:layout_below="@+id/buttonCalculate"
         android:text="@string/Solution" />
-
 </RelativeLayout>
