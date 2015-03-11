@@ -1216,11 +1216,16 @@ public class MainActivity extends Activity implements View.OnClickListener {
 	 */
 	void CrossOut(int index, TextView Antibody1, int cell)
 	{
-		if (antibody.IsPositive(index)) {
+		Value	result;
+		
+		result =	antibody.IsPositive(index);
+		if (result == Value.Positive) {
 			Antibody1.setTextColor(getResources().getColor(R.color.red));
 			if (antibody.CrossOut(index)) {
 				Log.d("Antibody", "Using " + (cell + 1) + " to cross out " + antibody.GetName(index));
 			}
+		} else if (result == Value.Negative) {
+			Antibody1.setTextColor(getResources().getColor(R.color.black));
 		}
 	}
 
