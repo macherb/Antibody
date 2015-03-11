@@ -251,6 +251,64 @@ public class MainActivity extends Activity implements View.OnClickListener {
 						mLUA8,
 						mLUB8,
 
+						mD9,
+						mBigC9,
+						mBigE9,
+						mLittleC9,
+						mLittleE9,
+						mF9,
+						mCW9,
+						mV9,
+						mBigK9,
+						mLittleK9,
+						mKPA9,
+						mKPB9,
+						mJSA9,
+						mJSB9,
+						mFYA9,
+						mFYB9,
+						mJKA9,
+						mJKB9,
+						mXGA9,
+						mLEA9,
+						mLEB9,
+						mBigS9,
+						mLittleS9,
+						mM9,
+						mN9,
+						mP1_9,
+						mLUA9,
+						mLUB9,
+
+						mD10,
+						mBigC10,
+						mBigE10,
+						mLittleC10,
+						mLittleE10,
+						mF10,
+						mCW10,
+						mV10,
+						mBigK10,
+						mLittleK10,
+						mKPA10,
+						mKPB10,
+						mJSA10,
+						mJSB10,
+						mFYA10,
+						mFYB10,
+						mJKA10,
+						mJKB10,
+						mXGA10,
+						mLEA10,
+						mLEB10,
+						mBigS10,
+						mLittleS10,
+						mM10,
+						mN10,
+						mP1_10,
+						mLUA10,
+						mLUB10,
+
 						mD[],
 						mBigC[],
 						mBigE[],
@@ -290,12 +348,15 @@ public class MainActivity extends Activity implements View.OnClickListener {
 						mCheck6,
 						mCheck7,
 						mCheck8,
+						mCheck9,
+						mCheck10,
 
 						mCheck[];
 
-	private Button		mCalculate;
+	private Button		mCalculate,
+						mReset;
 
-	private final int	max =	8;
+	private final int	max =	10;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -534,6 +595,64 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		mLUA8 =			(TextView	)findViewById(R.id.textLUA8			);
 		mLUB8 =			(TextView	)findViewById(R.id.textLUB8			);
 
+		mD9 =			(TextView	)findViewById(R.id.textD9			);
+		mBigC9 =		(TextView	)findViewById(R.id.textBigC9		);
+		mBigE9 =		(TextView	)findViewById(R.id.textBigE9		);
+		mLittleC9 =		(TextView	)findViewById(R.id.textLittleC9		);
+		mLittleE9 =		(TextView	)findViewById(R.id.textLittleE9		);
+		mF9 =			(TextView	)findViewById(R.id.textF9			);
+		mCW9 =			(TextView	)findViewById(R.id.textCW9			);
+		mV9 =			(TextView	)findViewById(R.id.textV9			);
+		mBigK9 =		(TextView	)findViewById(R.id.textBigK9		);
+		mLittleK9 =		(TextView	)findViewById(R.id.textLittleK9		);
+		mKPA9 =			(TextView	)findViewById(R.id.textKPA9			);
+		mKPB9 =			(TextView	)findViewById(R.id.textKPB9			);
+		mJSA9 =			(TextView	)findViewById(R.id.textJSA9			);
+		mJSB9 =			(TextView	)findViewById(R.id.textJSB9			);
+		mFYA9 =			(TextView	)findViewById(R.id.textFYA9			);
+		mFYB9 =			(TextView	)findViewById(R.id.textFYB9			);
+		mJKA9 =			(TextView	)findViewById(R.id.textJKA9			);
+		mJKB9 =			(TextView	)findViewById(R.id.textJKB9			);
+		mXGA9 =			(TextView	)findViewById(R.id.textXGA9			);
+		mLEA9 =			(TextView	)findViewById(R.id.textLEA9			);
+		mLEB9 =			(TextView	)findViewById(R.id.textLEB9			);
+		mBigS9 =		(TextView	)findViewById(R.id.textBigS9		);
+		mLittleS9 =		(TextView	)findViewById(R.id.textLittleS9		);
+		mM9 =			(TextView	)findViewById(R.id.textM9			);
+		mN9 =			(TextView	)findViewById(R.id.textN9			);
+		mP1_9 =			(TextView	)findViewById(R.id.textP1_9			);
+		mLUA9 =			(TextView	)findViewById(R.id.textLUA9			);
+		mLUB9 =			(TextView	)findViewById(R.id.textLUB9			);
+
+		mD10 =			(TextView	)findViewById(R.id.textD10			);
+		mBigC10 =		(TextView	)findViewById(R.id.textBigC10		);
+		mBigE10 =		(TextView	)findViewById(R.id.textBigE10		);
+		mLittleC10 =	(TextView	)findViewById(R.id.textLittleC10	);
+		mLittleE10 =	(TextView	)findViewById(R.id.textLittleE10	);
+		mF10 =			(TextView	)findViewById(R.id.textF10			);
+		mCW10 =			(TextView	)findViewById(R.id.textCW10			);
+		mV10 =			(TextView	)findViewById(R.id.textV10			);
+		mBigK10 =		(TextView	)findViewById(R.id.textBigK10		);
+		mLittleK10 =	(TextView	)findViewById(R.id.textLittleK10	);
+		mKPA10 =		(TextView	)findViewById(R.id.textKPA10		);
+		mKPB10 =		(TextView	)findViewById(R.id.textKPB10		);
+		mJSA10 =		(TextView	)findViewById(R.id.textJSA10		);
+		mJSB10 =		(TextView	)findViewById(R.id.textJSB10		);
+		mFYA10 =		(TextView	)findViewById(R.id.textFYA10		);
+		mFYB10 =		(TextView	)findViewById(R.id.textFYB10		);
+		mJKA10 =		(TextView	)findViewById(R.id.textJKA10		);
+		mJKB10 =		(TextView	)findViewById(R.id.textJKB10		);
+		mXGA10 =		(TextView	)findViewById(R.id.textXGA10		);
+		mLEA10 =		(TextView	)findViewById(R.id.textLEA10		);
+		mLEB10 =		(TextView	)findViewById(R.id.textLEB10		);
+		mBigS10 =		(TextView	)findViewById(R.id.textBigS10		);
+		mLittleS10 =	(TextView	)findViewById(R.id.textLittleS10	);
+		mM10 =			(TextView	)findViewById(R.id.textM10			);
+		mN10 =			(TextView	)findViewById(R.id.textN10			);
+		mP1_10 =		(TextView	)findViewById(R.id.textP1_10		);
+		mLUA10 =		(TextView	)findViewById(R.id.textLUA10		);
+		mLUB10 =		(TextView	)findViewById(R.id.textLUB10		);
+
 		mSolution =		(TextView	)findViewById(R.id.textSolution		);
 
 		mCheck1 =		(CheckBox	)findViewById(R.id.check1			);
@@ -544,9 +663,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		mCheck6 =		(CheckBox	)findViewById(R.id.check6			);
 		mCheck7 =		(CheckBox	)findViewById(R.id.check7			);
 		mCheck8 =		(CheckBox	)findViewById(R.id.check8			);
+		mCheck9 =		(CheckBox	)findViewById(R.id.check9			);
+		mCheck10 =		(CheckBox	)findViewById(R.id.check10			);
 
 		mCalculate =	(Button		)findViewById(R.id.buttonCalculate	);
         mCalculate.setOnClickListener(this);
+		mReset =		(Button		)findViewById(R.id.buttonReset		);
+        mReset.setOnClickListener(this);
 
         antibody =		new Antibody_Super();
 
@@ -559,6 +682,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mD[5] =			mD6;
         mD[6] =			mD7;
         mD[7] =			mD8;
+        mD[8] =			mD9;
+        mD[9] =			mD10;
 
         mBigC = 		new TextView[max];
         mBigC[0] =		mBigC1;
@@ -569,6 +694,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mBigC[5] =		mBigC6;
         mBigC[6] =		mBigC7;
         mBigC[7] =		mBigC8;
+        mBigC[8] =		mBigC9;
+        mBigC[9] =		mBigC10;
 
         mBigE = 		new TextView[max];
         mBigE[0] =		mBigE1;
@@ -579,6 +706,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mBigE[5] =		mBigE6;
         mBigE[6] =		mBigE7;
         mBigE[7] =		mBigE8;
+        mBigE[8] =		mBigE9;
+        mBigE[9] =		mBigE10;
 
         mLittleC = 		new TextView[max];
         mLittleC[0] =	mLittleC1;
@@ -589,6 +718,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mLittleC[5] =	mLittleC6;
         mLittleC[6] =	mLittleC7;
         mLittleC[7] =	mLittleC8;
+        mLittleC[8] =	mLittleC9;
+        mLittleC[9] =	mLittleC10;
 
         mLittleE = 		new TextView[max];
         mLittleE[0] =	mLittleE1;
@@ -599,6 +730,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mLittleE[5] =	mLittleE6;
         mLittleE[6] =	mLittleE7;
         mLittleE[7] =	mLittleE8;
+        mLittleE[8] =	mLittleE9;
+        mLittleE[9] =	mLittleE10;
 
         mF =			new TextView[max];
         mF[0] =			mF1;
@@ -609,6 +742,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mF[5] =			mF6;
         mF[6] =			mF7;
         mF[7] =			mF8;
+        mF[8] =			mF9;
+        mF[9] =			mF10;
 
         mCW =			new TextView[max];
         mCW[0] =		mCW1;
@@ -619,6 +754,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mCW[5] =		mCW6;
         mCW[6] =		mCW7;
         mCW[7] =		mCW8;
+        mCW[8] =		mCW9;
+        mCW[9] =		mCW10;
 
         mV =			new TextView[max];
         mV[0] =			mV1;
@@ -629,6 +766,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mV[5] =			mV6;
         mV[6] =			mV7;
         mV[7] =			mV8;
+        mV[8] =			mV9;
+        mV[9] =			mV10;
 
         mBigK =			new TextView[max];
         mBigK[0] =		mBigK1;
@@ -639,6 +778,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mBigK[5] =		mBigK6;
         mBigK[6] =		mBigK7;
         mBigK[7] =		mBigK8;
+        mBigK[8] =		mBigK9;
+        mBigK[9] =		mBigK10;
 
         mLittleK =		new TextView[max];
         mLittleK[0] =	mLittleK1;
@@ -649,6 +790,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mLittleK[5] =	mLittleK6;
         mLittleK[6] =	mLittleK7;
         mLittleK[7] =	mLittleK8;
+        mLittleK[8] =	mLittleK9;
+        mLittleK[9] =	mLittleK10;
 
         mKPA =			new TextView[max];
         mKPA[0] =		mKPA1;
@@ -659,6 +802,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mKPA[5] =		mKPA6;
         mKPA[6] =		mKPA7;
         mKPA[7] =		mKPA8;
+        mKPA[8] =		mKPA9;
+        mKPA[9] =		mKPA10;
 
         mKPB =			new TextView[max];
         mKPB[0] =		mKPB1;
@@ -669,6 +814,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mKPB[5] =		mKPB6;
         mKPB[6] =		mKPB7;
         mKPB[7] =		mKPB8;
+        mKPB[8] =		mKPB9;
+        mKPB[9] =		mKPB10;
 
         mJSA =			new TextView[max];
         mJSA[0] =		mJSA1;
@@ -679,6 +826,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mJSA[5] =		mJSA6;
         mJSA[6] =		mJSA7;
         mJSA[7] =		mJSA8;
+        mJSA[8] =		mJSA9;
+        mJSA[9] =		mJSA10;
 
         mJSB =			new TextView[max];
         mJSB[0] =		mJSB1;
@@ -689,6 +838,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mJSB[5] =		mJSB6;
         mJSB[6] =		mJSB7;
         mJSB[7] =		mJSB8;
+        mJSB[8] =		mJSB9;
+        mJSB[9] =		mJSB10;
 
         mFYA =			new TextView[max];
         mFYA[0] =		mFYA1;
@@ -699,6 +850,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mFYA[5] =		mFYA6;
         mFYA[6] =		mFYA7;
         mFYA[7] =		mFYA8;
+        mFYA[8] =		mFYA9;
+        mFYA[9] =		mFYA10;
 
         mFYB =			new TextView[max];
         mFYB[0] =		mFYB1;
@@ -709,6 +862,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mFYB[5] =		mFYB6;
         mFYB[6] =		mFYB7;
         mFYB[7] =		mFYB8;
+        mFYB[8] =		mFYB9;
+        mFYB[9] =		mFYB10;
 
         mJKA =			new TextView[max];
         mJKA[0] =		mJKA1;
@@ -719,6 +874,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mJKA[5] =		mJKA6;
         mJKA[6] =		mJKA7;
         mJKA[7] =		mJKA8;
+        mJKA[8] =		mJKA9;
+        mJKA[9] =		mJKA10;
 
         mJKB =			new TextView[max];
         mJKB[0] =		mJKB1;
@@ -729,6 +886,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mJKB[5] =		mJKB6;
         mJKB[6] =		mJKB7;
         mJKB[7] =		mJKB8;
+        mJKB[8] =		mJKB9;
+        mJKB[9] =		mJKB10;
 
         mXGA =			new TextView[max];
         mXGA[0] =		mXGA1;
@@ -739,6 +898,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mXGA[5] =		mXGA6;
         mXGA[6] =		mXGA7;
         mXGA[7] =		mXGA8;
+        mXGA[8] =		mXGA9;
+        mXGA[9] =		mXGA10;
 
         mLEA =			new TextView[max];
         mLEA[0] =		mLEA1;
@@ -749,6 +910,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mLEA[5] =		mLEA6;
         mLEA[6] =		mLEA7;
         mLEA[7] =		mLEA8;
+        mLEA[8] =		mLEA9;
+        mLEA[9] =		mLEA10;
 
         mLEB =			new TextView[max];
         mLEB[0] =		mLEB1;
@@ -759,6 +922,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mLEB[5] =		mLEB6;
         mLEB[6] =		mLEB7;
         mLEB[7] =		mLEB8;
+        mLEB[8] =		mLEB9;
+        mLEB[9] =		mLEB10;
 
         mBigS =			new TextView[max];
         mBigS[0] =		mBigS1;
@@ -769,6 +934,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mBigS[5] =		mBigS6;
         mBigS[6] =		mBigS7;
         mBigS[7] =		mBigS8;
+        mBigS[8] =		mBigS9;
+        mBigS[9] =		mBigS10;
 
         mLittleS =		new TextView[max];
         mLittleS[0] =	mLittleS1;
@@ -779,7 +946,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mLittleS[5] =	mLittleS6;
         mLittleS[6] =	mLittleS7;
         mLittleS[7] =	mLittleS8;
-        
+        mLittleS[8] =	mLittleS9;
+        mLittleS[9] =	mLittleS10;
+
         mM =			new TextView[max];
         mM[0] =			mM1;
         mM[1] =			mM2;
@@ -789,7 +958,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mM[5] =			mM6;
         mM[6] =			mM7;
         mM[7] =			mM8;
-        
+        mM[8] =			mM9;
+        mM[9] =			mM10;
+
         mN =			new TextView[max];
         mN[0] =			mN1;
         mN[1] =			mN2;
@@ -799,7 +970,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mN[5] =			mN6;
         mN[6] =			mN7;
         mN[7] =			mN8;
-        
+        mN[8] =			mN9;
+        mN[9] =			mN10;
+
         mP1 =			new TextView[max];
         mP1[0] =		mP1_1;
         mP1[1] =		mP1_2;
@@ -809,6 +982,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mP1[5] =		mP1_6;
         mP1[6] =		mP1_7;
         mP1[7] =		mP1_8;
+        mP1[8] =		mP1_9;
+        mP1[9] =		mP1_10;
 
         mLUA =			new TextView[max];
         mLUA[0] =		mLUA1;
@@ -819,6 +994,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mLUA[5] =		mLUA6;
         mLUA[6] =		mLUA7;
         mLUA[7] =		mLUA8;
+        mLUA[8] =		mLUA9;
+        mLUA[9] =		mLUA10;
 
         mLUB =			new TextView[max];
         mLUB[0] =		mLUB1;
@@ -829,6 +1006,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mLUB[5] =		mLUB6;
         mLUB[6] =		mLUB7;
         mLUB[7] =		mLUB8;
+        mLUB[8] =		mLUB9;
+        mLUB[9] =		mLUB10;
 
         mCheck =		new CheckBox[max];
         mCheck[0] =		mCheck1;
@@ -839,6 +1018,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mCheck[5] =		mCheck6;
         mCheck[6] =		mCheck7;
         mCheck[7] =		mCheck8;
+        mCheck[8] =		mCheck9;
+        mCheck[9] =		mCheck10;
 	}
 
 	@Override
@@ -864,117 +1045,125 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		int	i,
 			j;
 
-		antibody.Reset();
+		if (mCalculate.equals(v)) {
+			antibody.Reset();
 
-		if      ( mCheck1.isChecked() &&  mCheck2.isChecked() &&  mCheck3.isChecked() &&  mCheck4.isChecked() &&
-				  mCheck5.isChecked() &&  mCheck6.isChecked() &&  mCheck7.isChecked() &&  mCheck8.isChecked()	)
-		{
-			mSolution.setText("Inconclusive");
-			SetAllBlack();
-		}
-		else if (!mCheck1.isChecked() && !mCheck2.isChecked() && !mCheck3.isChecked() && !mCheck4.isChecked() &&
-				 !mCheck5.isChecked() && !mCheck6.isChecked() && !mCheck7.isChecked() && !mCheck8.isChecked()	)
-		{
-			mSolution.setText("Too weak");
-			SetAllBlack();
-		}
-		else
-		{
-			mSolution.setText("");											//clear the solution text
-
-			for (i = 0; i < max; i++) {
-				antibody.SetValue( 0, mD		[i].getText());				//The values need to be set for every cell
-				antibody.SetValue( 1, mBigC		[i].getText());
-				antibody.SetValue( 2, mBigE		[i].getText());
-				antibody.SetValue( 3, mLittleC	[i].getText());
-				antibody.SetValue( 4, mLittleE	[i].getText());
-				antibody.SetValue( 5, mF		[i].getText());
-				antibody.SetValue( 6, mCW		[i].getText());
-				antibody.SetValue( 7, mV		[i].getText());
-				antibody.SetValue( 8, mBigK		[i].getText());
-				antibody.SetValue( 9, mLittleK	[i].getText());
-				antibody.SetValue(10, mKPA		[i].getText());
-				antibody.SetValue(11, mKPB		[i].getText());
-				antibody.SetValue(12, mJSA		[i].getText());
-				antibody.SetValue(13, mJSB		[i].getText());
-				antibody.SetValue(14, mFYA		[i].getText());
-				antibody.SetValue(15, mFYB		[i].getText());
-				antibody.SetValue(16, mJKA		[i].getText());
-				antibody.SetValue(17, mJKB		[i].getText());
-				antibody.SetValue(18, mXGA		[i].getText());
-				antibody.SetValue(19, mLEA		[i].getText());
-				antibody.SetValue(20, mLEB		[i].getText());
-				antibody.SetValue(21, mBigS		[i].getText());
-				antibody.SetValue(22, mLittleS	[i].getText());
-				antibody.SetValue(23, mM		[i].getText());
-				antibody.SetValue(24, mN		[i].getText());
-				antibody.SetValue(25, mP1		[i].getText());
-				antibody.SetValue(26, mLUA		[i].getText());
-				antibody.SetValue(27, mLUB		[i].getText());
-
-				if (!mCheck[i].isChecked()) {								//Can use this row to cross out
-					CrossOut( 0, mD			[i], i);
-					CrossOut( 1, mBigC		[i], i);
-					CrossOut( 2, mBigE		[i], i);
-					CrossOut( 3, mLittleC	[i], i);
-					CrossOut( 4, mLittleE	[i], i);
-					CrossOut( 5, mF			[i], i);
-					CrossOut( 6, mCW		[i], i);
-					CrossOut( 7, mV			[i], i);
-					CrossOut( 8, mBigK		[i], i);
-					CrossOut( 9, mLittleK	[i], i);
-					CrossOut(10, mKPA		[i], i);
-					CrossOut(11, mKPB		[i], i);
-					CrossOut(12, mJSA		[i], i);
-					CrossOut(13, mJSB		[i], i);
-					CrossOut(14, mFYA		[i], i);
-					CrossOut(15, mFYB		[i], i);
-					CrossOut(16, mJKA		[i], i);
-					CrossOut(17, mJKB		[i], i);
-					CrossOut(18, mXGA		[i], i);
-					CrossOut(19, mLEA		[i], i);
-					CrossOut(20, mLEB		[i], i);
-					CrossOut(21, mBigS		[i], i);
-					CrossOut(22, mLittleS	[i], i);
-					CrossOut(23, mM			[i], i);
-					CrossOut(24, mN			[i], i);
-					CrossOut(25, mP1		[i], i);
-					CrossOut(26, mLUA		[i], i);
-					CrossOut(27, mLUB		[i], i);
-				}
-			}
-			for (i = 0; i < max; i++)
-				UseToGetSolutions(i);
-			for (i = 0; i < Antibody_Super.max; i++)
+			if      ( mCheck1.isChecked() &&  mCheck2.isChecked() &&  mCheck3.isChecked() &&  mCheck4.isChecked() &&  mCheck5.isChecked() &&
+					  mCheck6.isChecked() &&  mCheck7.isChecked() &&  mCheck8.isChecked() &&  mCheck9.isChecked() &&  mCheck10.isChecked()	)
 			{
-				if (
-					(antibody.GetCount(i) > 0)	//if this is a solution
-					&&							//and
-					(antibody.NotCrossedOut(i))	//it hasn't been crossed out
-				   )
-				{
-					Log.d("Antibody", "At " + i + "(" + antibody.GetName(i) + ") there is " + antibody.GetCount(i) + "");
-					antibody.SetNewMost(i);		//it might be the new most
-				}
+				mSolution.setText("Inconclusive");
+				SetAllBlack();
 			}
-			for (j = 0; j < antibody.GetMost(); j++)
+			else if (!mCheck1.isChecked() && !mCheck2.isChecked() && !mCheck3.isChecked() && !mCheck4.isChecked() && !mCheck5.isChecked() &&
+					 !mCheck6.isChecked() && !mCheck7.isChecked() && !mCheck8.isChecked() && !mCheck9.isChecked() && !mCheck10.isChecked()	)
 			{
-				antibody.ResetSolutions();
-				for (i = 0; i < Antibody_Super.max; i++)
-				{
-					if (antibody.GetCount(i) == antibody.GetMost() - j)
-					{
-						mSolution.setText(	mSolution.getText() + 
-											antibody.GetNameRace(i, j)
-										 );
-						antibody.IncrementSolutions();
+				mSolution.setText("Too weak");
+				SetAllBlack();
+			}
+			else
+			{
+				mSolution.setText("");											//clear the solution text
+
+				for (i = 0; i < max; i++) {
+					antibody.SetValue( 0, mD		[i].getText());				//The values need to be set for every cell
+					antibody.SetValue( 1, mBigC		[i].getText());
+					antibody.SetValue( 2, mBigE		[i].getText());
+					antibody.SetValue( 3, mLittleC	[i].getText());
+					antibody.SetValue( 4, mLittleE	[i].getText());
+					antibody.SetValue( 5, mF		[i].getText());
+					antibody.SetValue( 6, mCW		[i].getText());
+					antibody.SetValue( 7, mV		[i].getText());
+					antibody.SetValue( 8, mBigK		[i].getText());
+					antibody.SetValue( 9, mLittleK	[i].getText());
+					antibody.SetValue(10, mKPA		[i].getText());
+					antibody.SetValue(11, mKPB		[i].getText());
+					antibody.SetValue(12, mJSA		[i].getText());
+					antibody.SetValue(13, mJSB		[i].getText());
+					antibody.SetValue(14, mFYA		[i].getText());
+					antibody.SetValue(15, mFYB		[i].getText());
+					antibody.SetValue(16, mJKA		[i].getText());
+					antibody.SetValue(17, mJKB		[i].getText());
+					antibody.SetValue(18, mXGA		[i].getText());
+					antibody.SetValue(19, mLEA		[i].getText());
+					antibody.SetValue(20, mLEB		[i].getText());
+					antibody.SetValue(21, mBigS		[i].getText());
+					antibody.SetValue(22, mLittleS	[i].getText());
+					antibody.SetValue(23, mM		[i].getText());
+					antibody.SetValue(24, mN		[i].getText());
+					antibody.SetValue(25, mP1		[i].getText());
+					antibody.SetValue(26, mLUA		[i].getText());
+					antibody.SetValue(27, mLUB		[i].getText());
+
+					if (!mCheck[i].isChecked()) {								//Can use this row to cross out
+						CrossOut( 0, mD			[i], i);
+						CrossOut( 1, mBigC		[i], i);
+						CrossOut( 2, mBigE		[i], i);
+						CrossOut( 3, mLittleC	[i], i);
+						CrossOut( 4, mLittleE	[i], i);
+						CrossOut( 5, mF			[i], i);
+						CrossOut( 6, mCW		[i], i);
+						CrossOut( 7, mV			[i], i);
+						CrossOut( 8, mBigK		[i], i);
+						CrossOut( 9, mLittleK	[i], i);
+						CrossOut(10, mKPA		[i], i);
+						CrossOut(11, mKPB		[i], i);
+						CrossOut(12, mJSA		[i], i);
+						CrossOut(13, mJSB		[i], i);
+						CrossOut(14, mFYA		[i], i);
+						CrossOut(15, mFYB		[i], i);
+						CrossOut(16, mJKA		[i], i);
+						CrossOut(17, mJKB		[i], i);
+						CrossOut(18, mXGA		[i], i);
+						CrossOut(19, mLEA		[i], i);
+						CrossOut(20, mLEB		[i], i);
+						CrossOut(21, mBigS		[i], i);
+						CrossOut(22, mLittleS	[i], i);
+						CrossOut(23, mM			[i], i);
+						CrossOut(24, mN			[i], i);
+						CrossOut(25, mP1		[i], i);
+						CrossOut(26, mLUA		[i], i);
+						CrossOut(27, mLUB		[i], i);
 					}
 				}
-				if (antibody.GetSolutions() > 0)	//if there is at least one solution for this number of solutions
-					mSolution.setText(mSolution.getText() + "\n");
+				for (i = 0; i < max; i++)
+					UseToGetSolutions(i);
+				for (i = 0; i < Antibody_Super.max; i++)
+				{
+					if (
+						(antibody.GetCount(i) > 0)	//if this is a solution
+						&&							//and
+						(antibody.NotCrossedOut(i))	//it hasn't been crossed out
+				      )
+					{
+						Log.d("Antibody", "At " + i + "(" + antibody.GetName(i) + ") there is " + antibody.GetCount(i) + "");
+						antibody.SetNewMost(i);		//it might be the new most
+					}
+				}
+				for (j = 0; j < antibody.GetMost(); j++)
+				{
+					antibody.ResetSolutions();
+					for (i = 0; i < Antibody_Super.max; i++)
+					{
+						if (antibody.GetCount(i) == antibody.GetMost() - j)
+						{
+							mSolution.setText(	mSolution.getText() + 
+												antibody.GetNameRace(i, j)
+											 );
+							antibody.IncrementSolutions();
+						}
+					}
+					if (antibody.GetSolutions() > 0)	//if there is at least one solution for this number of solutions
+						mSolution.setText(mSolution.getText() + "\n");
+				}
+				if (antibody.GetMost() == 0)			//if there are not any solutions
+					mSolution.setText("There are no solutions");
 			}
-			if (antibody.GetMost() == 0)			//if there are not any solutions
-				mSolution.setText("There are no solutions");
+		}
+		else if (mReset.equals(v)) {
+			SetAllBlack();
+			for (i = 0; i < max; i++)
+				mCheck[i].setChecked(false);
+			mSolution.setText("");
 		}
 	}
 
