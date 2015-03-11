@@ -1,5 +1,11 @@
 package com.example.antibodyidentification;
 
+enum Value {
+	Negative,
+	Positive,
+	Unknown
+}
+
 /**
  * Everything to do with the collection of antibodies
  * 
@@ -101,18 +107,18 @@ class Antibody_Super {
 	 */
 	public boolean GetValue(int index) {
 		if (index < max)
-			return	ab[index].GetValue() == Antibody_Sub.Value.Positive;
+			return	ab[index].GetValue() == Value.Positive;
 		else
 			return	false;
 	}
 	public void SetValue(int index, CharSequence value) {
 		if (index < max) {
 			if      (value.equals("+"))
-				ab[index].SetValue(Antibody_Sub.Value.Positive	);
+				ab[index].SetValue(Value.Positive	);
 			else if (value.equals("0"))
-				ab[index].SetValue(Antibody_Sub.Value.Negative	);
+				ab[index].SetValue(Value.Negative	);
 			else
-				ab[index].SetValue(Antibody_Sub.Value.Unknown	);
+				ab[index].SetValue(Value.Unknown	);
 		}
 	}
 	public int GetSolutions()
@@ -183,23 +189,23 @@ class Antibody_Super {
 	 * 
 	 * @return If this antibody is positive and should be crossed out
 	 */
-	public boolean IsPositive(int index) {
+	public Value IsPositive(int index) {
 		if (index < max) {
-			if (ab[index].GetValue() == Antibody_Sub.Value.Positive) {
+			if (ab[index].GetValue() == Value.Positive) {
 				if (ab[index].GetPair() == null)	//if it doesn't have a pair, nothing else matters
-					return	true;
+					return	Value.Positive;
 				else {
-					if (ab[index].GetPair().GetValue() == Antibody_Sub.Value.Negative)
-						return	true;
+					if (ab[index].GetPair().GetValue() == Value.Negative)
+						return	Value.Positive;
 					else
-						return	false;
+						return	Value.Negative;
 				}
 			}
 			else
-				return	false;
+				return	Value.Unknown;
 		}
 		else
-			return	false;
+			return	Value.Unknown;
 	}
 	/**
 	 * This antibody will not be considered a solution
@@ -283,12 +289,6 @@ class Antibody_Sub {
 	private				int				race	 [];
 
 	private final		String			name;
-
-	enum Value {
-		Negative,
-		Positive,
-		Unknown
-	}
 
 	/**
 	 * If this antibody has a pair
