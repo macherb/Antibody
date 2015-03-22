@@ -1,9 +1,16 @@
 package com.example.antibodyidentification;
 
 import android.app.Activity;
+import android.content.ComponentName;
+import android.content.ContentValues;
+import android.content.Intent;
+import android.content.res.Resources;
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -15,7 +22,21 @@ import android.widget.TextView;
  * 
  * @author Bobby Macher
  */
-public class MainActivity extends Activity implements View.OnClickListener {
+public class PatientEditor extends Activity implements View.OnClickListener {
+
+	private static final String[]	PROJECTION =
+									new String[] {
+													"_id", // 0
+													"title", // 1
+													"note", // 2
+												};
+
+	private static final int	STATE_EDIT =		0;
+    private static final int	STATE_INSERT =		1;
+
+    private int				mState;
+	private Uri				mUri;
+    private Cursor			mCursor;
 
 	private Antibody_Super	antibody;
 
@@ -358,10 +379,31 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 	private final int	max =	10;
 
+	@SuppressWarnings("deprecation")
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+
+		final Intent intent = getIntent();
+
+		final String action = intent.getAction();
+
+		if (Intent.ACTION_EDIT.equals(action)) {
+			mState = STATE_EDIT;
+			mUri = intent.getData();
+		} else if (Intent.ACTION_INSERT.equals(action)) {
+			mState = STATE_INSERT;
+			mUri = getContentResolver().insert(intent.getData(), null);
+		}
+		mCursor = managedQuery(
+	            mUri,
+	            PROJECTION,
+	            null,
+	            null,
+	            null
+	        );
+
+		setContentView(R.layout.patient_editor);
 
 		mD1 =			(TextView	)findViewById(R.id.textD1			);
 		mBigC1 =		(TextView	)findViewById(R.id.textBigC1		);
@@ -1022,23 +1064,94 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mCheck[9] =		mCheck10;
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
+    protected void onResume() {
+		super.onResume();
+
+		int	i;
+
+		if (mCursor != null) {
+			mCursor.requery();
+			mCursor.moveToFirst();
+			if (mState == STATE_EDIT) {
+				int colTitleIndex = mCursor.getColumnIndex("title");
+				String title = mCursor.getString(colTitleIndex);
+				Resources res = getResources();
+                String text = String.format(res.getString(R.string.title_edit), title);
+                setTitle(text);
+			} else if (mState == STATE_INSERT) {
+				setTitle(getText(R.string.title_create));
+        	}
+			int colNoteIndex = mCursor.getColumnIndex("note");
+			String note = mCursor.getString(colNoteIndex);
+			for (i = 0; i < max; i++)
+				mCheck[i].setChecked(note.charAt(i) == '1');
+			onClick(mCalculate);
+		}
 	}
 
 	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
+    protected void onPause() {
+		super.onPause();
+
+		if (mCursor != null) {
+			if (mState == STATE_EDIT) {
+				updatePatient();
+			} else if (mState == STATE_INSERT) {
+				updatePatient();
+				mState = STATE_EDIT;
+			}
+		}
+	}
+
+	@Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.editor_options_menu, menu);
+
+        Intent intent = new Intent(null, mUri);
+        intent.addCategory(Intent.CATEGORY_ALTERNATIVE);
+        menu.addIntentOptions(Menu.CATEGORY_ALTERNATIVE, 0, 0,
+                new ComponentName(this, PatientEditor.class), null, intent, 0, null);
+
+        return super.onCreateOptionsMenu(menu);
+	}
+
+	@Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+        	case R.id.menu_save:
+        		updatePatient();
+                finish();
+                break;
+            case R.id.menu_delete:
+                if (mCursor != null) {
+                    mCursor.close();
+                    mCursor = null;
+                    getContentResolver().delete(mUri, null, null);
+                }
+        		finish();
+            	break;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+
+	private final void updatePatient() {
+		int				i;
+		StringBuilder	note =		new StringBuilder();
+		ContentValues	values =	new ContentValues();
+
+		values.put("modified", System.currentTimeMillis());
+		for (i = 0; i < max; i++)
+			note.append(mCheck[i].isChecked() ? '1' : '0');
+		values.put("note", note.toString());
+		getContentResolver().update(
+									mUri,
+									values,
+									null,
+									null
+								);
 	}
 
 	public void onClick(View v) {
