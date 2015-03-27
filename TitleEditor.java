@@ -1,5 +1,7 @@
 package com.example.antibodyidentification;
 
+import org.eclipse.jdt.annotation.Nullable;
+
 import android.app.Activity;
 import android.content.ContentValues;
 import android.database.Cursor;
@@ -10,12 +12,14 @@ import android.widget.EditText;
 
 public class TitleEditor extends Activity {
 
+	private static final String TAG = "TitleEditor";
+
 	private static final String[] PROJECTION = new String[] {
         "_id", // 0
         "title", // 1
 	};
 
-	private Cursor mCursor;
+	@Nullable private Cursor mCursor;
 
 	private EditText mText;
 
