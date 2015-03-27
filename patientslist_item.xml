@@ -11,7 +11,7 @@
         android:visibility="gone" />
 
     <TextView
-        android:id="@+id/cellEntryNote"
+        android:id="@+id/cellEntryTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/cellEntryID"
@@ -22,8 +22,8 @@
         android:id="@+id/cellEntryCreated"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/cellEntryNote"
-        android:layout_toRightOf="@+id/cellEntryNote"
+        android:layout_alignTop="@+id/cellEntryTitle"
+        android:layout_toRightOf="@+id/cellEntryTitle"
         android:text="_"
         android:visibility="gone" />
 
