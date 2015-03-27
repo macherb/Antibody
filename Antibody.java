@@ -1,5 +1,7 @@
 package com.example.antibodyidentification;
 
+import org.eclipse.jdt.annotation.Nullable;
+
 enum Value {
 	Negative,
 	Positive,
@@ -9,25 +11,36 @@ enum Value {
 /**
  * Everything to do with the collection of antibodies
  * 
+ * @since 1.0
+ * 
  * @author Bobby Macher
  */
 class Antibody_Super {
 	/**
 	 * The number of antibodies that have this many solutions
+	 * 
+	 * @since 1.0
 	 */
 	private				int		solutions;
 	
 	/**
 	 * The most occurrences of an antibody as a solution
+	 * 
+	 * @since 1.0
 	 */
 	private				int		most;
 
 	/**
 	 * The maximum number of antibodies
+	 * 
+	 * @since 1.0
 	 */
 	public static final	int		max =		28;
 
-	private Antibody_Sub		ab		[];
+	/**
+	 * @since 1.1
+	 */
+	private final Antibody_Sub		ab		[];
 
 	Antibody_Super()
 	{
@@ -104,14 +117,16 @@ class Antibody_Super {
 	 * @param index
 	 * 
 	 * @return if the value is positive
+	 * 
+	 * @since 1.0
 	 */
-	public boolean GetValue(int index) {
+	public final boolean GetValue(final int index) {
 		if (index < max)
 			return	ab[index].GetValue() == Value.Positive;
 		else
 			return	false;
 	}
-	public void SetValue(int index, CharSequence value) {
+	public final void SetValue(final int index, final CharSequence value) {
 		if (index < max) {
 			if      (value.equals("+"))
 				ab[index].SetValue(Value.Positive	);
@@ -121,15 +136,15 @@ class Antibody_Super {
 				ab[index].SetValue(Value.Unknown	);
 		}
 	}
-	public int GetSolutions()
+	public final int GetSolutions()
 	{
 		return	solutions;
 	}
-	public void ResetSolutions()
+	public final void ResetSolutions()
 	{
 		solutions =	0;
 	}
-	public void IncrementSolutions()
+	public final void IncrementSolutions()
 	{
 		solutions++;
 	}
@@ -140,8 +155,10 @@ class Antibody_Super {
 	 * @param index2 the solution index
 	 * 
 	 * @return the name and race percents
+	 * 
+	 * @since 1.0
 	 */
-	public String GetNameRace(int index1, int index2)
+	public final String GetNameRace(final int index1, final int index2)
 	{
 		StringBuilder	result =	new StringBuilder();
 
@@ -170,15 +187,17 @@ class Antibody_Super {
 	 * @param index
 	 * 
 	 * @return The number of times this antibody is a solution
+	 * 
+	 * @since 1.0
 	 */
-	public int GetCount(int index)
+	public final int GetCount(final int index)
 	{
 		if (index < max)
 			return	ab[index].GetCount();
 		else
 			return	0;
 	}
-	public void IncrementCount(int index)
+	public final void IncrementCount(final int index)
 	{
 		if (index < max)
 			ab[index].IncrementCount();
@@ -188,8 +207,10 @@ class Antibody_Super {
 	 * @param index
 	 * 
 	 * @return If this antibody is positive and should be crossed out
+	 * 
+	 * @since 1.0
 	 */
-	public Value IsPositive(int index) {
+	public final Value IsPositive(final int index) {
 		if (index < max) {
 			if (ab[index].GetValue() == Value.Positive) {
 				if (ab[index].GetPair() == null)	//if it doesn't have a pair, nothing else matters
@@ -211,8 +232,10 @@ class Antibody_Super {
 	 * This antibody will not be considered a solution
 	 * 
 	 * @param index
+	 * 
+	 * @since 1.0
 	 */
-	public boolean CrossOut(int index) {
+	public final boolean CrossOut(final int index) {
 		if (index < max) {
 			if (ab[index].GetCount() < 255) {//if it's not crossed out already
 				ab[index].CrossOut();
@@ -222,7 +245,7 @@ class Antibody_Super {
 		} else
 			return	false;
 	}
-	public boolean NotCrossedOut(int index) {
+	public final boolean NotCrossedOut(final int index) {
 		if (index < max)
 			return	ab[index].GetCount() < 255;
 		else
@@ -231,8 +254,10 @@ class Antibody_Super {
 
 	/**
 	 * @return the highest number of times an antibody is a solution
+	 * 
+	 * @since 1.0
 	 */
-	public int GetMost()
+	public final int GetMost()
 	{
 		return	most;
 	}
@@ -240,8 +265,10 @@ class Antibody_Super {
 	 * Sets this antibody as the most if it's greater than the previous {@link #most}
 	 * 
 	 * @param index
+	 * 
+	 * @since 1.0
 	 */
-	public void SetNewMost(int index)
+	public final void SetNewMost(final int index)
 	{
 		if (index < max) {
 			if (ab[index].GetCount() > most)
@@ -249,7 +276,7 @@ class Antibody_Super {
 		}
 	}
 
-	public String GetName(int index)
+	public final String GetName(final int index)
 	{
 		if (index < max)
 			return	ab[index].GetName();
@@ -259,8 +286,10 @@ class Antibody_Super {
 
 	/**
 	 * Resets the {@link #most}, and the {@link Antibody_Sub#count}'s
+	 * 
+	 * @since 1.0
 	 */
-	public void Reset()
+	public final void Reset()
 	{
 		int	i;
 
@@ -272,6 +301,8 @@ class Antibody_Super {
 
 /**
  * Everything to do with the specific antibodies
+ * 
+ * @since 1.1
  * 
  * @author Bobby Macher
  */
@@ -286,14 +317,14 @@ class Antibody_Sub {
 	/**
 	 * Percentages for race
 	 */
-	private				int				race	 [];
+	private final		int				race	 [];
 
 	private final		String			name;
 
 	/**
 	 * If this antibody has a pair
 	 */
-	private				Antibody_Sub	pair;
+	@Nullable private				Antibody_Sub	pair;
 
 	Antibody_Sub(String name, int race0, int  race1) {
 		race =			new int[2];
@@ -306,38 +337,38 @@ class Antibody_Sub {
 		pair =			null;
 	}
 
-	public Antibody_Sub GetPair() {
+	public final Antibody_Sub GetPair() {
 		return	pair;
 	}
-	public void SetPair(Antibody_Sub pair) {
+	public final void SetPair(final Antibody_Sub pair) {
 		this.pair =	pair;
 	}
 
-	public Value GetValue() {
+	public final Value GetValue() {
 		return	value;
 	}
-	public void SetValue(Value value) {
+	public final void SetValue(final Value value) {
 		this.value =	value;
 	}
 
-	public int GetCount() {
+	public final int GetCount() {
 		return	count;
 	}
-	public void ResetCount() {
+	public final void ResetCount() {
 		count =	0;
 	}
-	public void IncrementCount() {
+	public final void IncrementCount() {
 		count++;
 	}
-	public void CrossOut() {
+	public final void CrossOut() {
 		count =	255;
 	}
 	
-	public String GetName() {
+	public final String GetName() {
 		return	name;
 	}
 
-	public int GetRace(int index) {
+	public final int GetRace(final int index) {
 		return	race[index];
 	}
 }
