@@ -20,7 +20,7 @@ import android.text.TextUtils;
 
 public class PatientProvider extends ContentProvider implements PipeDataWriter<Cursor> {
 
-	private static HashMap<String, String> sNotesProjectionMap;
+	private static HashMap<String, String> sReactionssProjectionMap;
 
     private static final UriMatcher sUriMatcher;
 
@@ -30,13 +30,13 @@ public class PatientProvider extends ContentProvider implements PipeDataWriter<C
 		sUriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
 		sUriMatcher.addURI("com.google.provider.Patient", "patients", 1);
         sUriMatcher.addURI("com.google.provider.Patient", "patients/#", 2);
-		sNotesProjectionMap = new HashMap<String, String>();
-		sNotesProjectionMap.put("_id", "_id");
-		sNotesProjectionMap.put("title", "title");
-		sNotesProjectionMap.put("note", "note");
-		sNotesProjectionMap.put("created",
+		sReactionssProjectionMap = new HashMap<String, String>();
+		sReactionssProjectionMap.put("_id", "_id");
+		sReactionssProjectionMap.put("title", "title");
+		sReactionssProjectionMap.put("reactions", "reactions");
+		sReactionssProjectionMap.put("created",
 				"created");
-		sNotesProjectionMap.put(
+		sReactionssProjectionMap.put(
 				"modified",
 				"modified");
 	}
@@ -52,7 +52,7 @@ public class PatientProvider extends ContentProvider implements PipeDataWriter<C
 			db.execSQL("CREATE TABLE " + "patients" + " ("
 	                   + "_id" + " INTEGER PRIMARY KEY,"
 	                   + "title" + " TEXT,"
-	                   + "note" + " TEXT,"
+	                   + "reactions" + " TEXT,"
 	                   + "created" + " INTEGER,"
 	                   + "modified" + " INTEGER"
 	                   + ");");
@@ -102,7 +102,7 @@ public class PatientProvider extends ContentProvider implements PipeDataWriter<C
                 				);
 				break;
 			default:
-                throw new IllegalArgumentException("Unknown URI " + uri);
+				throw new IllegalArgumentException("Unknown URI " + uri);
 		}
 		getContext().getContentResolver().notifyChange(uri, null);
         return count;
@@ -143,13 +143,13 @@ public class PatientProvider extends ContentProvider implements PipeDataWriter<C
             Resources r = Resources.getSystem();
             values.put("title", r.getString(android.R.string.untitled));
         }
-		if (values.containsKey("note") == false) {
-            values.put("note", "0000000000");
+		if (values.containsKey("reactions") == false) {
+            values.put("reactions", "0000000000");
         }
 		SQLiteDatabase db = mOpenHelper.getWritableDatabase();
 		long rowId = db.insert(
 	            "patients",
-	            "note",
+	            "reactions",
 	            values
 	        );
 		Uri patientUri = ContentUris.withAppendedId(Uri.parse("content://com.google.provider.Patient/patients/"), rowId);
@@ -172,10 +172,10 @@ public class PatientProvider extends ContentProvider implements PipeDataWriter<C
 
 		switch (sUriMatcher.match(uri)) {
 			case 1:
-				qb.setProjectionMap(sNotesProjectionMap);
+				qb.setProjectionMap(sReactionssProjectionMap);
 				break;
 			case 2:
-				qb.setProjectionMap(sNotesProjectionMap);
+				qb.setProjectionMap(sReactionssProjectionMap);
 	               qb.appendWhere(
 	            		   			"_id" +
 	            		   			"=" +
@@ -183,7 +183,7 @@ public class PatientProvider extends ContentProvider implements PipeDataWriter<C
 	            		   		);
 				break;
 			default:
-                throw new IllegalArgumentException("Unknown URI " + uri);
+				throw new IllegalArgumentException("Unknown URI " + uri);
 		}
 
 		String orderBy;
@@ -238,7 +238,7 @@ public class PatientProvider extends ContentProvider implements PipeDataWriter<C
 								);
 				break;
             default:
-                throw new IllegalArgumentException("Unknown URI " + uri);
+            	throw new IllegalArgumentException("Unknown URI " + uri);
 		}
 		getContext().getContentResolver().notifyChange(uri, null);
 		return count;
