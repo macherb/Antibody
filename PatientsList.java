@@ -19,6 +19,8 @@ import android.widget.SimpleCursorAdapter;
 
 public class PatientsList extends ListActivity {
 
+	private static final String TAG = "PatientsList";
+
 	private static final String[] PROJECTION = new String[] {
         "_id", // 0
         "title", // 1
@@ -45,7 +47,7 @@ public class PatientsList extends ListActivity {
 			null,
 			"modified ASC");
 
-		int[] viewIDs = { R.id.cellEntryID, R.id.cellEntryNote, R.id.cellEntryCreated, R.id.cellEntryModified };
+		int[] viewIDs = { R.id.cellEntryID, R.id.cellEntryTitle, R.id.cellEntryCreated, R.id.cellEntryModified };
 
 		SimpleCursorAdapter adapter
 		= new SimpleCursorAdapter(this,
