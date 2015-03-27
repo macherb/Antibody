@@ -1,5 +1,7 @@
 package com.example.antibodyidentification;
 
+import org.eclipse.jdt.annotation.Nullable;
+
 import android.app.Activity;
 import android.content.ComponentName;
 import android.content.ContentValues;
@@ -24,11 +26,13 @@ import android.widget.TextView;
  */
 public class PatientEditor extends Activity implements View.OnClickListener {
 
+	private static final String		TAG =			"PatientEditor";
+
 	private static final String[]	PROJECTION =
 									new String[] {
 													"_id", // 0
 													"title", // 1
-													"note", // 2
+													"reactions", // 2
 												};
 
 	private static final int	STATE_EDIT =		0;
@@ -36,7 +40,7 @@ public class PatientEditor extends Activity implements View.OnClickListener {
 
     private int				mState;
 	private Uri				mUri;
-    private Cursor			mCursor;
+	@Nullable private Cursor			mCursor;
 
 	private Antibody_Super	antibody;
 
@@ -1083,11 +1087,10 @@ public class PatientEditor extends Activity implements View.OnClickListener {
 			} else if (mState == STATE_INSERT) {
 				setTitle(getText(R.string.title_create));
         	}
-			int colNoteIndex = mCursor.getColumnIndex("note");
-			String note = mCursor.getString(colNoteIndex);
+			int colReactionsIndex =	mCursor.getColumnIndex("reactions");
+			String reactions =		mCursor.getString(colReactionsIndex);
 			for (i = 0; i < max; i++)
-				mCheck[i].setChecked(note.charAt(i) == '1');
-			onClick(mCalculate);
+				mCheck[i].setChecked(reactions.charAt(i) == '1');
 		}
 	}
 
@@ -1126,7 +1129,7 @@ public class PatientEditor extends Activity implements View.OnClickListener {
                 finish();
                 break;
             case R.id.menu_delete:
-                if (mCursor != null) {
+            	if (mCursor != null) {
                     mCursor.close();
                     mCursor = null;
                     getContentResolver().delete(mUri, null, null);
@@ -1137,15 +1140,18 @@ public class PatientEditor extends Activity implements View.OnClickListener {
 		return super.onOptionsItemSelected(item);
 	}
 
+	/**
+	 * @since 1.2
+	 */
 	private final void updatePatient() {
 		int				i;
-		StringBuilder	note =		new StringBuilder();
+		StringBuilder	reactions =	new StringBuilder();
 		ContentValues	values =	new ContentValues();
 
 		values.put("modified", System.currentTimeMillis());
 		for (i = 0; i < max; i++)
-			note.append(mCheck[i].isChecked() ? '1' : '0');
-		values.put("note", note.toString());
+			reactions.append(mCheck[i].isChecked() ? '1' : '0');
+		values.put("reactions", reactions.toString());
 		getContentResolver().update(
 									mUri,
 									values,
@@ -1283,7 +1289,7 @@ public class PatientEditor extends Activity implements View.OnClickListener {
 	/**
 	 * Set the color of every antibody to black
 	 */
-	void SetAllBlack() {
+	private final void SetAllBlack() {
 		int	i;
 
 		for (i = 0; i < max; i++)
@@ -1327,7 +1333,7 @@ public class PatientEditor extends Activity implements View.OnClickListener {
 	 * @param cell the row used
 	 * @param letter the name of the antibody
 	 */
-	void CrossOut(int index, TextView Antibody1, int cell)
+	private final void CrossOut(int index, TextView Antibody1, int cell)
 	{
 		Value	result;
 		
@@ -1347,7 +1353,7 @@ public class PatientEditor extends Activity implements View.OnClickListener {
 	 * 
 	 * @param index
 	 */
-	void UseToGetSolutions(int index)
+	private final void UseToGetSolutions(int index)
 	{
 		if (mCheck[index].isChecked())	//if the result is positive
 		{
@@ -1389,7 +1395,7 @@ public class PatientEditor extends Activity implements View.OnClickListener {
 	 * @param index
 	 * @param antibody1
 	 */
-	void GetSolution(int index, TextView antibody1)
+	private final void GetSolution(int index, TextView antibody1)
 	{
 		if (antibody1.getText().equals("+"))
 		{
