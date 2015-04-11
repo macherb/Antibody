@@ -178,6 +178,7 @@ class Antibody_Super {
 			result.append(", ");
 			result.append(ab[index1].GetRace(1));
 			result.append(")");
+			// TODO: Get only one race
 		}
 
 		return	result.toString();
