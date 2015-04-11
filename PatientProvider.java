@@ -20,7 +20,9 @@ import android.text.TextUtils;
 
 public class PatientProvider extends ContentProvider implements PipeDataWriter<Cursor> {
 
-	private static HashMap<String, String> sReactionssProjectionMap;
+	private static final String TAG = "PatientProvider";
+
+	private static HashMap<String, String> sReactionsProjectionMap;
 
     private static final UriMatcher sUriMatcher;
 
@@ -30,15 +32,13 @@ public class PatientProvider extends ContentProvider implements PipeDataWriter<C
 		sUriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
 		sUriMatcher.addURI("com.google.provider.Patient", "patients", 1);
         sUriMatcher.addURI("com.google.provider.Patient", "patients/#", 2);
-		sReactionssProjectionMap = new HashMap<String, String>();
-		sReactionssProjectionMap.put("_id", "_id");
-		sReactionssProjectionMap.put("title", "title");
-		sReactionssProjectionMap.put("reactions", "reactions");
-		sReactionssProjectionMap.put("created",
-				"created");
-		sReactionssProjectionMap.put(
-				"modified",
-				"modified");
+		sReactionsProjectionMap = new HashMap<String, String>();
+		sReactionsProjectionMap.put("_id", "_id");
+		sReactionsProjectionMap.put("title", "title");
+		sReactionsProjectionMap.put("reactions", "reactions");
+		sReactionsProjectionMap.put("created", "created");
+		sReactionsProjectionMap.put("modified", "modified");
+		// TODO: Replace created and modified with race
 	}
 
 	static class DatabaseHelper extends SQLiteOpenHelper {
@@ -56,6 +56,7 @@ public class PatientProvider extends ContentProvider implements PipeDataWriter<C
 	                   + "created" + " INTEGER,"
 	                   + "modified" + " INTEGER"
 	                   + ");");
+			// TODO: Replace created and modified with race
 		}
 
 		@Override
@@ -102,7 +103,7 @@ public class PatientProvider extends ContentProvider implements PipeDataWriter<C
                 				);
 				break;
 			default:
-				throw new IllegalArgumentException("Unknown URI " + uri);
+                throw new IllegalArgumentException("Unknown URI " + uri);
 		}
 		getContext().getContentResolver().notifyChange(uri, null);
         return count;
@@ -139,6 +140,8 @@ public class PatientProvider extends ContentProvider implements PipeDataWriter<C
             values.put("modified", now);
         }
 
+		// TODO: Replace created and modified with race
+
 		if (values.containsKey("title") == false) {
             Resources r = Resources.getSystem();
             values.put("title", r.getString(android.R.string.untitled));
@@ -172,10 +175,10 @@ public class PatientProvider extends ContentProvider implements PipeDataWriter<C
 
 		switch (sUriMatcher.match(uri)) {
 			case 1:
-				qb.setProjectionMap(sReactionssProjectionMap);
+				qb.setProjectionMap(sReactionsProjectionMap);
 				break;
 			case 2:
-				qb.setProjectionMap(sReactionssProjectionMap);
+				qb.setProjectionMap(sReactionsProjectionMap);
 	               qb.appendWhere(
 	            		   			"_id" +
 	            		   			"=" +
@@ -183,7 +186,7 @@ public class PatientProvider extends ContentProvider implements PipeDataWriter<C
 	            		   		);
 				break;
 			default:
-				throw new IllegalArgumentException("Unknown URI " + uri);
+                throw new IllegalArgumentException("Unknown URI " + uri);
 		}
 
 		String orderBy;
