@@ -27,6 +27,7 @@ public class PatientsList extends ListActivity {
         "created", // 2
         "modified", // 3
 	};
+	// TODO: Replace created and modified with race
 
 	@SuppressWarnings("deprecation")
 	@Override
@@ -48,6 +49,7 @@ public class PatientsList extends ListActivity {
 			"modified ASC");
 
 		int[] viewIDs = { R.id.cellEntryID, R.id.cellEntryTitle, R.id.cellEntryCreated, R.id.cellEntryModified };
+		// TODO: Replace created and modified with race
 
 		SimpleCursorAdapter adapter
 		= new SimpleCursorAdapter(this,
