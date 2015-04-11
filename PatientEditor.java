@@ -22,6 +22,8 @@ import android.widget.TextView;
 /**
  * Decide which antibodies are solutions
  * 
+ * @since 1.0
+ * 
  * @author Bobby Macher
  */
 public class PatientEditor extends Activity implements View.OnClickListener {
@@ -34,13 +36,14 @@ public class PatientEditor extends Activity implements View.OnClickListener {
 													"title", // 1
 													"reactions", // 2
 												};
+	// TODO: Add race
 
 	private static final int	STATE_EDIT =		0;
     private static final int	STATE_INSERT =		1;
 
-    private int				mState;
-	private Uri				mUri;
-	@Nullable private Cursor			mCursor;
+    private int					mState;
+	private Uri					mUri;
+	@Nullable private Cursor	mCursor;
 
 	private Antibody_Super	antibody;
 
@@ -334,34 +337,7 @@ public class PatientEditor extends Activity implements View.OnClickListener {
 						mLUA10,
 						mLUB10,
 
-						mD[],
-						mBigC[],
-						mBigE[],
-						mLittleC[],
-						mLittleE[],
-						mF[],
-						mCW[],
-						mV[],
-						mBigK[],
-						mLittleK[],
-						mKPA[],
-						mKPB[],
-						mJSA[],
-						mJSB[],
-						mFYA[],
-						mFYB[],
-						mJKA[],
-						mJKB[],
-						mXGA[],
-						mLEA[],
-						mLEB[],
-						mBigS[],
-						mLittleS[],
-						mM[],
-						mN[],
-						mP1[],
-						mLUA[],
-						mLUB[],
+						mText[][],
 
 						mSolution;
 
@@ -386,7 +362,11 @@ public class PatientEditor extends Activity implements View.OnClickListener {
 	@SuppressWarnings("deprecation")
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
+		int	i;
+
 		super.onCreate(savedInstanceState);
+
+		Log.d(TAG, "onCreate beginning");
 
 		final Intent intent = getIntent();
 
@@ -397,6 +377,7 @@ public class PatientEditor extends Activity implements View.OnClickListener {
 			mUri = intent.getData();
 		} else if (Intent.ACTION_INSERT.equals(action)) {
 			mState = STATE_INSERT;
+			Log.d(TAG, "Before insert");
 			mUri = getContentResolver().insert(intent.getData(), null);
 		}
 		mCursor = managedQuery(
@@ -719,341 +700,317 @@ public class PatientEditor extends Activity implements View.OnClickListener {
 
         antibody =		new Antibody_Super();
 
-        mD = 			new TextView[max];
-        mD[0] =			mD1;
-        mD[1] =			mD2;
-        mD[2] =			mD3;
-        mD[3] =			mD4;
-        mD[4] =			mD5;
-        mD[5] =			mD6;
-        mD[6] =			mD7;
-        mD[7] =			mD8;
-        mD[8] =			mD9;
-        mD[9] =			mD10;
+        mText =			new TextView[28][];
+        for (i = 0; i < 28; i++)
+        	mText[i] =		new TextView[max];
 
-        mBigC = 		new TextView[max];
-        mBigC[0] =		mBigC1;
-        mBigC[1] =		mBigC2;
-        mBigC[2] =		mBigC3;
-        mBigC[3] =		mBigC4;
-        mBigC[4] =		mBigC5;
-        mBigC[5] =		mBigC6;
-        mBigC[6] =		mBigC7;
-        mBigC[7] =		mBigC8;
-        mBigC[8] =		mBigC9;
-        mBigC[9] =		mBigC10;
+		mText[0][0] =	mD1;
+		mText[0][1] =	mD2;
+		mText[0][2] =	mD3;
+		mText[0][3] =	mD4;
+		mText[0][4] =	mD5;
+		mText[0][5] =	mD6;
+		mText[0][6] =	mD7;
+		mText[0][7] =	mD8;
+		mText[0][8] =	mD9;
+		mText[0][9] =	mD10;
 
-        mBigE = 		new TextView[max];
-        mBigE[0] =		mBigE1;
-        mBigE[1] =		mBigE2;
-        mBigE[2] =		mBigE3;
-        mBigE[3] =		mBigE4;
-        mBigE[4] =		mBigE5;
-        mBigE[5] =		mBigE6;
-        mBigE[6] =		mBigE7;
-        mBigE[7] =		mBigE8;
-        mBigE[8] =		mBigE9;
-        mBigE[9] =		mBigE10;
+		mText[1][0] =	mBigC1;
+        mText[1][1] =	mBigC2;
+        mText[1][2] =	mBigC3;
+        mText[1][3] =	mBigC4;
+        mText[1][4] =	mBigC5;
+        mText[1][5] =	mBigC6;
+        mText[1][6] =	mBigC7;
+        mText[1][7] =	mBigC8;
+        mText[1][8] =	mBigC9;
+        mText[1][9] =	mBigC10;
 
-        mLittleC = 		new TextView[max];
-        mLittleC[0] =	mLittleC1;
-        mLittleC[1] =	mLittleC2;
-        mLittleC[2] =	mLittleC3;
-        mLittleC[3] =	mLittleC4;
-        mLittleC[4] =	mLittleC5;
-        mLittleC[5] =	mLittleC6;
-        mLittleC[6] =	mLittleC7;
-        mLittleC[7] =	mLittleC8;
-        mLittleC[8] =	mLittleC9;
-        mLittleC[9] =	mLittleC10;
+        mText[2][0] =	mBigE1;
+		mText[2][1] =	mBigE2;
+		mText[2][2] =	mBigE3;
+		mText[2][3] =	mBigE4;
+		mText[2][4] =	mBigE5;
+		mText[2][5] =	mBigE6;
+		mText[2][6] =	mBigE7;
+		mText[2][7] =	mBigE8;
+		mText[2][8] =	mBigE9;
+		mText[2][9] =	mBigE10;
 
-        mLittleE = 		new TextView[max];
-        mLittleE[0] =	mLittleE1;
-        mLittleE[1] =	mLittleE2;
-        mLittleE[2] =	mLittleE3;
-        mLittleE[3] =	mLittleE4;
-        mLittleE[4] =	mLittleE5;
-        mLittleE[5] =	mLittleE6;
-        mLittleE[6] =	mLittleE7;
-        mLittleE[7] =	mLittleE8;
-        mLittleE[8] =	mLittleE9;
-        mLittleE[9] =	mLittleE10;
+		mText[3][0] =	mLittleC1;
+		mText[3][1] =	mLittleC2;
+		mText[3][2] =	mLittleC3;
+		mText[3][3] =	mLittleC4;
+		mText[3][4] =	mLittleC5;
+		mText[3][5] =	mLittleC6;
+		mText[3][6] =	mLittleC7;
+		mText[3][7] =	mLittleC8;
+		mText[3][8] =	mLittleC9;
+		mText[3][9] =	mLittleC10;
 
-        mF =			new TextView[max];
-        mF[0] =			mF1;
-        mF[1] =			mF2;
-        mF[2] =			mF3;
-        mF[3] =			mF4;
-        mF[4] =			mF5;
-        mF[5] =			mF6;
-        mF[6] =			mF7;
-        mF[7] =			mF8;
-        mF[8] =			mF9;
-        mF[9] =			mF10;
+		mText[4][0] =	mLittleE1;
+		mText[4][1] =	mLittleE2;
+		mText[4][2] =	mLittleE3;
+		mText[4][3] =	mLittleE4;
+		mText[4][4] =	mLittleE5;
+		mText[4][5] =	mLittleE6;
+		mText[4][6] =	mLittleE7;
+		mText[4][7] =	mLittleE8;
+		mText[4][8] =	mLittleE9;
+		mText[4][9] =	mLittleE10;
 
-        mCW =			new TextView[max];
-        mCW[0] =		mCW1;
-        mCW[1] =		mCW2;
-        mCW[2] =		mCW3;
-        mCW[3] =		mCW4;
-        mCW[4] =		mCW5;
-        mCW[5] =		mCW6;
-        mCW[6] =		mCW7;
-        mCW[7] =		mCW8;
-        mCW[8] =		mCW9;
-        mCW[9] =		mCW10;
+		mText[5][0] =	mF1;
+        mText[5][1] =	mF2;
+        mText[5][2] =	mF3;
+        mText[5][3] =	mF4;
+        mText[5][4] =	mF5;
+        mText[5][5] =	mF6;
+        mText[5][6] =	mF7;
+        mText[5][7] =	mF8;
+        mText[5][8] =	mF9;
+        mText[5][9] =	mF10;
 
-        mV =			new TextView[max];
-        mV[0] =			mV1;
-        mV[1] =			mV2;
-        mV[2] =			mV3;
-        mV[3] =			mV4;
-        mV[4] =			mV5;
-        mV[5] =			mV6;
-        mV[6] =			mV7;
-        mV[7] =			mV8;
-        mV[8] =			mV9;
-        mV[9] =			mV10;
+        mText[6][0] =	mCW1;
+        mText[6][1] =	mCW2;
+        mText[6][2] =	mCW3;
+        mText[6][3] =	mCW4;
+        mText[6][4] =	mCW5;
+        mText[6][5] =	mCW6;
+        mText[6][6] =	mCW7;
+        mText[6][7] =	mCW8;
+        mText[6][8] =	mCW9;
+        mText[6][9] =	mCW10;
 
-        mBigK =			new TextView[max];
-        mBigK[0] =		mBigK1;
-        mBigK[1] =		mBigK2;
-        mBigK[2] =		mBigK3;
-        mBigK[3] =		mBigK4;
-        mBigK[4] =		mBigK5;
-        mBigK[5] =		mBigK6;
-        mBigK[6] =		mBigK7;
-        mBigK[7] =		mBigK8;
-        mBigK[8] =		mBigK9;
-        mBigK[9] =		mBigK10;
+        mText[7][0] =	mV1;
+        mText[7][1] =	mV2;
+        mText[7][2] =	mV3;
+        mText[7][3] =	mV4;
+        mText[7][4] =	mV5;
+        mText[7][5] =	mV6;
+        mText[7][6] =	mV7;
+        mText[7][7] =	mV8;
+        mText[7][8] =	mV9;
+        mText[7][9] =	mV10;
 
-        mLittleK =		new TextView[max];
-        mLittleK[0] =	mLittleK1;
-        mLittleK[1] =	mLittleK2;
-        mLittleK[2] =	mLittleK3;
-        mLittleK[3] =	mLittleK4;
-        mLittleK[4] =	mLittleK5;
-        mLittleK[5] =	mLittleK6;
-        mLittleK[6] =	mLittleK7;
-        mLittleK[7] =	mLittleK8;
-        mLittleK[8] =	mLittleK9;
-        mLittleK[9] =	mLittleK10;
+        mText[8][0] =	mBigK1;
+        mText[8][1] =	mBigK2;
+        mText[8][2] =	mBigK3;
+        mText[8][3] =	mBigK4;
+        mText[8][4] =	mBigK5;
+        mText[8][5] =	mBigK6;
+        mText[8][6] =	mBigK7;
+        mText[8][7] =	mBigK8;
+        mText[8][8] =	mBigK9;
+        mText[8][9] =	mBigK10;
 
-        mKPA =			new TextView[max];
-        mKPA[0] =		mKPA1;
-        mKPA[1] =		mKPA2;
-        mKPA[2] =		mKPA3;
-        mKPA[3] =		mKPA4;
-        mKPA[4] =		mKPA5;
-        mKPA[5] =		mKPA6;
-        mKPA[6] =		mKPA7;
-        mKPA[7] =		mKPA8;
-        mKPA[8] =		mKPA9;
-        mKPA[9] =		mKPA10;
+        mText[9][0] =	mLittleK1;
+        mText[9][1] =	mLittleK2;
+        mText[9][2] =	mLittleK3;
+        mText[9][3] =	mLittleK4;
+        mText[9][4] =	mLittleK5;
+        mText[9][5] =	mLittleK6;
+        mText[9][6] =	mLittleK7;
+        mText[9][7] =	mLittleK8;
+        mText[9][8] =	mLittleK9;
+        mText[9][9] =	mLittleK10;
 
-        mKPB =			new TextView[max];
-        mKPB[0] =		mKPB1;
-        mKPB[1] =		mKPB2;
-        mKPB[2] =		mKPB3;
-        mKPB[3] =		mKPB4;
-        mKPB[4] =		mKPB5;
-        mKPB[5] =		mKPB6;
-        mKPB[6] =		mKPB7;
-        mKPB[7] =		mKPB8;
-        mKPB[8] =		mKPB9;
-        mKPB[9] =		mKPB10;
+        mText[10][0] =	mKPA1;
+        mText[10][1] =	mKPA2;
+        mText[10][2] =	mKPA3;
+        mText[10][3] =	mKPA4;
+        mText[10][4] =	mKPA5;
+        mText[10][5] =	mKPA6;
+        mText[10][6] =	mKPA7;
+        mText[10][7] =	mKPA8;
+        mText[10][8] =	mKPA9;
+        mText[10][9] =	mKPA10;
 
-        mJSA =			new TextView[max];
-        mJSA[0] =		mJSA1;
-        mJSA[1] =		mJSA2;
-        mJSA[2] =		mJSA3;
-        mJSA[3] =		mJSA4;
-        mJSA[4] =		mJSA5;
-        mJSA[5] =		mJSA6;
-        mJSA[6] =		mJSA7;
-        mJSA[7] =		mJSA8;
-        mJSA[8] =		mJSA9;
-        mJSA[9] =		mJSA10;
+        mText[11][0] =	mKPB1;
+        mText[11][1] =	mKPB2;
+        mText[11][2] =	mKPB3;
+        mText[11][3] =	mKPB4;
+        mText[11][4] =	mKPB5;
+        mText[11][5] =	mKPB6;
+        mText[11][6] =	mKPB7;
+        mText[11][7] =	mKPB8;
+        mText[11][8] =	mKPB9;
+        mText[11][9] =	mKPB10;
 
-        mJSB =			new TextView[max];
-        mJSB[0] =		mJSB1;
-        mJSB[1] =		mJSB2;
-        mJSB[2] =		mJSB3;
-        mJSB[3] =		mJSB4;
-        mJSB[4] =		mJSB5;
-        mJSB[5] =		mJSB6;
-        mJSB[6] =		mJSB7;
-        mJSB[7] =		mJSB8;
-        mJSB[8] =		mJSB9;
-        mJSB[9] =		mJSB10;
+        mText[12][0] =	mJSA1;
+        mText[12][1] =	mJSA2;
+        mText[12][2] =	mJSA3;
+        mText[12][3] =	mJSA4;
+        mText[12][4] =	mJSA5;
+        mText[12][5] =	mJSA6;
+        mText[12][6] =	mJSA7;
+        mText[12][7] =	mJSA8;
+        mText[12][8] =	mJSA9;
+        mText[12][9] =	mJSA10;
 
-        mFYA =			new TextView[max];
-        mFYA[0] =		mFYA1;
-        mFYA[1] =		mFYA2;
-        mFYA[2] =		mFYA3;
-        mFYA[3] =		mFYA4;
-        mFYA[4] =		mFYA5;
-        mFYA[5] =		mFYA6;
-        mFYA[6] =		mFYA7;
-        mFYA[7] =		mFYA8;
-        mFYA[8] =		mFYA9;
-        mFYA[9] =		mFYA10;
+        mText[13][0] =	mJSB1;
+        mText[13][1] =	mJSB2;
+        mText[13][2] =	mJSB3;
+        mText[13][3] =	mJSB4;
+        mText[13][4] =	mJSB5;
+        mText[13][5] =	mJSB6;
+        mText[13][6] =	mJSB7;
+        mText[13][7] =	mJSB8;
+        mText[13][8] =	mJSB9;
+        mText[13][9] =	mJSB10;
 
-        mFYB =			new TextView[max];
-        mFYB[0] =		mFYB1;
-        mFYB[1] =		mFYB2;
-        mFYB[2] =		mFYB3;
-        mFYB[3] =		mFYB4;
-        mFYB[4] =		mFYB5;
-        mFYB[5] =		mFYB6;
-        mFYB[6] =		mFYB7;
-        mFYB[7] =		mFYB8;
-        mFYB[8] =		mFYB9;
-        mFYB[9] =		mFYB10;
+        mText[14][0] =	mFYA1;
+        mText[14][1] =	mFYA2;
+        mText[14][2] =	mFYA3;
+        mText[14][3] =	mFYA4;
+        mText[14][4] =	mFYA5;
+        mText[14][5] =	mFYA6;
+        mText[14][6] =	mFYA7;
+        mText[14][7] =	mFYA8;
+        mText[14][8] =	mFYA9;
+        mText[14][9] =	mFYA10;
 
-        mJKA =			new TextView[max];
-        mJKA[0] =		mJKA1;
-        mJKA[1] =		mJKA2;
-        mJKA[2] =		mJKA3;
-        mJKA[3] =		mJKA4;
-        mJKA[4] =		mJKA5;
-        mJKA[5] =		mJKA6;
-        mJKA[6] =		mJKA7;
-        mJKA[7] =		mJKA8;
-        mJKA[8] =		mJKA9;
-        mJKA[9] =		mJKA10;
+        mText[15][0] =	mFYB1;
+        mText[15][1] =	mFYB2;
+        mText[15][2] =	mFYB3;
+        mText[15][3] =	mFYB4;
+        mText[15][4] =	mFYB5;
+        mText[15][5] =	mFYB6;
+        mText[15][6] =	mFYB7;
+        mText[15][7] =	mFYB8;
+        mText[15][8] =	mFYB9;
+        mText[15][9] =	mFYB10;
 
-        mJKB =			new TextView[max];
-        mJKB[0] =		mJKB1;
-        mJKB[1] =		mJKB2;
-        mJKB[2] =		mJKB3;
-        mJKB[3] =		mJKB4;
-        mJKB[4] =		mJKB5;
-        mJKB[5] =		mJKB6;
-        mJKB[6] =		mJKB7;
-        mJKB[7] =		mJKB8;
-        mJKB[8] =		mJKB9;
-        mJKB[9] =		mJKB10;
+        mText[16][0] =	mJKA1;
+        mText[16][1] =	mJKA2;
+        mText[16][2] =	mJKA3;
+        mText[16][3] =	mJKA4;
+        mText[16][4] =	mJKA5;
+        mText[16][5] =	mJKA6;
+        mText[16][6] =	mJKA7;
+        mText[16][7] =	mJKA8;
+        mText[16][8] =	mJKA9;
+        mText[16][9] =	mJKA10;
 
-        mXGA =			new TextView[max];
-        mXGA[0] =		mXGA1;
-        mXGA[1] =		mXGA2;
-        mXGA[2] =		mXGA3;
-        mXGA[3] =		mXGA4;
-        mXGA[4] =		mXGA5;
-        mXGA[5] =		mXGA6;
-        mXGA[6] =		mXGA7;
-        mXGA[7] =		mXGA8;
-        mXGA[8] =		mXGA9;
-        mXGA[9] =		mXGA10;
+        mText[17][0] =	mJKB1;
+        mText[17][1] =	mJKB2;
+        mText[17][2] =	mJKB3;
+        mText[17][3] =	mJKB4;
+        mText[17][4] =	mJKB5;
+        mText[17][5] =	mJKB6;
+        mText[17][6] =	mJKB7;
+        mText[17][7] =	mJKB8;
+        mText[17][8] =	mJKB9;
+        mText[17][9] =	mJKB10;
 
-        mLEA =			new TextView[max];
-        mLEA[0] =		mLEA1;
-        mLEA[1] =		mLEA2;
-        mLEA[2] =		mLEA3;
-        mLEA[3] =		mLEA4;
-        mLEA[4] =		mLEA5;
-        mLEA[5] =		mLEA6;
-        mLEA[6] =		mLEA7;
-        mLEA[7] =		mLEA8;
-        mLEA[8] =		mLEA9;
-        mLEA[9] =		mLEA10;
+        mText[18][0] =	mXGA1;
+        mText[18][1] =	mXGA2;
+        mText[18][2] =	mXGA3;
+        mText[18][3] =	mXGA4;
+        mText[18][4] =	mXGA5;
+        mText[18][5] =	mXGA6;
+        mText[18][6] =	mXGA7;
+        mText[18][7] =	mXGA8;
+        mText[18][8] =	mXGA9;
+        mText[18][9] =	mXGA10;
 
-        mLEB =			new TextView[max];
-        mLEB[0] =		mLEB1;
-        mLEB[1] =		mLEB2;
-        mLEB[2] =		mLEB3;
-        mLEB[3] =		mLEB4;
-        mLEB[4] =		mLEB5;
-        mLEB[5] =		mLEB6;
-        mLEB[6] =		mLEB7;
-        mLEB[7] =		mLEB8;
-        mLEB[8] =		mLEB9;
-        mLEB[9] =		mLEB10;
+        mText[19][0] =	mLEA1;
+        mText[19][1] =	mLEA2;
+        mText[19][2] =	mLEA3;
+        mText[19][3] =	mLEA4;
+        mText[19][4] =	mLEA5;
+        mText[19][5] =	mLEA6;
+        mText[19][6] =	mLEA7;
+        mText[19][7] =	mLEA8;
+        mText[19][8] =	mLEA9;
+        mText[19][9] =	mLEA10;
 
-        mBigS =			new TextView[max];
-        mBigS[0] =		mBigS1;
-        mBigS[1] =		mBigS2;
-        mBigS[2] =		mBigS3;
-        mBigS[3] =		mBigS4;
-        mBigS[4] =		mBigS5;
-        mBigS[5] =		mBigS6;
-        mBigS[6] =		mBigS7;
-        mBigS[7] =		mBigS8;
-        mBigS[8] =		mBigS9;
-        mBigS[9] =		mBigS10;
+        mText[20][0] =	mLEB1;
+        mText[20][1] =	mLEB2;
+        mText[20][2] =	mLEB3;
+        mText[20][3] =	mLEB4;
+        mText[20][4] =	mLEB5;
+        mText[20][5] =	mLEB6;
+        mText[20][6] =	mLEB7;
+        mText[20][7] =	mLEB8;
+        mText[20][8] =	mLEB9;
+        mText[20][9] =	mLEB10;
 
-        mLittleS =		new TextView[max];
-        mLittleS[0] =	mLittleS1;
-        mLittleS[1] =	mLittleS2;
-        mLittleS[2] =	mLittleS3;
-        mLittleS[3] =	mLittleS4;
-        mLittleS[4] =	mLittleS5;
-        mLittleS[5] =	mLittleS6;
-        mLittleS[6] =	mLittleS7;
-        mLittleS[7] =	mLittleS8;
-        mLittleS[8] =	mLittleS9;
-        mLittleS[9] =	mLittleS10;
+        mText[21][0] =	mBigS1;
+        mText[21][1] =	mBigS2;
+        mText[21][2] =	mBigS3;
+        mText[21][3] =	mBigS4;
+        mText[21][4] =	mBigS5;
+        mText[21][5] =	mBigS6;
+        mText[21][6] =	mBigS7;
+        mText[21][7] =	mBigS8;
+        mText[21][8] =	mBigS9;
+        mText[21][9] =	mBigS10;
 
-        mM =			new TextView[max];
-        mM[0] =			mM1;
-        mM[1] =			mM2;
-        mM[2] =			mM3;
-        mM[3] =			mM4;
-        mM[4] =			mM5;
-        mM[5] =			mM6;
-        mM[6] =			mM7;
-        mM[7] =			mM8;
-        mM[8] =			mM9;
-        mM[9] =			mM10;
+        mText[22][0] =	mLittleS1;
+        mText[22][1] =	mLittleS2;
+        mText[22][2] =	mLittleS3;
+        mText[22][3] =	mLittleS4;
+        mText[22][4] =	mLittleS5;
+        mText[22][5] =	mLittleS6;
+        mText[22][6] =	mLittleS7;
+        mText[22][7] =	mLittleS8;
+        mText[22][8] =	mLittleS9;
+        mText[22][9] =	mLittleS10;
 
-        mN =			new TextView[max];
-        mN[0] =			mN1;
-        mN[1] =			mN2;
-        mN[2] =			mN3;
-        mN[3] =			mN4;
-        mN[4] =			mN5;
-        mN[5] =			mN6;
-        mN[6] =			mN7;
-        mN[7] =			mN8;
-        mN[8] =			mN9;
-        mN[9] =			mN10;
+        mText[23][0] =	mM1;
+        mText[23][1] =	mM2;
+        mText[23][2] =	mM3;
+        mText[23][3] =	mM4;
+        mText[23][4] =	mM5;
+        mText[23][5] =	mM6;
+        mText[23][6] =	mM7;
+        mText[23][7] =	mM8;
+        mText[23][8] =	mM9;
+        mText[23][9] =	mM10;
 
-        mP1 =			new TextView[max];
-        mP1[0] =		mP1_1;
-        mP1[1] =		mP1_2;
-        mP1[2] =		mP1_3;
-        mP1[3] =		mP1_4;
-        mP1[4] =		mP1_5;
-        mP1[5] =		mP1_6;
-        mP1[6] =		mP1_7;
-        mP1[7] =		mP1_8;
-        mP1[8] =		mP1_9;
-        mP1[9] =		mP1_10;
+        mText[24][0] =	mN1;
+        mText[24][1] =	mN2;
+        mText[24][2] =	mN3;
+        mText[24][3] =	mN4;
+        mText[24][4] =	mN5;
+        mText[24][5] =	mN6;
+        mText[24][6] =	mN7;
+        mText[24][7] =	mN8;
+        mText[24][8] =	mN9;
+        mText[24][9] =	mN10;
 
-        mLUA =			new TextView[max];
-        mLUA[0] =		mLUA1;
-        mLUA[1] =		mLUA2;
-        mLUA[2] =		mLUA3;
-        mLUA[3] =		mLUA4;
-        mLUA[4] =		mLUA5;
-        mLUA[5] =		mLUA6;
-        mLUA[6] =		mLUA7;
-        mLUA[7] =		mLUA8;
-        mLUA[8] =		mLUA9;
-        mLUA[9] =		mLUA10;
+        mText[25][0] =	mP1_1;
+        mText[25][1] =	mP1_2;
+        mText[25][2] =	mP1_3;
+        mText[25][3] =	mP1_4;
+        mText[25][4] =	mP1_5;
+        mText[25][5] =	mP1_6;
+        mText[25][6] =	mP1_7;
+        mText[25][7] =	mP1_8;
+        mText[25][8] =	mP1_9;
+        mText[25][9] =	mP1_10;
 
-        mLUB =			new TextView[max];
-        mLUB[0] =		mLUB1;
-        mLUB[1] =		mLUB2;
-        mLUB[2] =		mLUB3;
-        mLUB[3] =		mLUB4;
-        mLUB[4] =		mLUB5;
-        mLUB[5] =		mLUB6;
-        mLUB[6] =		mLUB7;
-        mLUB[7] =		mLUB8;
-        mLUB[8] =		mLUB9;
-        mLUB[9] =		mLUB10;
+        mText[26][0] =	mLUA1;
+        mText[26][1] =	mLUA2;
+        mText[26][2] =	mLUA3;
+        mText[26][3] =	mLUA4;
+        mText[26][4] =	mLUA5;
+        mText[26][5] =	mLUA6;
+        mText[26][6] =	mLUA7;
+        mText[26][7] =	mLUA8;
+        mText[26][8] =	mLUA9;
+        mText[26][9] =	mLUA10;
+
+        mText[27][0] =	mLUB1;
+        mText[27][1] =	mLUB2;
+        mText[27][2] =	mLUB3;
+        mText[27][3] =	mLUB4;
+        mText[27][4] =	mLUB5;
+        mText[27][5] =	mLUB6;
+        mText[27][6] =	mLUB7;
+        mText[27][7] =	mLUB8;
+        mText[27][8] =	mLUB9;
+        mText[27][9] =	mLUB10;
 
         mCheck =		new CheckBox[max];
         mCheck[0] =		mCheck1;
@@ -1066,6 +1023,8 @@ public class PatientEditor extends Activity implements View.OnClickListener {
         mCheck[7] =		mCheck8;
         mCheck[8] =		mCheck9;
         mCheck[9] =		mCheck10;
+
+        Log.d(TAG, "onCreate end");
 	}
 
 	@SuppressWarnings("deprecation")
@@ -1075,22 +1034,30 @@ public class PatientEditor extends Activity implements View.OnClickListener {
 
 		int	i;
 
+		Log.d(TAG, "onResume beginning");
 		if (mCursor != null) {
+			Log.d(TAG, "onResume not null beginning");
 			mCursor.requery();
 			mCursor.moveToFirst();
 			if (mState == STATE_EDIT) {
+				Log.d(TAG, "onResume not null edit");
 				int colTitleIndex = mCursor.getColumnIndex("title");
 				String title = mCursor.getString(colTitleIndex);
 				Resources res = getResources();
                 String text = String.format(res.getString(R.string.title_edit), title);
                 setTitle(text);
 			} else if (mState == STATE_INSERT) {
+				Log.d(TAG, "onResume not null insert");
 				setTitle(getText(R.string.title_create));
         	}
+			Log.d(TAG, "onResume not null end");
 			int colReactionsIndex =	mCursor.getColumnIndex("reactions");
 			String reactions =		mCursor.getString(colReactionsIndex);
+			// TODO: Add race radio buttons
 			for (i = 0; i < max; i++)
 				mCheck[i].setChecked(reactions.charAt(i) == '1');
+		} else {
+			Log.d(TAG, "onResume null");
 		}
 	}
 
@@ -1098,10 +1065,13 @@ public class PatientEditor extends Activity implements View.OnClickListener {
     protected void onPause() {
 		super.onPause();
 
+		Log.d(TAG, "onPause");
 		if (mCursor != null) {
 			if (mState == STATE_EDIT) {
+				Log.d(TAG, "onPause edit");
 				updatePatient();
 			} else if (mState == STATE_INSERT) {
+				Log.d(TAG, "onPause insert");
 				updatePatient();
 				mState = STATE_EDIT;
 			}
@@ -1110,6 +1080,7 @@ public class PatientEditor extends Activity implements View.OnClickListener {
 
 	@Override
     public boolean onCreateOptionsMenu(Menu menu) {
+		Log.d(TAG, "onCreateOptionsMenu");
 		MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.editor_options_menu, menu);
 
@@ -1123,13 +1094,16 @@ public class PatientEditor extends Activity implements View.OnClickListener {
 
 	@Override
     public boolean onOptionsItemSelected(MenuItem item) {
+		Log.d(TAG, "onOptionsItemSelected beginning");
 		switch (item.getItemId()) {
         	case R.id.menu_save:
+        		Log.d(TAG, "onOptionsItemSelected save");
         		updatePatient();
                 finish();
                 break;
             case R.id.menu_delete:
-            	if (mCursor != null) {
+            	Log.d(TAG, "onOptionsItemSelected delete");
+                if (mCursor != null) {
                     mCursor.close();
                     mCursor = null;
                     getContentResolver().delete(mUri, null, null);
@@ -1137,6 +1111,7 @@ public class PatientEditor extends Activity implements View.OnClickListener {
         		finish();
             	break;
 		}
+		Log.d(TAG, "onOptionsItemSelected end");
 		return super.onOptionsItemSelected(item);
 	}
 
@@ -1152,6 +1127,7 @@ public class PatientEditor extends Activity implements View.OnClickListener {
 		for (i = 0; i < max; i++)
 			reactions.append(mCheck[i].isChecked() ? '1' : '0');
 		values.put("reactions", reactions.toString());
+		// TODO: Add race radio buttons
 		getContentResolver().update(
 									mUri,
 									values,
@@ -1184,64 +1160,14 @@ public class PatientEditor extends Activity implements View.OnClickListener {
 				mSolution.setText("");											//clear the solution text
 
 				for (i = 0; i < max; i++) {
-					antibody.SetValue( 0, mD		[i].getText());				//The values need to be set for every cell
-					antibody.SetValue( 1, mBigC		[i].getText());
-					antibody.SetValue( 2, mBigE		[i].getText());
-					antibody.SetValue( 3, mLittleC	[i].getText());
-					antibody.SetValue( 4, mLittleE	[i].getText());
-					antibody.SetValue( 5, mF		[i].getText());
-					antibody.SetValue( 6, mCW		[i].getText());
-					antibody.SetValue( 7, mV		[i].getText());
-					antibody.SetValue( 8, mBigK		[i].getText());
-					antibody.SetValue( 9, mLittleK	[i].getText());
-					antibody.SetValue(10, mKPA		[i].getText());
-					antibody.SetValue(11, mKPB		[i].getText());
-					antibody.SetValue(12, mJSA		[i].getText());
-					antibody.SetValue(13, mJSB		[i].getText());
-					antibody.SetValue(14, mFYA		[i].getText());
-					antibody.SetValue(15, mFYB		[i].getText());
-					antibody.SetValue(16, mJKA		[i].getText());
-					antibody.SetValue(17, mJKB		[i].getText());
-					antibody.SetValue(18, mXGA		[i].getText());
-					antibody.SetValue(19, mLEA		[i].getText());
-					antibody.SetValue(20, mLEB		[i].getText());
-					antibody.SetValue(21, mBigS		[i].getText());
-					antibody.SetValue(22, mLittleS	[i].getText());
-					antibody.SetValue(23, mM		[i].getText());
-					antibody.SetValue(24, mN		[i].getText());
-					antibody.SetValue(25, mP1		[i].getText());
-					antibody.SetValue(26, mLUA		[i].getText());
-					antibody.SetValue(27, mLUB		[i].getText());
+					for (j = 0; j < 28; j++) {
+						antibody.SetValue(j, mText[j][i].getText());			//The values need to be set for every cell
+					}
 
 					if (!mCheck[i].isChecked()) {								//Can use this row to cross out
-						CrossOut( 0, mD			[i], i);
-						CrossOut( 1, mBigC		[i], i);
-						CrossOut( 2, mBigE		[i], i);
-						CrossOut( 3, mLittleC	[i], i);
-						CrossOut( 4, mLittleE	[i], i);
-						CrossOut( 5, mF			[i], i);
-						CrossOut( 6, mCW		[i], i);
-						CrossOut( 7, mV			[i], i);
-						CrossOut( 8, mBigK		[i], i);
-						CrossOut( 9, mLittleK	[i], i);
-						CrossOut(10, mKPA		[i], i);
-						CrossOut(11, mKPB		[i], i);
-						CrossOut(12, mJSA		[i], i);
-						CrossOut(13, mJSB		[i], i);
-						CrossOut(14, mFYA		[i], i);
-						CrossOut(15, mFYB		[i], i);
-						CrossOut(16, mJKA		[i], i);
-						CrossOut(17, mJKB		[i], i);
-						CrossOut(18, mXGA		[i], i);
-						CrossOut(19, mLEA		[i], i);
-						CrossOut(20, mLEB		[i], i);
-						CrossOut(21, mBigS		[i], i);
-						CrossOut(22, mLittleS	[i], i);
-						CrossOut(23, mM			[i], i);
-						CrossOut(24, mN			[i], i);
-						CrossOut(25, mP1		[i], i);
-						CrossOut(26, mLUA		[i], i);
-						CrossOut(27, mLUB		[i], i);
+						for (j = 0; j < 28; j++) {
+							CrossOut(j, mText[j][i], i);
+						}
 					}
 				}
 				for (i = 0; i < max; i++)
@@ -1268,6 +1194,7 @@ public class PatientEditor extends Activity implements View.OnClickListener {
 							mSolution.setText(	mSolution.getText() + 
 												antibody.GetNameRace(i, j)
 											 );
+							// TODO: Send race radio button
 							antibody.IncrementSolutions();
 						}
 					}
@@ -1290,38 +1217,13 @@ public class PatientEditor extends Activity implements View.OnClickListener {
 	 * Set the color of every antibody to black
 	 */
 	private final void SetAllBlack() {
-		int	i;
+		int	i,
+			j;
 
-		for (i = 0; i < max; i++)
-		{
-			mD[i].setTextColor(getResources().getColor(R.color.black));
-			mBigC[i].setTextColor(getResources().getColor(R.color.black));
-			mBigE[i].setTextColor(getResources().getColor(R.color.black));
-			mLittleC[i].setTextColor(getResources().getColor(R.color.black));
-			mLittleE[i].setTextColor(getResources().getColor(R.color.black));
-			mF[i].setTextColor(getResources().getColor(R.color.black));
-			mCW[i].setTextColor(getResources().getColor(R.color.black));
-			mV[i].setTextColor(getResources().getColor(R.color.black));
-			mBigK[i].setTextColor(getResources().getColor(R.color.black));
-			mLittleK[i].setTextColor(getResources().getColor(R.color.black));
-			mKPA[i].setTextColor(getResources().getColor(R.color.black));
-			mKPB[i].setTextColor(getResources().getColor(R.color.black));
-			mJSA[i].setTextColor(getResources().getColor(R.color.black));
-			mJSB[i].setTextColor(getResources().getColor(R.color.black));
-			mFYA[i].setTextColor(getResources().getColor(R.color.black));
-			mFYB[i].setTextColor(getResources().getColor(R.color.black));
-			mJKA[i].setTextColor(getResources().getColor(R.color.black));
-			mJKB[i].setTextColor(getResources().getColor(R.color.black));
-			mXGA[i].setTextColor(getResources().getColor(R.color.black));
-			mLEA[i].setTextColor(getResources().getColor(R.color.black));
-			mLEB[i].setTextColor(getResources().getColor(R.color.black));
-			mBigS[i].setTextColor(getResources().getColor(R.color.black));
-			mLittleS[i].setTextColor(getResources().getColor(R.color.black));
-			mM[i].setTextColor(getResources().getColor(R.color.black));
-			mN[i].setTextColor(getResources().getColor(R.color.black));
-			mP1[i].setTextColor(getResources().getColor(R.color.black));
-			mLUA[i].setTextColor(getResources().getColor(R.color.black));
-			mLUB[i].setTextColor(getResources().getColor(R.color.black));
+		for (j = 0; j < 28; j++) {
+			for (i = 0; i < max; i++) {
+				mText[j][i].setTextColor(getResources().getColor(R.color.black));
+			}
 		}
 	}
 
@@ -1355,37 +1257,13 @@ public class PatientEditor extends Activity implements View.OnClickListener {
 	 */
 	private final void UseToGetSolutions(int index)
 	{
+		int	i;
+
 		if (mCheck[index].isChecked())	//if the result is positive
 		{
 			Log.d("Antibody", "Using " + (index + 1) + " to get solutions");
-			GetSolution( 0, mD		[index]);//, antibody.GetName( 0));
-			GetSolution( 1, mBigC	[index]);//, antibody.GetName( 1));
-			GetSolution( 2, mBigE	[index]);//, antibody.GetName( 2));
-			GetSolution( 3, mLittleC[index]);//, antibody.GetName( 3));
-			GetSolution( 4, mLittleE[index]);//, antibody.GetName( 4));
-			GetSolution( 5, mF		[index]);//, antibody.GetName( 5));
-			GetSolution( 6, mCW		[index]);//, antibody.GetName( 6));
-			GetSolution( 7, mV		[index]);//, antibody.GetName( 7));
-			GetSolution( 8, mBigK	[index]);//, antibody.GetName( 8));
-			GetSolution( 9, mLittleK[index]);//, antibody.GetName( 9));
-			GetSolution(10, mKPA	[index]);//, antibody.GetName(10));
-			GetSolution(11, mKPB	[index]);//, antibody.GetName(11));
-			GetSolution(12, mJSA	[index]);//, antibody.GetName(12));
-			GetSolution(13, mJSB	[index]);//, antibody.GetName(13));
-			GetSolution(14, mFYA	[index]);//, antibody.GetName(14));
-			GetSolution(15, mFYB	[index]);//, antibody.GetName(15));
-			GetSolution(16, mJKA	[index]);//, antibody.GetName(16));
-			GetSolution(17, mJKB	[index]);//, antibody.GetName(17));
-			GetSolution(18, mXGA	[index]);//, antibody.GetName(18));
-			GetSolution(19, mLEA	[index]);//, antibody.GetName(19));
-			GetSolution(20, mLEB	[index]);//, antibody.GetName(20));
-			GetSolution(21, mBigS	[index]);//, antibody.GetName(21));
-			GetSolution(22, mLittleS[index]);//, antibody.GetName(22));
-			GetSolution(23, mM		[index]);//, antibody.GetName(23));
-			GetSolution(24, mN		[index]);//, antibody.GetName(24));
-			GetSolution(25, mP1		[index]);//, antibody.GetName(25));
-			GetSolution(26, mLUA	[index]);//, antibody.GetName(26));
-			GetSolution(27, mLUB	[index]);//, antibody.GetName(27));
+			for (i = 0; i < 28; i++)
+				GetSolution(i, mText[i][index]);
 		}
 	}
 
