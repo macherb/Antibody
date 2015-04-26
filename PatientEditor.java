@@ -28,8 +28,6 @@ import android.widget.TextView;
  */
 public class PatientEditor extends Activity implements View.OnClickListener {
 
-	private static final String		TAG =			"PatientEditor";
-
 	private static final String[]	PROJECTION =
 									new String[] {
 													"_id", // 0
@@ -38,36 +36,25 @@ public class PatientEditor extends Activity implements View.OnClickListener {
 												};
 	// TODO: Add race
 
-	private static final int	STATE_EDIT =		0;
-    private static final int	STATE_INSERT =		1;
+	private static final int		STATE_EDIT =		0;
+    private static final int		STATE_INSERT =		1;
 
-    private int					mState;
-	private Uri					mUri;
-	@Nullable private Cursor	mCursor;
+    private int						mState;
+	private Uri						mUri;
+	@Nullable private Cursor		mCursor;
 
-	private Antibody_Super	antibody;
+	private Antibody_Super			antibody;
 
-	private TextView	mText[][],
+	private TextView				mText[][],
 
-						mSolution;
+									mSolution;
 
-	private CheckBox	mCheck1,
-						mCheck2,
-						mCheck3,
-						mCheck4,
-						mCheck5,
-						mCheck6,
-						mCheck7,
-						mCheck8,
-						mCheck9,
-						mCheck10,
+	private CheckBox				mCheck[];
 
-						mCheck[];
+	private Button					mCalculate,
+									mReset;
 
-	private Button		mCalculate,
-						mReset;
-
-	private final int	max =	10;
+	private final int				max =	10;
 
 	@SuppressWarnings("deprecation")
 	@Override
@@ -75,8 +62,6 @@ public class PatientEditor extends Activity implements View.OnClickListener {
 		int	i;
 
 		super.onCreate(savedInstanceState);
-
-		Log.d(TAG, "onCreate beginning");
 
 		final Intent intent = getIntent();
 
@@ -87,7 +72,6 @@ public class PatientEditor extends Activity implements View.OnClickListener {
 			mUri = intent.getData();
 		} else if (Intent.ACTION_INSERT.equals(action)) {
 			mState = STATE_INSERT;
-			Log.d(TAG, "Before insert");
 			mUri = getContentResolver().insert(intent.getData(), null);
 		}
 		mCursor = managedQuery(
@@ -102,17 +86,6 @@ public class PatientEditor extends Activity implements View.OnClickListener {
 
 		mSolution =		(TextView	)findViewById(R.id.textSolution		);
 
-		mCheck1 =		(CheckBox	)findViewById(R.id.check1			);
-		mCheck2 =		(CheckBox	)findViewById(R.id.check2			);
-		mCheck3 =		(CheckBox	)findViewById(R.id.check3			);
-		mCheck4 =		(CheckBox	)findViewById(R.id.check4			);
-		mCheck5 =		(CheckBox	)findViewById(R.id.check5			);
-		mCheck6 =		(CheckBox	)findViewById(R.id.check6			);
-		mCheck7 =		(CheckBox	)findViewById(R.id.check7			);
-		mCheck8 =		(CheckBox	)findViewById(R.id.check8			);
-		mCheck9 =		(CheckBox	)findViewById(R.id.check9			);
-		mCheck10 =		(CheckBox	)findViewById(R.id.check10			);
-
 		mCalculate =	(Button		)findViewById(R.id.buttonCalculate	);
         mCalculate.setOnClickListener(this);
 		mReset =		(Button		)findViewById(R.id.buttonReset		);
@@ -120,8 +93,8 @@ public class PatientEditor extends Activity implements View.OnClickListener {
 
         antibody =		new Antibody_Super();
 
-        mText =			new TextView[28][];
-        for (i = 0; i < 28; i++)
+        mText =			new TextView[Antibody_Super.max][];
+        for (i = 0; i < Antibody_Super.max; i++)
         	mText[i] =		new TextView[max];
 
 		mText[0][0] =	(TextView	)findViewById(R.id.textD1			);
@@ -433,18 +406,16 @@ public class PatientEditor extends Activity implements View.OnClickListener {
         mText[27][9] =	(TextView	)findViewById(R.id.textLUB10		);
 
         mCheck =		new CheckBox[max];
-        mCheck[0] =		mCheck1;
-        mCheck[1] =		mCheck2;
-        mCheck[2] =		mCheck3;
-        mCheck[3] =		mCheck4;
-        mCheck[4] =		mCheck5;
-        mCheck[5] =		mCheck6;
-        mCheck[6] =		mCheck7;
-        mCheck[7] =		mCheck8;
-        mCheck[8] =		mCheck9;
-        mCheck[9] =		mCheck10;
-
-        Log.d(TAG, "onCreate end");
+        mCheck[0] =		(CheckBox	)findViewById(R.id.check1			);
+        mCheck[1] =		(CheckBox	)findViewById(R.id.check2			);
+        mCheck[2] =		(CheckBox	)findViewById(R.id.check3			);
+        mCheck[3] =		(CheckBox	)findViewById(R.id.check4			);
+        mCheck[4] =		(CheckBox	)findViewById(R.id.check5			);
+        mCheck[5] =		(CheckBox	)findViewById(R.id.check6			);
+        mCheck[6] =		(CheckBox	)findViewById(R.id.check7			);
+        mCheck[7] =		(CheckBox	)findViewById(R.id.check8			);
+        mCheck[8] =		(CheckBox	)findViewById(R.id.check9			);
+        mCheck[9] =		(CheckBox	)findViewById(R.id.check10			);
 	}
 
 	@SuppressWarnings("deprecation")
@@ -454,30 +425,23 @@ public class PatientEditor extends Activity implements View.OnClickListener {
 
 		int	i;
 
-		Log.d(TAG, "onResume beginning");
 		if (mCursor != null) {
-			Log.d(TAG, "onResume not null beginning");
 			mCursor.requery();
 			mCursor.moveToFirst();
 			if (mState == STATE_EDIT) {
-				Log.d(TAG, "onResume not null edit");
 				int colTitleIndex = mCursor.getColumnIndex("title");
 				String title = mCursor.getString(colTitleIndex);
 				Resources res = getResources();
                 String text = String.format(res.getString(R.string.title_edit), title);
                 setTitle(text);
 			} else if (mState == STATE_INSERT) {
-				Log.d(TAG, "onResume not null insert");
 				setTitle(getText(R.string.title_create));
         	}
-			Log.d(TAG, "onResume not null end");
 			int colReactionsIndex =	mCursor.getColumnIndex("reactions");
 			String reactions =		mCursor.getString(colReactionsIndex);
 			// TODO: Add race radio buttons
 			for (i = 0; i < max; i++)
 				mCheck[i].setChecked(reactions.charAt(i) == '1');
-		} else {
-			Log.d(TAG, "onResume null");
 		}
 	}
 
@@ -485,13 +449,10 @@ public class PatientEditor extends Activity implements View.OnClickListener {
     protected void onPause() {
 		super.onPause();
 
-		Log.d(TAG, "onPause");
 		if (mCursor != null) {
 			if (mState == STATE_EDIT) {
-				Log.d(TAG, "onPause edit");
 				updatePatient();
 			} else if (mState == STATE_INSERT) {
-				Log.d(TAG, "onPause insert");
 				updatePatient();
 				mState = STATE_EDIT;
 			}
@@ -500,7 +461,6 @@ public class PatientEditor extends Activity implements View.OnClickListener {
 
 	@Override
     public boolean onCreateOptionsMenu(Menu menu) {
-		Log.d(TAG, "onCreateOptionsMenu");
 		MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.editor_options_menu, menu);
 
@@ -514,15 +474,12 @@ public class PatientEditor extends Activity implements View.OnClickListener {
 
 	@Override
     public boolean onOptionsItemSelected(MenuItem item) {
-		Log.d(TAG, "onOptionsItemSelected beginning");
 		switch (item.getItemId()) {
         	case R.id.menu_save:
-        		Log.d(TAG, "onOptionsItemSelected save");
         		updatePatient();
                 finish();
                 break;
             case R.id.menu_delete:
-            	Log.d(TAG, "onOptionsItemSelected delete");
                 if (mCursor != null) {
                     mCursor.close();
                     mCursor = null;
@@ -531,7 +488,7 @@ public class PatientEditor extends Activity implements View.OnClickListener {
         		finish();
             	break;
 		}
-		Log.d(TAG, "onOptionsItemSelected end");
+
 		return super.onOptionsItemSelected(item);
 	}
 
@@ -563,14 +520,14 @@ public class PatientEditor extends Activity implements View.OnClickListener {
 		if (mCalculate.equals(v)) {
 			antibody.Reset();
 
-			if      ( mCheck1.isChecked() &&  mCheck2.isChecked() &&  mCheck3.isChecked() &&  mCheck4.isChecked() &&  mCheck5.isChecked() &&
-					  mCheck6.isChecked() &&  mCheck7.isChecked() &&  mCheck8.isChecked() &&  mCheck9.isChecked() &&  mCheck10.isChecked()	)
+			if      ( mCheck[0].isChecked() &&  mCheck[1].isChecked() &&  mCheck[2].isChecked() &&  mCheck[3].isChecked() &&  mCheck[4].isChecked() &&
+					  mCheck[5].isChecked() &&  mCheck[6].isChecked() &&  mCheck[7].isChecked() &&  mCheck[8].isChecked() &&  mCheck[9].isChecked()	)
 			{
 				mSolution.setText("Inconclusive");
 				SetAllBlack();
 			}
-			else if (!mCheck1.isChecked() && !mCheck2.isChecked() && !mCheck3.isChecked() && !mCheck4.isChecked() && !mCheck5.isChecked() &&
-					 !mCheck6.isChecked() && !mCheck7.isChecked() && !mCheck8.isChecked() && !mCheck9.isChecked() && !mCheck10.isChecked()	)
+			else if (!mCheck[0].isChecked() && !mCheck[1].isChecked() && !mCheck[2].isChecked() && !mCheck[3].isChecked() && !mCheck[4].isChecked() &&
+					 !mCheck[5].isChecked() && !mCheck[6].isChecked() && !mCheck[7].isChecked() && !mCheck[8].isChecked() && !mCheck[9].isChecked()	)
 			{
 				mSolution.setText("Too weak");
 				SetAllBlack();
@@ -580,12 +537,12 @@ public class PatientEditor extends Activity implements View.OnClickListener {
 				mSolution.setText("");											//clear the solution text
 
 				for (i = 0; i < max; i++) {
-					for (j = 0; j < 28; j++) {
+					for (j = 0; j < Antibody_Super.max; j++) {
 						antibody.SetValue(j, mText[j][i].getText());			//The values need to be set for every cell
 					}
 
 					if (!mCheck[i].isChecked()) {								//Can use this row to cross out
-						for (j = 0; j < 28; j++) {
+						for (j = 0; j < Antibody_Super.max; j++) {
 							CrossOut(j, mText[j][i], i);
 						}
 					}
@@ -640,7 +597,7 @@ public class PatientEditor extends Activity implements View.OnClickListener {
 		int	i,
 			j;
 
-		for (j = 0; j < 28; j++) {
+		for (j = 0; j < Antibody_Super.max; j++) {
 			for (i = 0; i < max; i++) {
 				mText[j][i].setTextColor(getResources().getColor(R.color.black));
 			}
@@ -682,7 +639,7 @@ public class PatientEditor extends Activity implements View.OnClickListener {
 		if (mCheck[index].isChecked())	//if the result is positive
 		{
 			Log.d("Antibody", "Using " + (index + 1) + " to get solutions");
-			for (i = 0; i < 28; i++)
+			for (i = 0; i < Antibody_Super.max; i++)
 				GetSolution(i, mText[i][index]);
 		}
 	}
